@@ -18,14 +18,8 @@ markup:
     extensions:
       passthrough:
         delimiters:
-          block:
-          - - \[
-            - \]
-          - - $$
-            - $$
-          inline:
-          - - \(
-            - \)
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
         enable: true
 
   # enable hextra syntax highlight
@@ -79,11 +73,6 @@ params:
   
   # 添加以下数学公式配置
   math: true
-    # enable: true  # 全局启用数学公式
-    # provider: katex  # 使用 KaTeX 渲染引擎
-    # katex:
-    #   output: htmlAndMathml  # 同时输出 HTML 和 MathML
-    #   displayMode: true  # 默认以块级模式显示公式
 
   theme:
     # light | dark | system
