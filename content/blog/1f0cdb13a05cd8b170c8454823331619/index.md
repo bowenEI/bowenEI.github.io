@@ -116,9 +116,9 @@ projects: []
 
 <!-- $$
 \begin{array}{c}
-\mbox{实践} \\\\
-\mbox{意识} \rightleftharpoons \mbox{物质} \\\\
-\mbox{认识} 
+\text{实践} \\
+\text{意识} \rightleftharpoons \text{物质} \\
+\text{认识} 
 \end{array}
 $$ -->
 
@@ -130,9 +130,9 @@ $$ -->
 
 <!-- $$
 \begin{array}{c}
-\mbox{吸引（认识）} \\\\
-\mbox{性魅力（物质）} \rightleftharpoons \mbox{好感（意识）} \\\\
-\mbox{追求（实践）} 
+\text{吸引（认识）} \\
+\text{性魅力（物质）} \rightleftharpoons \text{好感（意识）} \\
+\text{追求（实践）} 
 \end{array}
 $$ -->
 
@@ -144,9 +144,9 @@ $$ -->
 
 <!-- $$
 \begin{array}{c}
-\mbox{感受好感（认识）} \\\\
-\mbox{恋爱关系（物质）} \rightleftharpoons \mbox{相互喜欢（意识）} \\\\
-\mbox{表达好感（实践）} 
+\text{感受好感（认识）} \\
+\text{恋爱关系（物质）} \rightleftharpoons \text{相互喜欢（意识）} \\
+\text{表达好感（实践）} 
 \end{array}
 $$ -->
 
@@ -156,9 +156,9 @@ $$ -->
 
 <!-- $$
 \begin{array}{c}
-\mbox{感受爱意（认识）} \\\\
-\mbox{爱情（物质）} \rightleftharpoons \mbox{爱（意识）} \\\\
-\mbox{表达爱意（实践）} 
+\text{感受爱意（认识）} \\
+\text{爱情（物质）} \rightleftharpoons \text{爱（意识）} \\
+\text{表达爱意（实践）} 
 \end{array}
 $$ -->
 

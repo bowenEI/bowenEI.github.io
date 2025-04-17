@@ -66,7 +66,7 @@ Clearly, the AI of Things (AIoT), an integrative technology combining both AI an
 
 显然，人工智能物联网 AIoT，一种结合了人工智能和物联网的综合技术，正开始在云中心的支持下获得其聚光灯的份额。在 AIoT 时代，物联网设备生成的大量数据为训练人工智能模型提供了完美的机会，以可靠地从嘈杂复杂的环境中挖掘有价值的数据，进行智能分析和决策。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 作者在这一段当中由物联网 IoT 中的海量数据引出云计算 Cloud Computing 和人工智能 AI 两大概念，并且引出人工智能物联网 AIoT 的概念。
 
@@ -100,7 +100,7 @@ These solutions can lighten the burden of data transmission through the network 
 
 这些解决方案可以减轻通过网络回程传输数据的负担，进一步降低网络处理和维护的成本，并通过在终端设备附近定位计算能力及时做出决策。此外，这些方法可以保护敏感数据不被非法操作员滥用或被攻击者劫持。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 作者在这一段由基于云中心的 AIoT 存在的带宽限制和隐私安全问题，引出了边缘计算辅助的 AIoT 解决方案，并且分析边缘计算范式更好的原因。
 
@@ -670,7 +670,7 @@ Generally, there are two obstacles: the first is that attackers may infer sensit
 - Security and Privacy: 安全和隐私
 - Artificial Intelligence Ethics in Artificial Intelligence of Things: AIoT 中的人工智能伦理
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 本文是写得相对来说很不错的一篇综述，逻辑清晰。作者给出了人工智能、物联网、边缘计算等概念，引出边缘计算辅助 AIoT 的概念。随后作者以一个实际的 AIoT 示例介绍人工智能如何应用于实际的 IoT 场景，并且还介绍了人工智能模型在网络边缘推理和训练两方面的技术。
 

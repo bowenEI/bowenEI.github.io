@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-[Overleaf](https://cn.overleaf.com/) 是开源的在线实时协作 $\LaTeX$ 编辑器。官方还提供了[开源镜像](https://github.com/overleaf/overleaf)，可以在服务器上部署。由于课题组需要多人在线协作撰写论文，特写此文记录 Overleaf 环境部署的说明。
+[Overleaf](https://cn.overleaf.com/) 是开源的在线实时协作 \(\LaTeX\) 编辑器。官方还提供了[开源镜像](https://github.com/overleaf/overleaf)，可以在服务器上部署。由于课题组需要多人在线协作撰写论文，特写此文记录 Overleaf 环境部署的说明。
 
 <!--more-->
 
@@ -46,7 +46,7 @@ sudo sh get-docker.sh
 不过，仅仅通过官方安装脚本安装的 Docker 还不够。还需要安装 Docker Compose：
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-\((uname -s)-\)(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 如果要安装其他版本的 Docker Compose，替换路径中的 `v2.2.2`。（`v2.2.2` 是目前的稳定版本）
@@ -90,7 +90,7 @@ cd overleaf
 docker compose up -d
 ```
 
-由于完整安装 $\LaTeX$ 环境需要安装很多包，全部打包到 Docker 镜像中的话太大，不利于网络传输。因此，Overleaf 官方仅仅在 Docker 镜像中部署了很少一部分 $\LaTeX$ 的功能。完整的 $\LaTeX$ 功能需要我们手动安装。
+由于完整安装 \(\LaTeX\) 环境需要安装很多包，全部打包到 Docker 镜像中的话太大，不利于网络传输。因此，Overleaf 官方仅仅在 Docker 镜像中部署了很少一部分 \(\LaTeX\) 的功能。完整的 \(\LaTeX\) 功能需要我们手动安装。
 
 ## 安装完整的 LaTeX 环境
 
@@ -102,7 +102,7 @@ docker exec sharelatex tlmgr install scheme-full
 
 安装的过程很漫长，需要耐心等待。
 
-{{< callout warning >}}
+{{< callout type="warning" >}}
 
 我在安装过程中出现了报错如下：
 
@@ -125,11 +125,11 @@ docker exec sharelatex tlmgr update --self --all
 
 {{< /callout >}}
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **注意**
 
-`docker exec` 命令对 Docker 容器的更改是暂时的。如果用 Docker Compose 重新创建容器，之前所做的更改（安装完整的 $\LaTeX$）将会丢失。因此，可以使用 `docker commit` 命令：
+`docker exec` 命令对 Docker 容器的更改是暂时的。如果用 Docker Compose 重新创建容器，之前所做的更改（安装完整的 \(\LaTeX\)）将会丢失。因此，可以使用 `docker commit` 命令：
 
 ```bash
 docker commit sharelatex sharelatex/sharelatex:with-texlive-full

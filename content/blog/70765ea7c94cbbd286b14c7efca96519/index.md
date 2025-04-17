@@ -36,7 +36,7 @@ projects: []
 
 <!--more-->
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **特别鸣谢**
 
@@ -85,10 +85,10 @@ projects: []
 
 > Recurrent models typically factor computation along the symbol positions of the input and output sequences.
 
-RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ 的隐藏状态 `hidden states` 记作 $h_t$，它由上一个隐藏状态 $h_{t-1}$ 和当前时刻 $t$ 的输入决定。这就是为什么 RNN 能够处理时序信息的原因。也正因为 RNN 的这一特点，导致 RNN 存在如下问题：
+RNN 的特点是序列从左向右移一步一步往前做。当前时刻 \(t\) 的隐藏状态 `hidden states` 记作 \(h_t\)，它由上一个隐藏状态 \(h_{t-1}\) 和当前时刻 \(t\) 的输入决定。这就是为什么 RNN 能够处理时序信息的原因。也正因为 RNN 的这一特点，导致 RNN 存在如下问题：
 
 - 计算难以并行，主流的多线程 GPU 只能按照时序一个一个计算。
-- 序列长度和 $h_t$ 的长度之间的矛盾。如果序列长度特别长而 $h_t$ 不够长的话，前面的信息很可能会丢掉；但如果 $h_t$ 也设计得很长的话，内存开销太大。
+- 序列长度和 \(h_t\) 的长度之间的矛盾。如果序列长度特别长而 \(h_t\) 不够长的话，前面的信息很可能会丢掉；但如果 \(h_t\) 也设计得很长的话，内存开销太大。
 
 针对 RNN 的这些问题，近年来的改进工作很多，但都没有从根本上解决问题。
 
@@ -116,9 +116,9 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ �
 
 为了解释清楚 `encoder-decoder`，作者首先给出如下 3 个非常重要的定义：
 
-- $\left(x_1, x_2, ..., x_n\right)$：表示一个序列。假设这个序列是一个英文句子，那么 $x_t$ 就表示第 $t$ 个单词。
-- $\textbf{z} = \left(z_1, z_2, ..., z_n\right)$：编码器的输出。$z_t$ 是 $x_t$ 的一个向量表示。
-- $\left(y_1, y_2, ..., y_m\right)$：编码器的输出，是一个长为 $m$ 的序列。和编码器不同的是，解码器的词是一个个生成的，这叫做自回归 `auto-regressive`。自回归的意思是当前的输出也会作为输入参与下一轮的输出。换句话说就是，翻译的结果出来是一个个词往外蹦儿的。
+- \(\left(x_1, x_2, ..., x_n\right)\)：表示一个序列。假设这个序列是一个英文句子，那么 \(x_t\) 就表示第 \(t\) 个单词。
+- \(\textbf{z} = \left(z_1, z_2, ..., z_n\right)\)：编码器的输出。\(z_t\) 是 \(x_t\) 的一个向量表示。
+- \(\left(y_1, y_2, ..., y_m\right)\)：编码器的输出，是一个长为 \(m\) 的序列。和编码器不同的是，解码器的词是一个个生成的，这叫做自回归 `auto-regressive`。自回归的意思是当前的输出也会作为输入参与下一轮的输出。换句话说就是，翻译的结果出来是一个个词往外蹦儿的。
 
 这样也就弄清楚 **Transformer** 的输入和输出了，后文则主要对这里面的每个块进行说明。
 
@@ -128,30 +128,30 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ �
 
 **Encoder**
 
-- layers: $N=6$
+- layers: \(N=6\)
 - sub-layers:
   + multi-head self-attention mechanism: 多头自注意力机制
   + position-wise fully connected feed-forward network: 本质上就是一个 MLP（多层感知机，Multilayer Perceptron）
-- output: $\textrm{LayerNorm}(x + \textrm{Sublayer}(x))$
-- dimension: $d_{model} = 512$
+- output: \(\textrm{LayerNorm}(x + \textrm{Sublayer}(x))\)
+- dimension: \(d_{model} = 512\)
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **BatchNorm 和 LayerNorm 的区别**
 
-沐神就 `BatchNorm` 和 `LayerNorm` 的区别作了详细讲解。我们知道，`Norm` 即 `Normalization`，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 $0$ 方差为 $1$ 的标准化向量。
+沐神就 `BatchNorm` 和 `LayerNorm` 的区别作了详细讲解。我们知道，`Norm` 即 `Normalization`，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 \(0\) 方差为 \(1\) 的标准化向量。
 
 $$
-\begin{align*}
+\begin{aligned}
 Y = \frac{X - \mu}{\sigma}
-\end{align*}
+\end{aligned}
 $$
 
 如图所示，`BatchNorm` 和 `LayerNorm` 的区别一目了然。`BatchNorm` 是在每一个特征 `feature` 上对 `batch` 进行归一化，而 `LayerNorm` 是在每一个样本 `batch` 上对 `feature` 进行归一化。
 
 {{< figure src="layernorm-batchnorm.png" caption="Difference between BatchNorm and LayerNorm." numbered="true" >}}
 
-为什么要使用 `LayerNorm` 呢？一个原因是样本长度可能发生变化（即 `sequence` 的长度 $n$），如果使用 `BatchNorm` 的话，切片的结果可能长度参差不齐，会有很多零填充。而使用 `LayerNorm` 则不会出现这样的问题，因为是同一个样本（即同一个序列）。由于序列长度不一有零填充，计算均值和方差的时候每个样本的计算方法不一样，不能把零算进去，因为零不是有效值。
+为什么要使用 `LayerNorm` 呢？一个原因是样本长度可能发生变化（即 `sequence` 的长度 \(n\)），如果使用 `BatchNorm` 的话，切片的结果可能长度参差不齐，会有很多零填充。而使用 `LayerNorm` 则不会出现这样的问题，因为是同一个样本（即同一个序列）。由于序列长度不一有零填充，计算均值和方差的时候每个样本的计算方法不一样，不能把零算进去，因为零不是有效值。
 
 还有一点原因是，假如在做预测的时候，序列特别特别长以至于训练所得的均值和方差并不好用。而使用 `LayerNorm` 则不会出现这样的问题，因为它是每个样本独立计算的，最后也并不像 `BatchNorm` 那样需要算出一个全局的均值和方差。因此不管序列有多长，均值和方差都是在序列本身的基础上算的。
 
@@ -159,12 +159,12 @@ $$
 
 **Decoder**
 
-- layers: $N=6$
+- layers: \(N=6\)
 - sub-layers:
   + multi-head self-attention mechanism: 和 `encoder` 相同
   + position-wise fully connected feed-forward network: 和 `encoder` 相同
   + masked multi-head attention: 带掩码的多头注意力机制
-- masking: 确保位置 $i$ 的预测只能依赖于小于 $i$ 位置的已知输出。因为训练时 `decoder` 的输入是上面一些时刻在 `encoder` 的输出，不应该看到后面时刻的输入。
+- masking: 确保位置 \(i\) 的预测只能依赖于小于 \(i\) 位置的已知输出。因为训练时 `decoder` 的输入是上面一些时刻在 `encoder` 的输出，不应该看到后面时刻的输入。
 
 ### 3.2 Attention
 
@@ -181,37 +181,37 @@ $$
 注意力函数的计算公式如下：
 
 $$
-\begin{align*}
+\begin{aligned}
 \textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^{\top}}{\sqrt{d_k}}\right)V
-\end{align*}
+\end{aligned}
 $$
 
-$Q$ 即 `query`，$K$ 即 `key`，$QK^{\top}$ 即 `query` 和 `key` 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：
+\(Q\) 即 `query`，\(K\) 即 `key`，\(QK^{\top}\) 即 `query` 和 `key` 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 \(\sqrt{d_k}\) 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：
 
 $$
-\begin{align*}
+\begin{aligned}
 \textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
-\end{align*}
+\end{aligned}
 $$
 
-注意这里 `Mask` 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。
+注意这里 `Mask` 的作用是为了避免 \(t\) 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（\(-\infty\)）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 \(t\) 时刻后面的输入的效果。
 
 #### 3.2.2 Multi-Head Attention
 
-作者认为，与其计算单个的注意力函数，不如把 `query`、`key`、`value` 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。
+作者认为，与其计算单个的注意力函数，不如把 `query`、`key`、`value` 投影到一个更低的维度上，投影 \(h\) 次，然后再计算 \(h\) 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。
 
 {{< figure src="Multi-Head Attention.png" caption="Multi-Head Attention." numbered="true" >}}
 
 多头注意力函数的计算公式如下：
 
 $$
-\begin{align*}
-\textrm{MultiHead}\left(Q, K, V\right) &= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\\\
+\begin{aligned}
+\textrm{MultiHead}\left(Q, K, V\right) &= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\
 \textbf{where}\quad\textrm{head}_i &= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
-\end{align*}
+\end{aligned}
 $$
 
-在本文中作者定义 $h=8$，于是 $d_k = d_v = d_{model}/h = 64$，也就是输出维度。
+在本文中作者定义 \(h=8\)，于是 \(d_k = d_v = d_{model}/h = 64\)，也就是输出维度。
 
 #### 3.2.3 Applications of Attention in our Model
 
@@ -221,7 +221,7 @@ $$
 >
 > The encoder contains self-attention layers. In a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder. Each position in the encoder can attend to all positions in the previous layer of the encoder.
 >
-> Similarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position. We need to prevent leftward information flow in the decoder to preserve the auto-regressive property. We implement this inside of scaled dot-product attention by masking out (setting to $-\infty$) all values in the input of the softmax which correspond to illegal connections.
+> Similarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position. We need to prevent leftward information flow in the decoder to preserve the auto-regressive property. We implement this inside of scaled dot-product attention by masking out (setting to \(-\infty\)) all values in the input of the softmax which correspond to illegal connections.
 
 1. `encoder` 的 `Multi-Head Attention` 以 `key`、`value`、`query` 作为输入。图中的箭头一分为三，表示同一数据复制三次，这就叫做自注意力机制。输出的维度和输入一致。
 2. `decoder` 的 `Masked Multi-Head Attention` 和 `encoder` 的 `Multi-Head Attention` 类似，只不过需要掩盖后面的输入，前文已详述。
@@ -233,29 +233,29 @@ $$
 >
 > 你好世界
 
-显然，输入的英文序列 $n=2$，输出的中文序列 $m=4$。当 **Transformer** 在计算“好”字时，把“好”字对应的向量作为 `query` 时，计算和 `Hello` 对应的向量的相似度会更高一些，就会赋一个较大的权重。这就是注意力机制给我们最直观的感受！
+显然，输入的英文序列 \(n=2\)，输出的中文序列 \(m=4\)。当 **Transformer** 在计算“好”字时，把“好”字对应的向量作为 `query` 时，计算和 `Hello` 对应的向量的相似度会更高一些，就会赋一个较大的权重。这就是注意力机制给我们最直观的感受！
 
 ### 3.3 Position-wise Feed-Forward Networks
 
 > In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.
 
 $$
-\begin{align*}
+\begin{aligned}
 \textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
-\end{align*}
+\end{aligned}
 $$
 
 在注意力层之后，`encoder` 和 `decoder` 都会有一个前馈网络层，首先是一个全连接层，然后是 ReLU 激活函数，最后再过一个全连接层。
 
 ### 3.4 Embeddings and Softmax
 
-> Similarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of dimension $d_{model}$. We also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities.
+> Similarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of dimension \(d_{model}\). We also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities.
 
-`Embeddings` 将输入的每一个词 `token` 映射成维度为 $d_{model}$ 的向量。`Softmax` 的作用是归一化。
+`Embeddings` 将输入的每一个词 `token` 映射成维度为 \(d_{model}\) 的向量。`Softmax` 的作用是归一化。
 
 ### 3.5 Positional Encoding
 
-> Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add "positional encodings" to the input embeddings at the bottoms of the encoder and decoder stacks. The positional encodings have the same dimension $d_{model}$ as the embeddings, so that the two can be summed.
+> Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add "positional encodings" to the input embeddings at the bottoms of the encoder and decoder stacks. The positional encodings have the same dimension \(d_{model}\) as the embeddings, so that the two can be summed.
 
 为什么需要位置编码呢？因为 `attention` 本身并没有时序信息，它只是计算了 `key` 和 `query` 之间的余弦距离，它与序列的时序性无关。例如我们阅读下面这句话：
 
@@ -269,16 +269,16 @@ $$
 
 |         Layer Type          |   Complexity per Layer   | Sequential Operations | Maximum Path Length |
 | :-------------------------: | :----------------------: | :-------------------: | :-----------------: |
-|       Self-Attention        |     $O(n^2 \cdot d)$     |        $O(1)$         |       $O(1)$        |
-|          Recurrent          |     $O(n \cdot d^2)$     |        $O(n)$         |       $O(n)$        |
-|        Convolutional        | $O(k \cdot n \cdot d^2)$ |        $O(1)$         |   $O(\log_k{n})$    |
-| Self-Attention (restricted) |  $O(r \cdot n \cdot d)$  |        $O(1)$         |      $O(n/r)$       |
+|       Self-Attention        |     \(O(n^2 \cdot d)\)     |        \(O(1)\)         |       \(O(1)\)        |
+|          Recurrent          |     \(O(n \cdot d^2)\)     |        \(O(n)\)         |       \(O(n)\)        |
+|        Convolutional        | \(O(k \cdot n \cdot d^2)\) |        \(O(1)\)         |   \(O(\log_k{n})\)    |
+| Self-Attention (restricted) |  \(O(r \cdot n \cdot d)\)  |        \(O(1)\)         |      \(O(n/r)\)       |
 
 作者对比了自注意力机制、RNN、CNN 和受限制的 `restricted` 自注意力机制的三个方面：计算复杂度、顺序计算、最大路径长度。显然计算复杂度越低越好；顺序计算是指下一步计算必须等前面几步计算完成才能计算，当然越低越好，并行度越高；最大路径长度是指一个序列信息从一个数据点走到另一个数据点需要走多远，当然越短越好。
 
-这里需要额外解释的是受限制的自注意力机制。为什么相比与自注意力机制，其计算复杂度会有所降低？是因为 `query` 只跟最近的 $r$ 个邻居做运算。但带来的问题是最大路径长度的增加。
+这里需要额外解释的是受限制的自注意力机制。为什么相比与自注意力机制，其计算复杂度会有所降低？是因为 `query` 只跟最近的 \(r\) 个邻居做运算。但带来的问题是最大路径长度的增加。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 至此，已经可以基本了解 **Transformer** 的基本架构了。后面的章节是训练和模型效果，如有需要再进行补充。
 

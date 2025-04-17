@@ -39,53 +39,53 @@ toc: true
 ### 椭圆的标准方程
 
 $$
-\begin{align*}
+\begin{aligned}
   \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \quad (a, b > 0)
-\end{align*}
+\end{aligned}
 $$
 
-当 $a = b = r$ 时，这个方程表示圆
+当 \(a = b = r\) 时，这个方程表示圆
 
 $$
-\begin{align*}
+\begin{aligned}
   x^2 + y^2 = r^2 \quad (r > 0)
-\end{align*}
+\end{aligned}
 $$
 
 ### 双曲线的标准方程
 
 $$
-\begin{align*}
+\begin{aligned}
   \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \quad (a, b > 0) \\
   \frac{y^2}{a^2} - \frac{x^2}{b^2} = 1 \quad (a, b > 0)
-\end{align*}
+\end{aligned}
 $$
 
 ### 抛物线的标准方程
 
 $$
-\begin{align*}
+\begin{aligned}
   y^2 = 2px \\
   x^2 = 2py
-\end{align*}
+\end{aligned}
 $$
 
 {{< figure src="7d4385cb2c81b46986ad15c348bff081.png" caption="圆锥曲线" numbered="true" >}}
 
 ### 圆锥曲线的一般方程
 
-圆锥曲线的一般方程是一个关于 $x, y$ 的二次方程
+圆锥曲线的一般方程是一个关于 \(x, y\) 的二次方程
 
 $$
-\begin{align*}
+\begin{aligned}
   Ax^2 + By^2 + 2Cxy + 2Dx + 2Ex + F = 0 \tag{1}
-\end{align*}
+\end{aligned}
 $$
 
-之所以有部分项的前面有系数 $2$，是为了方便用高等代数的形式来表示，即
+之所以有部分项的前面有系数 \(2\)，是为了方便用高等代数的形式来表示，即
 
 $$
-\begin{align*}
+\begin{aligned}
   \begin{bmatrix}
     x & y & 1
   \end{bmatrix}
@@ -99,7 +99,7 @@ $$
     y \\
     1
   \end{bmatrix} = 0 \tag{2}
-\end{align*}
+\end{aligned}
 $$
 
 ## 圆锥曲线的形状判定
@@ -122,20 +122,20 @@ $$
 又因为逆矩阵的定义
 
 $$
-\begin{align*}
+\begin{aligned}
   R R^{-1} = R^{-1} R = I
-\end{align*}
+\end{aligned}
 $$
 
 所以
 
 $$
-\begin{align*}
+\begin{aligned}
   R^{-1} = R^{\top}
-\end{align*}
+\end{aligned}
 $$
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **正交变换**
 
@@ -151,15 +151,15 @@ $$
 我们所熟知的反比例函数图像为什么是双曲线，是因为
 
 $$
-\begin{align*}
+\begin{aligned}
   xy &= k
-\end{align*}
+\end{aligned}
 $$
 
-的两条渐近线分别为 $x$ 轴和 $y$ 轴。作变量变换
+的两条渐近线分别为 \(x\) 轴和 \(y\) 轴。作变量变换
 
 $$
-\begin{align*}
+\begin{aligned}
   \begin{bmatrix}
     u \\
     v
@@ -170,13 +170,13 @@ $$
     x \\
     y
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
 反解出
 
 $$
-\begin{align*}
+\begin{aligned}
   \begin{bmatrix}
     x \\
     y
@@ -187,41 +187,41 @@ $$
     u \\
     v
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
 代入原方程得
 
 $$
-\begin{align*}
+\begin{aligned}
   \left(\frac{\sqrt{2}}{2}u + \frac{\sqrt{2}}{2}v \right)
   \left(-\frac{\sqrt{2}}{2}u + \frac{\sqrt{2}}{2}v\right) &= k \\
   v^2 - u^2 &= 2k \\
   \frac{v^2}{2k} - \frac{u^2}{2k} &= 1
-\end{align*}
+\end{aligned}
 $$
 
 同样，对勾函数（也称为双勾函数）的图像也是双曲线，是因为
 
 $$
-\begin{align*}
+\begin{aligned}
   y = x + \frac{k}{x}
-\end{align*}
+\end{aligned}
 $$
 
 的两条渐近线分别为
 
 $$
-\begin{align*}
+\begin{aligned}
   x = 0 \\
   y = x
-\end{align*}
+\end{aligned}
 $$
 
 作变量变换
 
 $$
-\begin{align*}
+\begin{aligned}
   \begin{bmatrix}
     u \\
     v
@@ -232,21 +232,21 @@ $$
     x \\
     y
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
-由角平分线第二定理，可以快速计算出 $\frac{\pi}{8}$ 的正弦值为
+由角平分线第二定理，可以快速计算出 \(\frac{\pi}{8}\) 的正弦值为
 
 $$
-\begin{align*}
+\begin{aligned}
   \sin \frac{\pi}{8} &= \sin \frac{\pi}{4} \cdot \frac{1}{\sqrt{2} + 1} \\
   &= 1 - \frac{\sqrt{2}}{2} \\
   \Longrightarrow \cos \frac{\pi}{8} &= \sqrt{1 - \sin^{2} \frac{\pi}{8}} \\
   &= \sqrt{\sqrt{2} - \frac{1}{2}}
-\end{align*}
+\end{aligned}
 $$
 
-接着，求出旋转变换的逆矩阵即可反解出 $x, y$，代入原式即可证明。
+接着，求出旋转变换的逆矩阵即可反解出 \(x, y\)，代入原式即可证明。
 
 {{< figure src="31776221c1df4ce29b9bc0ceff5c2f3e.png" caption="反比例函数和对勾函数" numbered="true" >}}
 
@@ -262,10 +262,10 @@ P = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-是一个实对称矩阵，所以它必定可相似对角化，即存在可逆矩阵 $Q$，使得
+是一个实对称矩阵，所以它必定可相似对角化，即存在可逆矩阵 \(Q\)，使得
 
 $$
-\begin{align*}
+\begin{aligned}
   Q^{-1} P Q &= \begin{bmatrix}
     \lambda_1 & & \\
     & \lambda_2 & \\
@@ -276,19 +276,19 @@ $$
     & \lambda_2 & \\
     & & \lambda_3
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
-其中，$\lambda_1$, $\lambda_2$, $\lambda_3$ 为特征值。相似的矩阵具有相同的特征值，它刻画了特征向量的伸缩倍数。
+其中，\(\lambda_1\), \(\lambda_2\), \(\lambda_3\) 为特征值。相似的矩阵具有相同的特征值，它刻画了特征向量的伸缩倍数。
 
-注意这里的 $\lambda_1$, $\lambda_2$ 是直接对 $x, y$ 作用的，它们共同影响了圆锥曲线的形状。下面我们就来进行深入分析。
+注意这里的 \(\lambda_1\), \(\lambda_2\) 是直接对 \(x, y\) 作用的，它们共同影响了圆锥曲线的形状。下面我们就来进行深入分析。
 
 ### 圆锥曲线的不变量
 
 圆锥曲线一共有如下 3 个不变量
 
 $$
-\begin{align*}
+\begin{aligned}
   I_1 &= \operatorname{tr} \begin{pmatrix}
     A & C \\
     C & B
@@ -302,10 +302,10 @@ $$
     C & B & E \\
     D & E & F
   \end{pmatrix}
-\end{align*}
+\end{aligned}
 $$
 
-其中，$I_2$ 是重要的判断圆锥曲线形状的依据。若
+其中，\(I_2\) 是重要的判断圆锥曲线形状的依据。若
 
 $$
 \begin{bmatrix}
@@ -317,11 +317,11 @@ $$
 \end{bmatrix}
 $$
 
-作为对角矩阵的特征值，不妨设 $\lambda_1 < \lambda_2$，那么
+作为对角矩阵的特征值，不妨设 \(\lambda_1 < \lambda_2\)，那么
 
-1. 若 $0 < \lambda_1 < \lambda_2$, 则该圆锥曲线是椭圆。
-2. 若 $\lambda_1 < 0 < \lambda_2$, 则该圆锥曲线是双曲线。
-3. 若 $0 = \lambda_1 < \lambda_2$，则该圆锥曲线是抛物线。
+1. 若 \(0 < \lambda_1 < \lambda_2\), 则该圆锥曲线是椭圆。
+2. 若 \(\lambda_1 < 0 < \lambda_2\), 则该圆锥曲线是双曲线。
+3. 若 \(0 = \lambda_1 < \lambda_2\)，则该圆锥曲线是抛物线。
 
 并且，可以确定椭圆或双曲线的离心率为
 
@@ -334,7 +334,7 @@ e = \sqrt{1 - \frac{\lambda_1}{\lambda_2}} \begin{cases}
 \end{cases}
 $$
 
-又因为任意方阵 $A$ 的所有特征值之积等于 $A$ 的行列式，即
+又因为任意方阵 \(A\) 的所有特征值之积等于 \(A\) 的行列式，即
 
 $$
 \prod_{i} \lambda_i = \operatorname{det} A
@@ -350,9 +350,9 @@ I_2 = AB - C^2 \begin{cases}
 \end{cases}
 $$
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
-为什么不用 $I_3$ 来判断圆锥曲线的形状呢？
+为什么不用 \(I_3\) 来判断圆锥曲线的形状呢？
 
 注意在系数矩阵中，是包含比二次项次数更低的一次项和常数项的。在比二次项次数更低的分量上进行线性运算，只能是维度更低的运算，例如平移、投影等。低维运算对高维特征没有影响。
 
@@ -372,7 +372,7 @@ $$
 
 {{< figure src="751b2a631516019ae91ce04695f59ef0.png" caption="椭球面" numbered="true" >}}
 
-特别地，当 $a = b = c = r$ 时，方程表示球面
+特别地，当 \(a = b = c = r\) 时，方程表示球面
 
 $$
 x^2 + y^2 + z^2 = r^2 \quad (r > 0)
@@ -388,7 +388,7 @@ $$
 
 {{< figure src="45700debec6c599f244344cda2f57379.png" caption="椭圆锥面" numbered="true" >}}
 
-特别地，当 $a = b = r$ 时，方程表示圆锥面
+特别地，当 \(a = b = r\) 时，方程表示圆锥面
 
 $$
 \frac{x^2}{r^2} + \frac{y^2}{r^2} = z^2 \quad (r > 0)
@@ -399,11 +399,11 @@ $$
 圆锥曲线沿某个坐标轴运动的轨迹就形成了二次柱面，即
 
 $$
-\begin{align*}
+\begin{aligned}
   \frac{x^2}{a^2} + \frac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
   \frac{x^2}{a^2} - \frac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
   y^2 &= 2px
-\end{align*}
+\end{aligned}
 $$
 
 {{< figure src="64cd27b202370d223b5d961972e386aa.png" caption="二次柱面" numbered="true" >}}
@@ -413,10 +413,10 @@ $$
 双曲线沿其不同的对称轴旋转的轨迹形成了不同的双曲面，包括单叶双曲面和双叶双曲面，即
 
 $$
-\begin{align*}
+\begin{aligned}
   \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
   \frac{x^2}{a^2} - \frac{y^2}{b^2} - \frac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
-\end{align*}
+\end{aligned}
 $$
 
 {{< figure src="846aa704fe15c8bfc6ae0df1cdedbb6e.png" caption="双曲面" numbered="true" >}}
@@ -426,17 +426,17 @@ $$
 椭圆和双曲线的标准方程都是二次齐次式，它们可以在更高的三维空间中和抛物线相结合，形成椭圆抛物面和双曲抛物面（马鞍面）。
 
 $$
-\begin{align*}
+\begin{aligned}
   \frac{x^2}{a^2} + \frac{y^2}{b^2} &= z \quad (a, b > 0) \\
   \frac{x^2}{a^2} - \frac{y^2}{b^2} &= z \quad (a, b > 0)
-\end{align*}
+\end{aligned}
 $$
 
 {{< figure src="6c51497c026ff58802c71be06122b2ad.png" caption="抛物面" numbered="true" >}}
 
 ### 二次曲面的一般方程
 
-通过类比推理，二次曲面的一般方程是一个关于 $x, y, z$ 的二次方程。用高等代数的形式表示就是
+通过类比推理，二次曲面的一般方程是一个关于 \(x, y, z\) 的二次方程。用高等代数的形式表示就是
 
 $$
 \begin{bmatrix}
@@ -469,7 +469,7 @@ $$
 ## 二次型
 
 $$
-\begin{align*}
+\begin{aligned}
   f(x_1, x_2, \cdots, x_n) &= \begin{bmatrix}
     x_1 & x_2 & \cdots & x_n
   \end{bmatrix} \begin{bmatrix}
@@ -484,32 +484,32 @@ $$
     x_n
   \end{bmatrix} \\
   &= x^{\top} A x
-\end{align*}
+\end{aligned}
 $$
 
-通过二次型的定义，可以将 $n$ 维空间的任意一个超二次曲面的方程和一个 $n$ 阶对称矩阵对应起来。
+通过二次型的定义，可以将 \(n\) 维空间的任意一个超二次曲面的方程和一个 \(n\) 阶对称矩阵对应起来。
 
 ### 矩阵合同
 
-两个矩阵 $A, B$ 合同，即
+两个矩阵 \(A, B\) 合同，即
 
 $$
-\begin{align*}
+\begin{aligned}
   A \simeq B
-\end{align*}
+\end{aligned}
 $$
 
-等价于，存在一个可逆矩阵 $Q$，使得
+等价于，存在一个可逆矩阵 \(Q\)，使得
 
 $$
-\begin{align*}
+\begin{aligned}
   Q^{\top} A Q &= B
-\end{align*}
+\end{aligned}
 $$
 
 二次型在可逆变换前后，矩阵合同。又因为二次型和实对称矩阵一一对应，所以任何二次型的系数矩阵一定和一个对角矩阵合同。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **矩阵等价、合同、相似**
 
@@ -521,7 +521,7 @@ $$
 
 两个矩阵**相似**，说明它们不光正负惯性指数相等，而且还有相同的**特征值**。
 
-上述关于相似和合同的结论仅仅只是在实对称矩阵上才成立。对于一般的 $n$ 阶方阵，合同和相似没有任何关系，但它们都一定能推出等价。
+上述关于相似和合同的结论仅仅只是在实对称矩阵上才成立。对于一般的 \(n\) 阶方阵，合同和相似没有任何关系，但它们都一定能推出等价。
 
 {{< /callout >}}
 
@@ -530,7 +530,7 @@ $$
 只含平方项的二次型被称为二次型的标准形，即
 
 $$
-\begin{align*}
+\begin{aligned}
   f(x_1, x_2, \cdots, x_n) &= \begin{bmatrix}
     x_1 & x_2 & \cdots & x_n
   \end{bmatrix} \begin{bmatrix}
@@ -545,7 +545,7 @@ $$
     x_n
   \end{bmatrix} \\
   &= \lambda_1 x_1^2 + \lambda_2 x_2^2 + \cdots + \lambda_n x_n^2
-\end{align*}
+\end{aligned}
 $$
 
 任何二次型都可以通过正交变换化为标准形。具体步骤如下：
@@ -560,13 +560,13 @@ $$
 f(x, y) = ax^2 + by^2 = k \quad (k > 0)
 $$
 
-- 若 $a > 0, b > 0$，二次型表示椭圆。
-- 若 $ab < 0$，二次型表示双曲线。
+- 若 \(a > 0, b > 0\)，二次型表示椭圆。
+- 若 \(ab < 0\)，二次型表示双曲线。
 
 由于抛物线的方程不是二次齐次式，按上述定义无法通过二次型表示抛物线。参考前文的内容，不难发现，一般的二次多项式若表示抛物线，须满足
 
 $$
-\begin{align*}
+\begin{aligned}
   I_2 &= \operatorname{det} \begin{pmatrix}
     A & C \\
     C & B
@@ -576,7 +576,7 @@ $$
     C & B & E \\
     D & E & F
   \end{pmatrix} \ne 0
-\end{align*}
+\end{aligned}
 $$
 
 类似地，在三维空间中，定义二次型
@@ -585,11 +585,11 @@ $$
 f(x, y, z) = ax^2 + by^2 + cz^2 = k \quad (k \geqslant 0)
 $$
 
-- 若 $a, b, c$ 都大于 $0$，二次型表示椭球面。
-- 若 $a, b, c$ 有且仅有一个小于 $0$，二次型表示单叶双曲面。
-- 若 $a, b, c$ 有且仅有两个小于 $0$，二次型表示双叶双曲面。
-- 若 $abc = 0$，二次型是一个柱面。
-- 若 $a, b, c$ 不都同号，且 $k = 0$，二次型表示椭圆锥面。
+- 若 \(a, b, c\) 都大于 \(0\)，二次型表示椭球面。
+- 若 \(a, b, c\) 有且仅有一个小于 \(0\)，二次型表示单叶双曲面。
+- 若 \(a, b, c\) 有且仅有两个小于 \(0\)，二次型表示双叶双曲面。
+- 若 \(abc = 0\)，二次型是一个柱面。
+- 若 \(a, b, c\) 不都同号，且 \(k = 0\)，二次型表示椭圆锥面。
 
 同样地，上述二次齐次式无法表示抛物面。可以用类似二维平面的方法，通过二次曲面的不变量来判断。
 
@@ -597,10 +597,10 @@ $$
 
 通过上述分析，我们发现二次型的标准形的正负是一个重要指标。通过可逆变换（不能是正交变换），可以把二次型化为规范形。
 
-二次型的规范形经过伸缩变换，特征值发生了变化，且取值范围只能是 $\{1, -1, 0\}$。大于 $0$ 的特征值个数称为**正惯性指数**，小于 $0$ 的特征值个数称为**负惯性指数**。
+二次型的规范形经过伸缩变换，特征值发生了变化，且取值范围只能是 \(\{1, -1, 0\}\)。大于 \(0\) 的特征值个数称为**正惯性指数**，小于 \(0\) 的特征值个数称为**负惯性指数**。
 
 ### 正定二次型
 
-如果一个二次型的特征值都大于 $0$，即正惯性指数 $p = n$，那么该二次型就是一个**正定二次型**。显然，椭圆、椭球面都是正定二次型，双曲线、双曲面都是不定二次型。
+如果一个二次型的特征值都大于 \(0\)，即正惯性指数 \(p = n\)，那么该二次型就是一个**正定二次型**。显然，椭圆、椭球面都是正定二次型，双曲线、双曲面都是不定二次型。
 
 不难发现，不论是二维平面的椭圆，还是三维空间的椭球面，它们具有一个共同的特点：封闭。这意味着，如果一个多元函数是正定的，那么它必然存在最优解。这在凸优化等领域得到广泛应用。
