@@ -31,8 +31,8 @@ ignoreLogs:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
+    - name: Learn
+      pageRef: /learn
       weight: 10
     - name: Blog
       pageRef: /blog
@@ -71,7 +71,6 @@ params:
   #   enable: true
   #   base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
   
-  # 添加以下数学公式配置
   math: true
 
   theme:
