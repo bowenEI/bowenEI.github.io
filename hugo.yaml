@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: My Site
+title: Bowen's Home
 
 # import hextra as module
 # module:
@@ -68,9 +68,9 @@ params:
     displayCopyright: false
     displayPoweredBy: true
 
-  editURL:
-    enable: true
-    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+  # editURL:
+  #   enable: true
+  #   base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
   
   # 添加以下数学公式配置
   math:
@@ -79,3 +79,8 @@ params:
     katex:
       output: htmlAndMathml  # 同时输出 HTML 和 MathML
       displayMode: true  # 默认以块级模式显示公式
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true

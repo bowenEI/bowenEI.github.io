@@ -1,3 +1,16 @@
+/* 调整暗色模式下的背景颜色 */
+:root {
+    --hx-color-dark: #1f1f1f;
+}
+
 body:where(.dark,.dark *) {
-    background-color: #1f1f1f;
+    background-color: var(--hx-color-dark);
+}
+
+.hx\:dark\:bg-dark:where(.dark,.dark *) {
+    background-color: var(--hx-color-dark);
+}
+
+.hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
+    --tw-shadow: 0 -12px 16px var(--tw-shadow-color, --hx-color-dark);
 }
