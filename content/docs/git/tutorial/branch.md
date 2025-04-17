@@ -140,7 +140,7 @@ $ git commit -m "& simple"
 
 现在，`master` 分支和 `feature1` 分支各自都分别有新的提交，变成了这样：
 
-{{< figure src="https://www.liaoxuefeng.com/files/attachments/919023000423040/0" >}}
+![](https://www.liaoxuefeng.com/files/attachments/919023000423040/0)
 
 当在不同的分支中对同一个文件的同一个地方作了不同的修改，像例子中把小写的 `and` 分别改成大写的 `AND` 和 `&`，**Git** 无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：
 
@@ -201,7 +201,7 @@ $ git commit -m "conflict fixed"
 
 现在，`master` 分支和 `feature1` 分支变成了下图所示：
 
-{{< figure src="https://www.liaoxuefeng.com/files/attachments/919023031831104/0" >}}
+![](https://www.liaoxuefeng.com/files/attachments/919023031831104/0)
 
 用带参数的 `git log` 也可以看到分支的合并情况：
 

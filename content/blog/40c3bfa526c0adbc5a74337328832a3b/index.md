@@ -48,7 +48,7 @@ Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM
 
 ### 架构
 
-{{< figure src="featured.png" title="Flash Attention Architecture" >}}
+![](featured.png "Flash Attention Architecture")
 
 左图显示了 GPU 的三级存储结构，从上到下分别是 SRAM、HBM 和 CPU Main Memory。由计算机体系结构的基本常识可知，从上到下的访存速度越来越慢，而存储容量越来越大，离计算单元越来越远。
 
@@ -60,7 +60,7 @@ Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM
 
 ### 标准 Attention 及其瓶颈
 
-{{< figure src="7bba188bb3c01b207692fa6bbfecb099.png" title="Standard Attention Inplementation">}}
+![](7bba188bb3c01b207692fa6bbfecb099.png "Standard Attention Inplementation")
 
 首先我们要知道一点，标准 Attention 的输入和输出都在 HBM 中。上图显示了标准 Attention 的计算过程，主要分为以下 3 步：
 
@@ -74,7 +74,7 @@ Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM
 
 ### Flash Attention
 
-{{< figure src="7a1e55573e341af02f1f508cc68334c5.png" title="Flash Attention Algorithm">}}
+![](7a1e55573e341af02f1f508cc68334c5.png "Flash Attention Algorithm")
 
 上图显示了 Flash Attention 的计算过程，看起来似乎很难理解。为了方便说明，更加直观通俗易懂，我们将整个计算过程分为分割（split）和计算两个过程。其中，分割过程首次阅读定然不好理解，因为我们不知其所以然。所以，我们首先来看计算的过程，也就是第 5 行到第 15 行的二重循环。
 
@@ -116,7 +116,7 @@ $$
 
 下图展示了标准 Softmax 的计算过程：
 
-{{< figure src="11e86e6231e6a5ddb908963d6c68fd2c.svg" title="Standard Softmax">}}
+![](11e86e6231e6a5ddb908963d6c68fd2c.svg "Standard Softmax")
 
 作为典型的非线性算子，Softmax 的计算需要经历取最大值、取指数和加权平均三个阶段。如若串行计算，则每一步的计算都需要一次读写。
 
@@ -158,7 +158,7 @@ $$
 
 我们希望读者首先要了解一个根本的规律：分块计算是一种对直接计算的**抽象**。在分块计算的过程中，块内要计算，块间也要相应地计算。前者可并行计算，互不影响；后者不可并行计算，且相互依赖彼此的计算结果。下面的计算过程将处处体现这一根本规律。
 
-{{< figure src="9497a73f235bee95c7367e38e66012e6.svg" title="第一阶段：减最大值">}}
+![](9497a73f235bee95c7367e38e66012e6.svg "第一阶段：减最大值")
 
 计算的第一步，是每个样本都减去最大值。这个过程其实分为分为 3 步：
 
@@ -166,14 +166,14 @@ $$
 2. 块间再求最大值。对应图中第 3 列，其中红色小圆即为总体 \(X\) 的最大值。
 3. 分别都减去最大值。对应图中第 4 列。
 
-{{< figure src="9327621a2ad1d5647ab7c3c0d0124126.svg" title="第二阶段：取指数">}}
+![](9327621a2ad1d5647ab7c3c0d0124126.svg "第二阶段：取指数")
 
 同理，取指数的过程也是分为块内和块间共 2 步：
 
 1. 块内取指数。对应图中第 2 列。
 2. 块间再取指数。对应图中第 3 列。
 
-{{< figure src="e2ed7beb109d55a56cf8084eaea2214e.svg" title="第三阶段：求和">}}
+![](e2ed7beb109d55a56cf8084eaea2214e.svg "第三阶段：求和")
 
 求和的过程其实也分为 2 步：
 
@@ -182,7 +182,7 @@ $$
 
 不过每个块最终得到的结果是相同的。
 
-{{< figure src="7546687d4f1f7aa37dd1f554e864953a.svg" title="第四阶段：加权平均">}}
+![](7546687d4f1f7aa37dd1f554e864953a.svg "第四阶段：加权平均")
 
 最后再取一次加权平均。
 

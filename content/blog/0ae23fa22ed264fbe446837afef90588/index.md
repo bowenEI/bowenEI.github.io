@@ -277,7 +277,7 @@ C. \(m=2, n=3\)
 
 D. \(m=n=3\)
 
-{{< figure src="049564e9d0f8acd85f6b48a462a59e89.png" >}}
+![](049564e9d0f8acd85f6b48a462a59e89.png)
 
 【解】
 

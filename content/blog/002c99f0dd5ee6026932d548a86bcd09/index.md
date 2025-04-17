@@ -152,7 +152,7 @@ ICLR 2020 有一个工作是在 CIFAR-10 数据集上切 2x2 的 `patch`，然�
 
 ### Vision Transformer (ViT)
 
-{{< figure src="featured.png" title="Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence." >}}
+![](featured.png "Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.")
 
 朱老师认为，论文的总览图非常重要。总览图画得好，别人在不读整篇文章的情况下光看图就能够大致了解这篇文章在讲什么。**ViT** 这篇文章的总览图画得非常好，以至于其他人在引用或者讲解 **ViT** 的时候都是直接把图贴上去而不做任何修改。
 
@@ -164,7 +164,7 @@ ICLR 2020 有一个工作是在 CIFAR-10 数据集上切 2x2 的 `patch`，然�
 
 那么下面结合下图 **ViT** 的 Transformer 部分对 Transformer 模型再做一个回顾。
 
-{{< figure src="ViT.svg" theme="light" >}}
+![](ViT.svg)
 
 首先将输入的图片打成若干 `patch`，这里的图片输入大小为 224x224x3，表示宽和高为 224 像素，RGB 3 通道。`patch` 的大小为 16x16x3，因此原图被划分为 \(14 \times 14 = 196\) 个 `patch`。再加上 `cls`，序列的总长度为 197。
 

@@ -50,7 +50,7 @@ plt.plot(lnx, lny)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_6_1.png" >}}
+![](/learn/matplotlib/subplot/output_6_1.png)
 ​    
 
 
@@ -74,7 +74,7 @@ ax2.plot(lnx, lny)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_8_1.png" >}}
+![](/learn/matplotlib/subplot/output_8_1.png)
 ​    
 
 
@@ -91,7 +91,7 @@ fig, ax = plt.subplots()
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_12_0.png" >}}
+![](/learn/matplotlib/subplot/output_12_0.png)
 ​    
 
 
@@ -109,7 +109,7 @@ ax = fig.subplots()
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_16_0.png" >}}
+![](/learn/matplotlib/subplot/output_16_0.png)
 ​    
 
 
@@ -122,7 +122,7 @@ fig, ax = plt.subplots(nrows=2, ncols=3)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_18_0.png" >}}
+![](/learn/matplotlib/subplot/output_18_0.png)
 ​    
 
 
@@ -140,7 +140,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_21_0.png" >}}
+![](/learn/matplotlib/subplot/output_21_0.png)
 ​    
 
 
@@ -154,7 +154,7 @@ fig, (ax1, ax2) = plt.subplots(2, 1)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_23_0.png" >}}
+![](/learn/matplotlib/subplot/output_23_0.png)
 ​    
 
 
@@ -171,7 +171,7 @@ fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_27_0.png" >}}
+![](/learn/matplotlib/subplot/output_27_0.png)
 ​    
 
 
@@ -184,7 +184,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_29_0.png" >}}
+![](/learn/matplotlib/subplot/output_29_0.png)
 ​    
 
 
@@ -199,7 +199,7 @@ fig, ax = plt.subplots(2, 2, sharex=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_32_0.png" >}}
+![](/learn/matplotlib/subplot/output_32_0.png)
 ​    
 
 
@@ -212,7 +212,7 @@ fig, ax = plt.subplots(2, 2, sharey=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_34_0.png" >}}
+![](/learn/matplotlib/subplot/output_34_0.png)
 ​    
 
 
@@ -225,7 +225,7 @@ fig, ax = plt.subplots(2, 2, sharex=True, sharey=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_36_0.png" >}}
+![](/learn/matplotlib/subplot/output_36_0.png)
 ​    
 
 
@@ -255,7 +255,7 @@ plt.plot(lnx, lny)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_39_1.png" >}}
+![](/learn/matplotlib/subplot/output_39_1.png)
 ​    
 
 
@@ -303,7 +303,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_48_0.png" >}}
+![](/learn/matplotlib/subplot/output_48_0.png)
 ​    
 
 
@@ -333,7 +333,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_53_0.png" >}}
+![](/learn/matplotlib/subplot/output_53_0.png)
 ​    
 
 
@@ -360,7 +360,7 @@ fig, ax = plt.subplots(2, 2, constrained_layout=True)
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_60_0.png" >}}
+![](/learn/matplotlib/subplot/output_60_0.png)
 ​    
 
 
@@ -394,7 +394,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_62_0.png" >}}
+![](/learn/matplotlib/subplot/output_62_0.png)
 ​    
 
 
@@ -415,7 +415,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_64_0.png" >}}
+![](/learn/matplotlib/subplot/output_64_0.png)
 ​    
 
 
@@ -449,7 +449,7 @@ lg = fig.legend((rects1, rects2, rects3), ('A', 'B', 'C'))
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_67_0.png" >}}
+![](/learn/matplotlib/subplot/output_67_0.png)
 ​    
 
 
@@ -465,7 +465,7 @@ fig
 
 
 ​    
-{{< figure src="/learn/matplotlib/subplot/output_69_0.png" >}}
+![](/learn/matplotlib/subplot/output_69_0.png)
 ​    
 
 

@@ -7,7 +7,7 @@ type: docs
 weight: 80
 ---
 
-{{< figure src="/learn/matplotlib/logo2_compressed.svg" >}}
+![](/learn/matplotlib/logo2_compressed.svg)
 
 ## What you will learn
 

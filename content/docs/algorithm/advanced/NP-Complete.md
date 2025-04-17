@@ -80,7 +80,7 @@ weight: 510
 
 我们可以用下面的 Venn 图来表示这些概念之间的关系：
 
-{{< figure src="/learn/algorithm/advanced/NP-C.png" >}}
+![](/learn/algorithm/advanced/NP-C.png)
 
 ### NP 完全性的证明
 

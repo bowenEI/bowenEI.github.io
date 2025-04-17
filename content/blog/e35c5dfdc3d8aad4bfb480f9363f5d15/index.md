@@ -36,7 +36,7 @@ projects: []
 
 ## 概述
 
-{{< figure src="architecture.svg" theme="dark" >}}
+![](architecture.svg)
 
 云计算体系结构由 IaaS、PaaS 和 SaaS 三大核心服务以及服务管理构成，并且提供用户访问接口。
 
@@ -56,7 +56,7 @@ SaaS（Software as a Service）是基于云计算基础平台所开发的应用�
 
 ## 一个形象的例子：烹饪
 
-{{< figure src="cooking.svg" theme="dark" >}}
+![](cooking.svg)
 
 假设我们现在想要做饭，可是却一无所有，该怎么办呢？我们可以摆路边摊，就当小推车是厨房，并且装着煤气罐。这样我们就有了做饭的基本条件了。但是所有的这些基本条件和资源都需要我们自己来管理，特别麻烦，而且还不稳定。
 
@@ -68,7 +68,7 @@ SaaS（Software as a Service）是基于云计算基础平台所开发的应用�
 
 ## 云计算服务模式的层次划分
 
-{{< figure src="layer-partition.png" >}}
+![](layer-partition.png)
 
 云计算服务模式主要分为网络、存储、服务器、虚拟化、操作系统、中间件、运行环境、数据和应用九层。
 
@@ -84,7 +84,7 @@ SaaS（Software as a Service）是基于云计算基础平台所开发的应用�
 
 IaaS 其实是云计算服务的最底层，主要提供一些基础资源。
 
-{{< figure src="https://www.openstack.org/themes/openstack/home_images/Diagram/overview-diagram-new.svg" >}}
+![](https://www.openstack.org/themes/openstack/home_images/Diagram/overview-diagram-new.svg)
 
 OpenStack 就是目前公认的云计算 IaaS 平台，其管理的核心目标对象是机器（虚拟机或物理机），当然也可以管理存储和网络，但那些也大都是围绕着机器所提供的配套资源。近年来容器技术火了之后，OpenStack 也开始通过各种方式增加对容器的支持，但目前 OpenStack 还不被视为管理容器的主流平台。
 
@@ -92,11 +92,11 @@ OpenStack 就是目前公认的云计算 IaaS 平台，其管理的核心目标�
 
 PaaS 提供软件部署平台（runtime），抽象掉了硬件和操作系统细节，可以无缝地扩展（scaling）。开发者只需要关注自己的业务逻辑，不需要关注底层。
 
-{{< figure src="https://docs.docker.com/engine/images/architecture.svg" >}}
+![](https://docs.docker.com/engine/images/architecture.svg)
 
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iOS 的 app）。Docker 几乎没有性能开销，可以很容易地在机器和数据中心中运行。最重要的是，它不依赖于任何语言、框架包括系统。
 
-{{< figure src="https://www.upgrad.com/blog/wp-content/uploads/2020/10/Kubernetes-architecture-1536x1046.png" >}}
+![](https://www.upgrad.com/blog/wp-content/uploads/2020/10/Kubernetes-architecture-1536x1046.png)
 
 Kubernetes（简称 k8s）是 Google 开源的容器集群管理系统。它构建于 Docker 技术之上，为容器化的应用提供资源调度、部署运行、服务发现、扩容缩容等整一套功能。k8s 本质上可看作是基于容器技术的 Micro-PaaS 平台，即第三代 PaaS 的代表性项目。
 

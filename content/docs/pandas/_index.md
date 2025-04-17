@@ -7,7 +7,7 @@ type: docs
 weight: 70
 ---
 
-{{< figure src="/learn/pandas/pandas_white.svg" theme="dark" >}}
+![](/learn/pandas/pandas_white.svg)
 
 ## What you will learn
 

@@ -9,7 +9,7 @@ summary: "学习凸优化。凸优化是数学最优化的一个子领域，研�
 weight: 120
 ---
 
-{{< figure src="/learn/convex-optimization/bv_cvxbook_cover.jpg" >}}
+![](/learn/convex-optimization/bv_cvxbook_cover.jpg)
 
 ## What you will learn
 

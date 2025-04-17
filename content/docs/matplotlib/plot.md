@@ -45,7 +45,7 @@ plt.plot(x, y)
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_7_1.png" >}}
+![](/learn/matplotlib/plot/output_7_1.png)
     
 
 
@@ -84,7 +84,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_16_0.png" >}}
+![](/learn/matplotlib/plot/output_16_0.png)
     
 
 
@@ -109,7 +109,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_21_0.png" >}}
+![](/learn/matplotlib/plot/output_21_0.png)
     
 
 
@@ -137,7 +137,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_26_0.png" >}}
+![](/learn/matplotlib/plot/output_26_0.png)
     
 
 
@@ -163,7 +163,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_30_0.png" >}}
+![](/learn/matplotlib/plot/output_30_0.png)
     
 
 
@@ -197,7 +197,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_36_0.png" >}}
+![](/learn/matplotlib/plot/output_36_0.png)
     
 
 
@@ -225,7 +225,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_39_0.png" >}}
+![](/learn/matplotlib/plot/output_39_0.png)
     
 
 
@@ -262,7 +262,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_43_0.png" >}}
+![](/learn/matplotlib/plot/output_43_0.png)
     
 
 
@@ -295,7 +295,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_46_0.png" >}}
+![](/learn/matplotlib/plot/output_46_0.png)
     
 
 
@@ -319,7 +319,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_50_0.png" >}}
+![](/learn/matplotlib/plot/output_50_0.png)
     
 
 
@@ -339,7 +339,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_52_0.png" >}}
+![](/learn/matplotlib/plot/output_52_0.png)
     
 
 
@@ -379,7 +379,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_57_0.png" >}}
+![](/learn/matplotlib/plot/output_57_0.png)
     
 
 
@@ -412,7 +412,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_60_0.png" >}}
+![](/learn/matplotlib/plot/output_60_0.png)
     
 
 
@@ -453,7 +453,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_67_0.png" >}}
+![](/learn/matplotlib/plot/output_67_0.png)
     
 
 
@@ -482,7 +482,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_70_0.png" >}}
+![](/learn/matplotlib/plot/output_70_0.png)
     
 
 
@@ -505,7 +505,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_74_0.png" >}}
+![](/learn/matplotlib/plot/output_74_0.png)
     
 
 
@@ -531,7 +531,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_78_0.png" >}}
+![](/learn/matplotlib/plot/output_78_0.png)
     
 
 
@@ -557,7 +557,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_82_0.png" >}}
+![](/learn/matplotlib/plot/output_82_0.png)
     
 
 
@@ -583,7 +583,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_86_0.png" >}}
+![](/learn/matplotlib/plot/output_86_0.png)
     
 
 
@@ -637,7 +637,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_93_0.png" >}}
+![](/learn/matplotlib/plot/output_93_0.png)
     
 
 
@@ -670,7 +670,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_97_0.png" >}}
+![](/learn/matplotlib/plot/output_97_0.png)
     
 
 
@@ -695,7 +695,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_100_0.png" >}}
+![](/learn/matplotlib/plot/output_100_0.png)
     
 
 
@@ -721,7 +721,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_103_0.png" >}}
+![](/learn/matplotlib/plot/output_103_0.png)
     
 
 
@@ -753,7 +753,7 @@ fig
 
 
     
-{{< figure src="/learn/matplotlib/plot/output_106_0.png" >}}
+![](/learn/matplotlib/plot/output_106_0.png)
     
 
 

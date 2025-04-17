@@ -7,7 +7,7 @@ type: docs
 weight: 40
 ---
 
-{{< figure src="/learn/linux/linux_logo_icon_171222.png" >}}
+![](/learn/linux/linux_logo_icon_171222.png)
 
 ## What you will learn
 

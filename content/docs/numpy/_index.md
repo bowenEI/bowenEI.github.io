@@ -7,7 +7,7 @@ type: docs
 weight: 60
 ---
 
-{{< figure src="/learn/numpy/cover.svg" >}}
+![](/learn/numpy/cover.svg)
 
 ## What you will learn
 

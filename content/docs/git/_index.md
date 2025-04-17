@@ -7,7 +7,7 @@ type: docs
 weight: 30
 ---
 
-{{< figure src="/learn/git/cover.png" >}}
+![](/learn/git/cover.png)
 
 ## What you will learn
 

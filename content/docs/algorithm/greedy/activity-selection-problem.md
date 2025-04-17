@@ -51,11 +51,11 @@ $$
 
 ### 最短活动优先
 
-{{< figure src="/learn/algorithm/greedy/活动选择1.png" >}}
+![](/learn/algorithm/greedy/活动选择1.png)
 
 ### 最早开始活动优先
 
-{{< figure src="/learn/algorithm/greedy/活动选择2.png" >}}
+![](/learn/algorithm/greedy/活动选择2.png)
 
 ### 最早结束活动优先
 

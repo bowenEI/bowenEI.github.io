@@ -93,7 +93,7 @@ for ax, h in zip(axs.flat, hatches):
 
 
 ​    
-{{< figure src="/learn/matplotlib/style/output_15_0.png" >}}
+![](/learn/matplotlib/style/output_15_0.png)
 ​    
 
 
@@ -111,7 +111,7 @@ for ax, h in zip(axs.flat, hatches):
 
 
 ​    
-{{< figure src="/learn/matplotlib/style/output_17_0.png" >}}
+![](/learn/matplotlib/style/output_17_0.png)
 ​    
 
 
@@ -129,6 +129,6 @@ for ax, h in zip(axs.flat, hatches):
 
 
 ​    
-{{< figure src="/learn/matplotlib/style/output_19_0.png" >}}
+![](/learn/matplotlib/style/output_19_0.png)
 ​    
 

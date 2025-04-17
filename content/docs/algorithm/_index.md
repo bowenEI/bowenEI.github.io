@@ -7,7 +7,7 @@ type: docs
 weight: 110
 ---
 
-{{< figure src="/learn/algorithm/cover.png" >}}
+![](/learn/algorithm/cover.png)
 
 ## What you will learn
 

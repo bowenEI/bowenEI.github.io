@@ -25,7 +25,7 @@ weight: 250
 
 凸函数具有凸的下水平集，所以也是拟凸函数。但是拟凸函数不一定是凸函数。下图是一个反例。
 
-{{< figure src="/learn/convex-optimization/convex-functions/f4b347efad64a5caa6aaee0915edb968.png" >}}
+![](/learn/convex-optimization/convex-functions/f4b347efad64a5caa6aaee0915edb968.png)
 
 如图所示，\(f(x)\) 有一条水平渐近线（图中绿色虚线）。对于任意的 \(\alpha\)，下水平集 \([a, b]\) 是凸集。对于任意的 \(\beta\)，下水平集 \((-\infty, c]\) 是凸集。因此，\(f(x)\) 是拟凸函数。
 

@@ -60,7 +60,7 @@ summary: ""
 
 ### 协商和顺应
 
-{{< figure src="/learn/love-psychology/chapter7/面对恋人之间冲突的反映.jpg" >}}
+![](/learn/love-psychology/chapter7/面对恋人之间冲突的反映.jpg)
 
 ## 冲突的结果
 

@@ -211,7 +211,7 @@ AIoT 在许多领域都有着很好的应用前景，如 IoV、智能医疗、�
 
 ### Outline of This Survey
 
-{{< figure src="architecture.svg" >}}
+![](architecture.svg)
 
 ## Fundamentals of Artificial Intelligence of Things
 
@@ -225,7 +225,7 @@ Generally, the IoT architecture is composed of three layers, namely, the percept
 
 作者认为，物联网架构一般由感知层、网络层和应用层三层组成。
 
-{{< figure src="https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu1-3088875-large.gif" >}}
+![](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu1-3088875-large.gif)
 
 1. **Perception Layer**: The perception layer provides the core capability enabling the comprehensive awareness of the environment; this layer includes such diverse devices and technologies as sensors, actuators, radio-frequency identification (RFID), 2-D codes, and multimedia information collection devices. These devices are used mainly to sense and collect physical data, and data is generally produced in trillions of bytes with a variety of attributes, including various physical quantities, identity signs, location information, and audio and video data. Additionally, these devices can respond to the environment.
 
@@ -359,7 +359,7 @@ From bottom to top are the end layer, edge layer and cloud layer, and the cloud 
 
 作者认为，AIoT 架构具有和 IoT 类似的端边云三层架构。从下到上依次为端层、边缘层和云层，云层可以协调端层和边缘层。终端层可以在本地预处理或分析数据，并做出早期决策。来自端层的预处理数据可以聚集在边缘层或云层中进行深度处理。
 
-{{< figure src="https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu4-3088875-large.gif" >}}
+![](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu4-3088875-large.gif)
 
 ### Example of Artificial Intelligence of Things Applications
 
@@ -367,7 +367,7 @@ The following describes the corresponding system design, illustrates model train
 
 作者在本章介绍一个 AIoT 的应用 HydraMini，一个自动驾驶汽车系统，并以此为例，说明了模型训练和部署以及推理的过程，并提供了使用端到端人工智能模型的案例研究。
 
-{{< figure src="https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu5-3088875-small.gif" >}}
+![](https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu5-3088875-small.gif)
 
 由于篇幅有限，本文在这里不对该系统进行详细的描述，仅以上图供参考。
 

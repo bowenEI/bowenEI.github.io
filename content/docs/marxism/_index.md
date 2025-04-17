@@ -7,7 +7,7 @@ type: docs
 weight: 10
 ---
 
-{{< figure src="/learn/marxism/cover.png" >}}
+![](/learn/marxism/cover.png)
 
 ## What you will learn
 

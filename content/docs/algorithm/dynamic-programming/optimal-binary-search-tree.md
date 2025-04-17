@@ -11,7 +11,7 @@ weight: 240
 
 <!--more-->
 
-{{< figure src="/learn/algorithm/dynamic-programming/最优二叉搜索树.png" >}}
+![](/learn/algorithm/dynamic-programming/最优二叉搜索树.png)
 
 ## 问题描述
 

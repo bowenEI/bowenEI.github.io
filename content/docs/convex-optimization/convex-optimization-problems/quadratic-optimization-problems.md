@@ -25,7 +25,7 @@ $$
 
 其中 \(P \in \mathbf{S}^n_+\)，\(G \in \mathbf{R}^{p \times n}\)。可以用下图来表示二次规划问题。
 
-{{< figure src="/learn/convex-optimization/convex-optimization-problems/03034aa004d3a2a2ddeb6f8bc04c0a04.png" >}}
+![](/learn/convex-optimization/convex-optimization-problems/03034aa004d3a2a2ddeb6f8bc04c0a04.png)
 
 ### 二次约束二次规划
 

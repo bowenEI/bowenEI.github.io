@@ -32,7 +32,7 @@ weight: 330
   - 否则，舍弃 \(e_{min}\)。
 - 重复上一过程，直到所有顶点在同一集合。
 
-{{< figure src="/learn/algorithm/greedy/Kruskal.png" >}}
+![](/learn/algorithm/greedy/Kruskal.png)
 
 ### 并查集
 
@@ -51,7 +51,7 @@ weight: 330
 
 #### 并查集的表示
 
-{{< figure src="/learn/algorithm/greedy/并查集.png" >}}
+![](/learn/algorithm/greedy/并查集.png)
 
 通常用双亲表示法表示的树作为并查集的基础数据结构（在内存中是连续的存储空间）。数组下标对应每个元素，数组的值表示指向父结点的指针。负数表示没有父结点，其绝对值表示集合中一共有多少个元素。
 
@@ -59,7 +59,7 @@ weight: 330
 
 #### 路径压缩
 
-{{< figure src="/learn/algorithm/greedy/路径压缩.png" >}}
+![](/learn/algorithm/greedy/路径压缩.png)
 
 #### 并查集的代码实现
 

@@ -55,7 +55,7 @@ $$
 
 ### 情况一
 
-{{< figure src="/learn/algorithm/dynamic-programming/最长公共子序列1.png" >}}
+![](/learn/algorithm/dynamic-programming/最长公共子序列1.png)
 
 如果 \(x_i \ne y_j\)，那么需要考察 \(C[i,j-1]\) 和 \(C[i-1,j]\) 两个子问题。并且当前问题的解是这两个子问题解的最大值，即如下的状态转移方程：
 
@@ -67,7 +67,7 @@ $$
 
 ### 情况二
 
-{{< figure src="/learn/algorithm/dynamic-programming/最长公共子序列2.png" >}}
+![](/learn/algorithm/dynamic-programming/最长公共子序列2.png)
 
 如果 \(x_i = y_j\)，那么既可以匹配这最后一对字符，也可以不匹配。这样一来，需要考察 \(C[i-1,j-1]\)、\(C[i-1,j]\) 和 \(C[i,j-1]\) 三个子问题。
 

@@ -11,7 +11,7 @@ summary: ""
 
 <!--more-->
 
-{{< figure src="/learn/matplotlib/overview/anatomy.png" >}}
+![](/learn/matplotlib/overview/anatomy.png)
 
 
 ```python

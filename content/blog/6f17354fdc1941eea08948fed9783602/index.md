@@ -140,7 +140,7 @@ $$
 
 **可视化**
 
-{{< figure src="MyEllipse.gif" >}}
+![](MyEllipse.gif)
 
 ```python
 from manim import *
@@ -622,7 +622,7 @@ $$
 
 **可视化**
 
-{{< figure src="MyFunction.gif" >}}
+![](MyFunction.gif)
 
 ```python
 from manim import *

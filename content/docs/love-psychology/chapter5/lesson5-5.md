@@ -26,7 +26,7 @@ weight: 550
 
 在四个象限中存在着公开自我、隐私自我、盲点自我和潜在自我。
 
-{{< figure src="/learn/love-psychology/chapter5/哈里窗.jpg" >}}
+![](/learn/love-psychology/chapter5/哈里窗.jpg)
 
 #### 公开我
 
@@ -63,7 +63,7 @@ weight: 550
 
 ### 爱情观四象限
 
-{{< figure src="/learn/love-psychology/chapter5/爱情观四象限.svg" >}}
+![](/learn/love-psychology/chapter5/爱情观四象限.svg)
 
 #### 第一象限
 

@@ -43,7 +43,7 @@ projects: []
 
 ## Taxonomy 分类
 
-{{< figure src="1efdd3bd0e2fa731ee1537e3954c9dca.png" >}}
+![](1efdd3bd0e2fa731ee1537e3954c9dca.png)
 
 该综述从**算法创新**和**系统优化**两个维度展开介绍。顾名思义，前者是在偏上层的算法（模型）层面的工作，后者是在偏下层的系统层面的工作。
 
@@ -51,7 +51,7 @@ projects: []
 
 ### Decoding Algorithm 解码算法
 
-{{< figure src="e8de4471a5f436349f6ef3de7e905880.png" >}}
+![](e8de4471a5f436349f6ef3de7e905880.png)
 
 现有的 LLM 多采用自回归解码（Auto-Regressive Decoding）机制，这会导致极低的计算效率。所以很自然地可以想到放弃这个范式，采用更高效的解码算法。
 
@@ -76,7 +76,7 @@ projects: []
 
 关于注意力简化的工作有很多，下图则列出了几种典型的注意力机制改进方法。
 
-{{< figure src="dfe60d993412dcf33947208291559286.png" >}}
+![](dfe60d993412dcf33947208291559286.png)
 
 ### Model Compression 模型压缩
 
@@ -137,7 +137,7 @@ projects: []
 
 ## Software Frameworks 软件框架
 
-{{< figure src="beac2d7733c6bd16b53b895369f3dd11.png" >}}
+![](beac2d7733c6bd16b53b895369f3dd11.png)
 
 论文还对一些目前最先进的基于 GPU 的开源 LLM 推理系统进行了深入的分析，并从多个方面总结了它们在设计与实现上的差异。
 

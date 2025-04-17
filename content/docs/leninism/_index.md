@@ -9,7 +9,7 @@ summary: "学习列宁主义，精选无产阶级革命导师列宁的重要著�
 weight: 15
 ---
 
-{{< figure src="/learn/leninism/cover.jpg" >}}
+![](/learn/leninism/cover.jpg)
 
 ## What you will learn
 

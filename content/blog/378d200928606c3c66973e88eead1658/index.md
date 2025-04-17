@@ -220,13 +220,13 @@ $$
 
 设想有 2 个矩阵都被切分成 \(2 \times 2\) 的块，每个块在 4 张不同的 GPU 上进行矩阵乘法运算。则每个 GPU 上的计算分别如下面 4 张图所示：
 
-{{< figure src="5b1754c39f3279088779d105a8ac8fd3.svg" >}}
+![](5b1754c39f3279088779d105a8ac8fd3.svg)
 
-{{< figure src="cdffdebf9d18eaacb04b206b64af6266.svg" >}}
+![](cdffdebf9d18eaacb04b206b64af6266.svg)
 
-{{< figure src="44432a5b019047ed1de2b056359358aa.svg" >}}
+![](44432a5b019047ed1de2b056359358aa.svg)
 
-{{< figure src="dec14c42714e74a73b6df392aa0583fe.svg" >}}
+![](dec14c42714e74a73b6df392aa0583fe.svg)
 
 ## 分块矩阵乘法的意义
 

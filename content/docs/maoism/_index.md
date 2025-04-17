@@ -7,7 +7,7 @@ type: docs
 weight: 20
 ---
 
-{{< figure src="/learn/maoism/cover.jpg" >}}
+![](/learn/maoism/cover.jpg)
 
 ## What you will learn
 

@@ -30,4 +30,4 @@ projects: []
 
 <!--more-->
 
-{{< figure src="中国社会各阶级分析.drawio.svg" >}}
+![](中国社会各阶级分析.drawio.svg)

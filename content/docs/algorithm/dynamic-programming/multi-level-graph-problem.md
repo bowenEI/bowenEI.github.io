@@ -15,7 +15,7 @@ weight: 270
 
 找任意起点到任意终点的一条最短路径。
 
-{{< figure src="/learn/algorithm/dynamic-programming/多级图问题1.png" >}}
+![](/learn/algorithm/dynamic-programming/多级图问题1.png)
 
 ### 形式化定义
 
@@ -33,7 +33,7 @@ weight: 270
 
 动态规划求解多级图问题是一个多阶段决策过程。每一步求解的问题是后面阶段求解问题的子问题，每步决策将依赖于以前步骤的决策结果。
 
-{{< figure src="/learn/algorithm/dynamic-programming/多级图问题2.png" >}}
+![](/learn/algorithm/dynamic-programming/多级图问题2.png)
 
 ### 优化原则
 
@@ -45,7 +45,7 @@ weight: 270
 
 **反例**
 
-{{< figure src="/learn/algorithm/dynamic-programming/多级图问题3.png" >}}
+![](/learn/algorithm/dynamic-programming/多级图问题3.png)
 
 本题要求总长模 \(10\) 的最小路径。动态规划算法的解为：`DUUU`，而最优解其实是 `DDDD`。
 

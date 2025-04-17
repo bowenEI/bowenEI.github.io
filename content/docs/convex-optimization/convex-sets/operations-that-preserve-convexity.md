@@ -67,7 +67,7 @@ $$
 
 在二维空间 \(\mathbf{R}^{2}\) 中，小孔坐标 \((0, 0)\)。圆 \(x^2 + (y-2)^2 = 1\) 在直线 \(y = -\sqrt{3}\) 上所成的像为线段 \(y = -\sqrt{3}, x \in [-1, 1]\)。如图所示：
 
-{{< figure src="/learn/convex-optimization/convex-sets/2f584a728570a6ece4e53c59712253b6.svg" >}}
+![](/learn/convex-optimization/convex-sets/2f584a728570a6ece4e53c59712253b6.svg)
 
 {{< /callout >}}
 

@@ -148,30 +148,30 @@ Tarjan 算法是一种由 Robert Tarjan 提出的求解有向图强连通分量�
 
 下面来举一个具体的例子说明 Tarjan 算法的执行流程。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan1.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan1.png)
 
 如图所示的有向图中包含 3 个强连通分量，分别为 \(\{1, 2, 4, 5\}\)、\(\{3\}\) 和 \(\{6\}\)。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan2.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan2.png)
 
 首先访问节点 \(1\)，之后陆续访问节点 \(2\)、\(3\)、\(6\)，`DFN` 的值和 `LOW` 值都相同（等于被搜索的次序）。
 
 现在发现节点 \(6\) 没有后继，因此需要进行回溯。回溯第一步发现 `DFN[6] == LOW[6]`，因此 \(\{6\}\) 为强连通分量，出栈。同理，`DFN[3] == LOW[3]`，因此 \(\{3\}\) 也为强连通分量，出栈。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan3.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan3.png)
 
 现在回溯到节点 \(2\)，发现它有后继节点 \(5\)，继续搜索。然而节点 \(5\) 的后继都已经被访问过了，因此节点 \(5\) 的 `LOW` 值需要更新，`LOW[5] = 5`，`DFN[1] = 1` 而 `DFN[4] = 4`，因此 `LOW[5] = 1`。
 
 下面仍然回溯到节点 \(2\)。由于节点 \(5\) 已经被访问过了，节点 \(2\) 的 `LOW` 值同样也需要更新。于是 `LOW[2] = 1`。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan4.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan4.png)
 
 接下来回溯到节点 \(1\)，发现它有后继节点 \(4\)，继续搜索。然而节点 \(4\) 的后继都已经被访问过了，因此节点 \(4\) 的 `LOW` 值需要更新，`LOW[4] = 5`。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan5.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan5.png)
 
 最后再次回溯到节点 \(1\)，此时所有的节点都已访问，并且 `DFN[1] == LOW[1]`。因此节点 \(1\) 及其后续所有节点全部出栈，\(\{1, 2, 4, 5\}\) 为强连通分量。
 
-{{< figure src="/learn/algorithm/graph-theory/Tarjan6.png" >}}
+![](/learn/algorithm/graph-theory/Tarjan6.png)
 
 整个算法的 DFS 搜索树如图所示。

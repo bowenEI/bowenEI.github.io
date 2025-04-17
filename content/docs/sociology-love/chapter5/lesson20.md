@@ -59,7 +59,7 @@ weight: 200
 
 我绘制了函数 \(f(x) = \sin {2x} + \sqrt {4x}\) 的图像，它可以形象地说明上述理论：
 
-{{< figure src="/learn/sociology-love/chapter5/99bfd26fd33a2a552bf96e12837b30f8.svg" >}}
+![](/learn/sociology-love/chapter5/99bfd26fd33a2a552bf96e12837b30f8.svg)
 
 沈老师在这里给出了仪式感的概念：郑重其事地去做一些非必要的事情。仪式感其实和游戏差不多，最大的特点就是非必要性。如果是必要的事情，那么就不叫仪式感，而是两个人的责任。仪式感有如下几点重要意义：
 
