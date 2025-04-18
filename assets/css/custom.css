@@ -14,3 +14,8 @@ body:where(.dark,.dark *) {
 .hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
     --tw-shadow: 0 -12px 16px var(--tw-shadow-color, --hx-color-dark);
 }
+
+/* 首页标题 */
+.hx\:mr-2.hx\:font-extrabold.hx\:inline.hx\:select-none {
+    font-size: 1.5rem;
+}

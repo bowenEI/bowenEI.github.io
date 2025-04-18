@@ -13,9 +13,11 @@ date: 2025-04-17T16:29:31+08:00
 
 ## 技术栈
 
+### Python
+
 {{< cards >}}
-  {{< card link="../git" title="Git" icon="book-open" >}}
-  {{< card link="../linux" title="Java" icon="user" >}}
+  {{< card link="../git" title="Git" icon="github" >}}
+  {{< card link="../linux" title="Linux" icon="user" >}}
   {{< card link="../mongo" title="MongoDB" icon="user" >}}
   {{< card link="../numpy" title="NumPy" icon="user" >}}
   {{< card link="../pandas" title="Pandas" icon="user" >}}
@@ -28,5 +30,7 @@ date: 2025-04-17T16:29:31+08:00
   {{< card link="../algorithm" title="算法分析与设计" icon="book-open" >}}
   {{< card link="../convex-optimization" title="凸优化" icon="user" >}}
   {{< card link="../finance" title="金融" icon="user" >}}
-  {{< card link="../love-psychology" title="机器学习" icon="user" >}}
+  {{< card link="../love-psychology" title="恋爱心理学" icon="user" >}}
+  {{< card link="../sociology-love" title="恋爱社会学" icon="user" >}}
+  {{< card link="../music-theory" title="乐理" icon="user" >}}
 {{< /cards >}}
