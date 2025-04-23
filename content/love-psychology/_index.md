@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Learn Love Psychology"
+title: "恋爱心理学"
 linktitle: "恋爱心理学"
 date: 2021-11-07T16:00:33+08:00
 type: docs
@@ -9,7 +9,7 @@ summary: "学习恋爱心理学。爱情从来都是一个亘古常新的话题�
 weight: 105
 ---
 
-![](/learn/love-psychology/cover.jpg)
+![](cover.jpg)
 
 ## What you will learn
 

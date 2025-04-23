@@ -37,26 +37,26 @@ menu:
     - name: Blog
       pageRef: /blog
       weight: 15
-    - name: About
-      pageRef: /about
+    - name: Gallery
+      pageRef: /gallery
       weight: 20
-    - name: Contact ↗
-      url: "https://github.com/imfing"
-      weight: 30
+    # - name: Contact ↗
+    #   url: "https://github.com/imfing"
+    #   weight: 30
     - name: Search
       weight: 40
       params:
         type: search
     - name: GitHub
       weight: 50
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/bowenEI"
       params:
         icon: github
-    - name: Twitter
-      weight: 60
-      url: "https://twitter.com/"
-      params:
-        icon: x-twitter
+    # - name: Twitter
+    #   weight: 60
+    #   url: "https://twitter.com/"
+    #   params:
+    #     icon: x-twitter
 
 params:
   navbar:

@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Learn Convex Optimization"
+title: "凸优化"
 linktitle: "凸优化"
 date: 2021-10-24T22:19:21+08:00
 type: docs

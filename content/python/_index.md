@@ -1,5 +1,5 @@
 ---
-title: Learn Python
+title: Python
 linkTitle: Python
 summary: 学习 Python 基础知识，方便查阅。
 date: '2021-01-24'
@@ -7,7 +7,7 @@ type: docs
 weight: 50
 ---
 
-![](/learn/python/cover.png)
+![](cover.jpg)
 
 ## What you will learn
 

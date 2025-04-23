@@ -1,5 +1,5 @@
 ---
-title: Learn Matplotlib
+title: Matplotlib
 linkTitle: Matplotlib
 summary: 学习 Matplotlib 数据可视化库。
 date: '2021-01-24'

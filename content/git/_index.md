@@ -1,5 +1,5 @@
 ---
-title: Learn Git
+title: Git
 linkTitle: Git
 summary: 学习关于 git 的知识，并且提供了更加方便的查询 git 指令的途径。
 date: '2021-01-24'
@@ -7,7 +7,7 @@ type: docs
 weight: 30
 ---
 
-![](/learn/git/cover.png)
+![](cover.png)
 
 ## What you will learn
 

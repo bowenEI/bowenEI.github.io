@@ -1,6 +1,6 @@
 ---
-title: Learn pandas
-linkTitle: pandas
+title: Pandas
+linkTitle: Pandas
 summary: 学习 pandas 数据分析库。
 date: '2021-01-24'
 type: docs

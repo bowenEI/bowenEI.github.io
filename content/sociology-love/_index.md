@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Learn Sociology Love"
+title: "沈奕斐的社会学爱情思维课"
 linktitle: "沈奕斐的社会学爱情思维课"
 date: 2021-07-17T19:39:46+08:00
 type: docs
@@ -9,7 +9,7 @@ summary: "沈奕斐的社会学爱情思维课包含60讲视频，用社会学�
 weight: 100
 ---
 
-![](/learn/sociology-love/cover.jpg)
+![](cover.jpg)
 
 ## What you will learn
 

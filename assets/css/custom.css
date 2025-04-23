@@ -1,14 +1,7 @@
 /* 调整暗色模式下的背景颜色 */
 :root {
-    --hx-color-dark: #1f1f1f;
-}
-
-body:where(.dark,.dark *) {
-    background-color: var(--hx-color-dark);
-}
-
-.hx\:dark\:bg-dark:where(.dark,.dark *) {
-    background-color: var(--hx-color-dark);
+    --hx-color-dark: #2a2a2a;
+    --hx-color-neutral-900: #222222;
 }
 
 .hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
@@ -18,4 +11,80 @@ body:where(.dark,.dark *) {
 /* 首页标题 */
 .hx\:mr-2.hx\:font-extrabold.hx\:inline.hx\:select-none {
     font-size: 1.5rem;
+}
+
+/* 导航栏字体大小 */
+span.hx\:text-center {
+    font-size: 1.125rem;
+}
+
+/* 行间代码字体大小 */
+.hextra-code-block pre {
+    font-size: 1em;
+}
+
+/* 页面标题内顶边距 */
+.content :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    margin-top: calc(var(--hx-spacing)*8);
+}
+
+.hx\:mt-2 {
+    margin-top: calc(var(--hx-spacing)*8);
+}
+
+/* About Me 组件样式 */
+.prose h1:first-child {
+  margin-top: 0;
+}
+
+.hx\:prose p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* 去除 h2 标签下的横线 */
+.content :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    border-bottom: none;
+}
+
+/* 照片 */
+.hx\:rounded-full {
+    border-radius: 100%;
+}
+
+.content :where(img):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    margin-block: 0;
+}
+
+/* Bio */
+h2#author {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h3#role {
+    font-weight: normal;
+    text-align: center;
+    margin-top: calc(var(--hx-spacing)*4);
+    margin-bottom: 0;
+}
+
+h3#institute {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* 主题切换按钮 */
+.hx\:sticky.hx\:bottom-0.hx\:max-h-\(--menu-height\).hx\:bg-transparent.hx\:mx-4.hx\:py-4.hx\:shadow-\[0_-12px_16px_\#fff\].hx\:flex.hx\:items-center.hx\:gap-2.hx\:border-gray-200.hx\:dark\:border-neutral-800.hx\:dark\:shadow-\[0_-12px_16px_\#111\].hx\:contrast-more\:border-neutral-400.hx\:contrast-more\:shadow-none {
+    margin-inline: 0;
+    width: calc(var(--hx-spacing)*7);
+}
+
+button#theme-toggle {
+    width: calc(var(--hx-spacing)*7);
+}
+
+.hx\:flex.hx\:items-center.hx\:gap-2.hx\:capitalize {
+    margin-left: -4px;
 }
