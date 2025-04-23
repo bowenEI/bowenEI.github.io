@@ -23,7 +23,7 @@ Graham-scan 的基本思想：
 - 按夹角从小到大排序。
 - 夹角最小的开始，寻找凸包点。
 
-![](/learn/algorithm/divide-and-conquer/寻找凸包1.png)
+![](寻找凸包1.png)
 
 是否存在分治的方法？
 
@@ -31,7 +31,7 @@ Graham-scan 的基本思想：
 - 有向线 \(p_{dr}p_{ul}\) 将整个凸包被划分为右凸包和左凸包。
 - 对右凸包和左凸包分别进行递归。
 
-![](/learn/algorithm/divide-and-conquer/寻找凸包2.png)
+![](寻找凸包2.png)
 
 ## 算法分析
 

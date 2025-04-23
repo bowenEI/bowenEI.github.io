@@ -27,27 +27,27 @@ Dijkstra 算法基于广度优先搜索算法，在遍历图的过程中更新�
 
 下面举一个具体的例子详细说明：
 
-![](/learn/algorithm/graph-theory/Dijkstra1.png)
+![](Dijkstra1.png)
 
 如图所示，以 \(A\) 为起点，`dist[0] = 0`，`visit[0] = 1`，然后节点 \(A\) 进入队列中。
 
-![](/learn/algorithm/graph-theory/Dijkstra2.png)
+![](Dijkstra2.png)
 
 接下来队首节点 \(A\) 出队，它有 3 个直接后继 \(C\)、\(E\)、\(F\)，节点 \(A\) 到这些节点的最短路径即为 3 条边上的权重。
 
-![](/learn/algorithm/graph-theory/Dijkstra3.png)
+![](Dijkstra3.png)
 
 接下来队首节点 \(C\) 出队，它有 1 个直接后继 \(D\)。节点 \(A\) 到节点 \(D\) 的最短路径本来为 \(\infty\)，经过节点 \(C\) 周转之后路径更短，更新为 \(60\)。
 
-![](/learn/algorithm/graph-theory/Dijkstra4.png)
+![](Dijkstra4.png)
 
 接下来队首节点 \(E\) 出队，它有 2 个直接后继 \(D\) 和 \(F\)。节点 \(A\) 到节点 \(D\) 的最短路径本来为 \(60\)，经过节点 \(E\) 周转之后路径更短，更新为 \(50\)。同理，节点 \(A\) 到节点 \(F\) 的最短路径本来为 \(100\)，经过节点 \(E\) 周转之后路径更短，为 \(90\)。
 
-![](/learn/algorithm/graph-theory/Dijkstra5.png)
+![](Dijkstra5.png)
 
 接下来队首节点 \(F\) 出队，它有没有直接后继。
 
-![](/learn/algorithm/graph-theory/Dijkstra6.png)
+![](Dijkstra6.png)
 
 接下来队首节点 \(D\) 出队，它有 1 个直接后继 \(F\)。节点 \(A\) 到节点 \(F\) 的最短路径本来为 \(90\)，经过节点 \(D\) 周转之后路径更短，更新为 \(60\)。
 
@@ -75,7 +75,7 @@ Dijkstra 算法基于广度优先搜索算法，在遍历图的过程中更新�
 
 应用场景：并行作业调度。给定一组具有持续时间和优先级约束的作业，安排作业（通过为每个作业找到开始时间）以达到最短完成时间，同时尊重约束。
 
-![](/learn/algorithm/graph-theory/关键路径1.jpeg)
+![](关键路径1.jpeg)
 
 要解决并行作业调度问题，需要创建边加权 DAG。
 
@@ -87,7 +87,7 @@ Dijkstra 算法基于广度优先搜索算法，在遍历图的过程中更新�
   - 端到下沉（0 权重）
 - 每个优先约束的一条边（0 权重）
 
-![](/learn/algorithm/graph-theory/关键路径2.jpeg)
+![](关键路径2.jpeg)
 
 ### 负权重边
 

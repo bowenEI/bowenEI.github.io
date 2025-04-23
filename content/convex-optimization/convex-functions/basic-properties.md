@@ -82,7 +82,7 @@ $$
 
 定义在 \(\mathbf{R}^n\) 上的凸函数 \(f\) 的上镜图是 \(\mathbf{R}^{n+1}\) 空间的一个凸集，其支撑超平面和一阶条件有着如下图所示的联系：
 
-![](/learn/convex-optimization/convex-functions/f2d493efc992a9a9ee5d3bcf4afe8753.png)
+![](f2d493efc992a9a9ee5d3bcf4afe8753.png)
 
 从图中可以直观地看到，凸函数 \(f\) 在点 \(x\) 处的一阶 Taylor 近似即为其上镜图在 \(x\) 处的支撑超平面。
 

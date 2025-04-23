@@ -7,7 +7,7 @@ type: docs
 weight: 70
 ---
 
-![](/learn/pandas/pandas_white.svg)
+![](pandas_white.svg)
 
 ## What you will learn
 

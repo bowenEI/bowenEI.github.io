@@ -37,6 +37,8 @@ $$
 
 可以解得时间复杂度为：
 
+$$
 \begin{aligned}
 T(n) = \Theta\left(n^{\log _{2}{3}}\right)
 \end{aligned}
+$$

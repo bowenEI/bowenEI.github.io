@@ -48,7 +48,7 @@ $$
 
 ### 几何意义
 
-![](/learn/convex-optimization/convex-optimization-problems/455f3f54b7dc5d4a7a0f58156d1779fb.png)
+![](455f3f54b7dc5d4a7a0f58156d1779fb.png)
 
 深色的部分表示目标值在 \(\mathbf{R}^2\) 上的向量优化问题的可达目标值集合 \(\mathcal{O}\)，其中锥为 \(K = \mathbf{R}^2_+\)。在这个例子中，标有 \(f_0(x^{\star})\) 的点为问题的最优值，\(x^{\star}\) 为一个最优解。目标值 \(f_0(x^{\star})\) 与其他任意可达值 \(f_0(y)\) 均可比，并且比 \(f_0(y)\) 更好或相等。（这里的“好”和“相等”表示在其下、其左。）
 
@@ -76,7 +76,7 @@ $$
 
 集合 \(f_(0) - K\) 可以解释为比 \(f_0(x)\) 好或相等的值的集合。因此，上述条件说明了唯一比 \(f_0(x)\) 好或相等的可达值就是 \(f_0(x)\) 本身。如下图所示：
 
-![](/learn/convex-optimization/convex-optimization-problems/4-7-2.png)
+![](4-7-2.png)
 
 右上角的部分是目标值在 \(\mathbf{R}^2\) 上的向量优化问题的可达目标值集合 \(\mathcal{O}\)，其中锥为 \(K = \mathbf{R}^2_+\)。这个问题不含有最优解或最优值，但确实有 Pareto 最优解集。在 \(O\) 的左下边界上，黄色的点左边和绿色的点右边两部分为 Pareto 最优解集的对应值。\(x^{\mathrm{po}}\) 是一个 Pareto 最优解，\(f_0(x^{\mathrm{po}})\) 是一个 Pareto 最优值。
 
@@ -102,7 +102,7 @@ $$
 
 并令 \(x\) 为最优解。那么，\(x\) 对于向量优化问题是 Pareto 最优的。利用表量化，我们可以通过求解普通的标量优化问题，寻找任意向量优化问题的 Pareto 最优解。权向量 \(\lambda\) 是一个自由参数，但必须满足 \(\lambda \succ _{K^*} 0\)。通过改变 \(\lambda\)，我们（有可能）得到向量优化问题的不同的 Pareto 最优解。如下图所示：
 
-![](/learn/convex-optimization/convex-optimization-problems/4-7-3.png)
+![](4-7-3.png)
 
 图中的 \(\mathcal{O}\) 为与锥 \(K = \mathbf{R}^2_+\) 相应的向量优化函数的可达值集合。图中显示了三个 Pareto 最优值 \(f_0(x_1), f_0(x_2), f_0(x_3)\)。前两个值可以通过标量化得到（图中红点），而值 \(f_0(x_3)\) 是最优的，但不能通过标量化找到（图中绿点）。
 
