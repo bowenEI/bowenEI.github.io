@@ -157,7 +157,7 @@ plt.plot(np.sin(np.linspace(0, 10*np.pi, 100)))
 
 
     
-![](/learn/python/ipython/output_27_1.png)
+![](ipython/output_27_1.png)
     
 
 
@@ -187,7 +187,7 @@ plot(x, tan(x))
 
 
     
-![](/learn/python/ipython/output_30_1.png)
+![](ipython/output_30_1.png)
     
 
 

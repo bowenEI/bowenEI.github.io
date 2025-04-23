@@ -22,9 +22,10 @@ date: 2025-04-17T16:29:31+08:00
 ### Python
 
 {{< cards >}}
+  {{< card link="../python" title="Python" icon="python" >}}
   {{< card link="../numpy" title="NumPy" icon="numpy" >}}
   {{< card link="../pandas" title="Pandas" icon="pandas" >}}
-  {{< card link="../python" title="Python" icon="python" >}}
+  {{< card link="../matplotlib" title="Matplotlib" icon="matplotlib" >}}
 {{< /cards >}}
 
 ## 知识星球

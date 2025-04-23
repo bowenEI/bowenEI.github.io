@@ -49,7 +49,7 @@ fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_8_0.png)
+![](plot3d/output_8_0.png)
 ​    
 
 
@@ -65,7 +65,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_10_0.png)
+![](plot3d/output_10_0.png)
 ​    
 
 
@@ -98,7 +98,7 @@ surf = ax.plot_surface(x, y, z)
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_17_0.png)
+![](plot3d/output_17_0.png)
 ​    
 
 
@@ -121,7 +121,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_21_0.png)
+![](plot3d/output_21_0.png)
 ​    
 
 
@@ -138,7 +138,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_23_0.png)
+![](plot3d/output_23_0.png)
 ​    
 
 
@@ -191,7 +191,7 @@ ax = plt.axes(projection='3d')
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_33_0.png)
+![](plot3d/output_33_0.png)
 ​    
 
 
@@ -207,6 +207,6 @@ fig
 
 
 ​    
-![](/learn/matplotlib/plot3d/output_35_0.png)
+![](plot3d/output_35_0.png)
 ​    
 

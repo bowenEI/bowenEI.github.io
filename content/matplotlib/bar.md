@@ -43,7 +43,7 @@ plt.bar(x, y)
 
 
 ​    
-![](/learn/matplotlib/bar/output_6_1.png)
+![](bar/output_6_1.png)
 ​    
 
 
@@ -65,7 +65,7 @@ ax.bar(x, y)
 
 
 ​    
-![](/learn/matplotlib/bar/output_8_1.png)
+![](bar/output_8_1.png)
 ​    
 
 
@@ -90,7 +90,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_13_0.png)
+![](bar/output_13_0.png)
 ​    
 
 
@@ -112,7 +112,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_16_0.png)
+![](bar/output_16_0.png)
 ​    
 
 
@@ -136,7 +136,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_20_0.png)
+![](bar/output_20_0.png)
 ​    
 
 
@@ -158,7 +158,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_23_0.png)
+![](bar/output_23_0.png)
 ​    
 
 
@@ -184,7 +184,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_28_0.png)
+![](bar/output_28_0.png)
 ​    
 
 
@@ -208,7 +208,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_32_0.png)
+![](bar/output_32_0.png)
 ​    
 
 
@@ -260,7 +260,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_43_0.png)
+![](bar/output_43_0.png)
 ​    
 
 
@@ -281,7 +281,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_45_0.png)
+![](bar/output_45_0.png)
 ​    
 
 
@@ -298,7 +298,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_47_0.png)
+![](bar/output_47_0.png)
 ​    
 
 
@@ -325,7 +325,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_49_0.png)
+![](bar/output_49_0.png)
 ​    
 
 
@@ -355,7 +355,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_54_0.png)
+![](bar/output_54_0.png)
 ​    
 
 
@@ -394,7 +394,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_61_0.png)
+![](bar/output_61_0.png)
 ​    
 
 
@@ -435,7 +435,7 @@ fig
 
 
 ​    
-![](/learn/matplotlib/bar/output_69_0.png)
+![](bar/output_69_0.png)
 ​    
 
 

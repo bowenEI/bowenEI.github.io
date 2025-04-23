@@ -11,7 +11,7 @@ summary: ""
 
 <!--more-->
 
-![](/learn/matplotlib/overview/anatomy.png)
+![](overview/anatomy.png)
 
 
 ```python
