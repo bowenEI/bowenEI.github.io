@@ -1,5 +1,5 @@
 ---
-title: "Learn"
+title: "Learn 🏫"
 date: 2025-04-17T16:29:31+08:00
 ---
 

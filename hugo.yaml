@@ -31,6 +31,9 @@ ignoreLogs:
 
 menu:
   main:
+    - name: About
+      pageRef: /about
+      weight: 5
     - name: Learn
       pageRef: /learn
       weight: 10
@@ -40,9 +43,9 @@ menu:
     - name: Gallery
       pageRef: /gallery
       weight: 20
-    # - name: Contact ↗
-    #   url: "https://github.com/imfing"
-    #   weight: 30
+    - name: Tags
+      pageRef: /tags
+      weight: 30
     - name: Search
       weight: 40
       params:
@@ -77,3 +80,9 @@ params:
     # light | dark | system
     default: system
     displayToggle: true
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: lastmod
+      sortOrder: desc
