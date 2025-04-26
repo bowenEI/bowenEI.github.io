@@ -88,3 +88,15 @@ button#theme-toggle {
 .hx\:flex.hx\:items-center.hx\:gap-2.hx\:capitalize {
     margin-left: -4px;
 }
+
+/* 详情 */
+.hx\:text-lg {
+    font-size: var(--hx-text-base);
+}
+
+/* 分割线 */
+hr {
+    color: var(--hx-color-gray-500);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
