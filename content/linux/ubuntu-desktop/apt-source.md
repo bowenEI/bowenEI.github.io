@@ -20,7 +20,7 @@ sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak   # 备份官方源
 sudo gedit /etc/apt/sources.list                          # 没有可视化文本编辑器的终端可以使用 vim
 ```
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **Tip: Codename**
 

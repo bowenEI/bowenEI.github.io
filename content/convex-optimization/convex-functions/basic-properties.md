@@ -114,7 +114,7 @@ $$
 f(\mathbf{E}x) \leqslant \mathbf{E} f(x)
 $$
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 我们不妨来回忆以下高中时期我们接触到的凸函数定义，如下
 

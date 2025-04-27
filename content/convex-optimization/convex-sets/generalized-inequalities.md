@@ -31,7 +31,7 @@ x \prec_{K} y \Longleftrightarrow y-x \in \operatorname{int} K
 \end{array}
 $$
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **偏序关系与广义不等式**
 

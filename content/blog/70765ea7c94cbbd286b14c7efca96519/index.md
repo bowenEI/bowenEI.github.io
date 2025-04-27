@@ -122,7 +122,7 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 \(t\) 
 
 这样也就弄清楚 **Transformer** 的输入和输出了，后文则主要对这里面的每个块进行说明。
 
-![](featured.png "The Transformer - model architecture." numbered="true")
+![](featured.png "The Transformer - model architecture.")
 
 ### 3.1 Encoder and Decoder Stacks
 
@@ -149,7 +149,7 @@ $$
 
 如图所示，`BatchNorm` 和 `LayerNorm` 的区别一目了然。`BatchNorm` 是在每一个特征 `feature` 上对 `batch` 进行归一化，而 `LayerNorm` 是在每一个样本 `batch` 上对 `feature` 进行归一化。
 
-![](layernorm-batchnorm.png "Difference between BatchNorm and LayerNorm." numbered="true")
+![](layernorm-batchnorm.png "Difference between BatchNorm and LayerNorm.")
 
 为什么要使用 `LayerNorm` 呢？一个原因是样本长度可能发生变化（即 `sequence` 的长度 \(n\)），如果使用 `BatchNorm` 的话，切片的结果可能长度参差不齐，会有很多零填充。而使用 `LayerNorm` 则不会出现这样的问题，因为是同一个样本（即同一个序列）。由于序列长度不一有零填充，计算均值和方差的时候每个样本的计算方法不一样，不能把零算进去，因为零不是有效值。
 
@@ -176,7 +176,7 @@ $$
 
 作者在本小节主要说明了 **Transformer** 采用的注意力机制。作者将之命名为 `Scaled Dot-Product Attention`，如图所示。
 
-![](Scaled Dot-Product Attention.png "Scaled Dot-Product Attention." numbered="true")
+![](Scaled Dot-Product Attention.png "Scaled Dot-Product Attention.")
 
 注意力函数的计算公式如下：
 
@@ -200,7 +200,7 @@ $$
 
 作者认为，与其计算单个的注意力函数，不如把 `query`、`key`、`value` 投影到一个更低的维度上，投影 \(h\) 次，然后再计算 \(h\) 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。
 
-![](Multi-Head Attention.png "Multi-Head Attention." numbered="true")
+![](Multi-Head Attention.png "Multi-Head Attention.")
 
 多头注意力函数的计算公式如下：
 

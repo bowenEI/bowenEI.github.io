@@ -94,9 +94,61 @@ button#theme-toggle {
     font-size: var(--hx-text-base);
 }
 
+/* 详情背景 */
+/* 深色主题 */
+.hx\:dark\:bg-neutral-800:where(.dark,.dark *) {
+    background-color: inherit;
+}
+/* 浅色主题 */
+.hx\:bg-neutral-50 {
+    background-color: inherit;
+}
+/* hover */
+summary.hx\:flex.hx\:items-center.hx\:cursor-pointer.hx\:select-none.hx\:list-none.hx\:p-1.hx\:rounded-sm.hx\:transition-colors.hx\:hover\:bg-gray-100.hx\:dark\:hover\:bg-neutral-800.hx\:before\:mr-1.hx\:before\:inline-block.hx\:before\:transition-transform.hx\:before\:content-\[\'\'\].hx\:dark\:before\:invert.hx\:rtl\:before\:rotate-180.hx\:group-open\:before\:rotate-90 {
+    background-color: inherit;
+}
+
 /* 分割线 */
 hr {
     color: var(--hx-color-gray-500);
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+/* 居中 */
+pre.mermaid.hx\:mt-6 {
+    justify-content: center;
+    display: flex;
+}
+
+/* 段落间距 */
+.content :where(p, ul, ol):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    margin-top: calc(var(--hx-spacing)*3);
+}
+
+.content :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    margin-top: calc(var(--hx-spacing)*3);
+    font-style: normal;
+}
+
+/* callout tips */
+/* dark mode */
+.hx\:dark\:text-green-200:where(.dark,.dark *) {
+    color: var(--hx-color-green-200);
+}
+.hx\:dark\:bg-green-900\/30:where(.dark,.dark *) {
+    background-color: color-mix(in oklab,var(--hx-color-green-900)20%,transparent);
+}
+.hx\:dark\:border-green-200\/30:where(.dark,.dark *) {
+    border-color: color-mix(in oklab,var(--hx-color-green-200)30%,transparent);
+}
+/* light mode */
+/* .hx\:text-green-900 {
+    color: var(--hx-color-green-900);
+}
+.hx\:bg-green-100 {
+    background-color: var(--hx-color-green-100);
+}
+.hx\:border-green-200 {
+    border-color: var(--hx-color-green-200);
+} */

@@ -11,7 +11,7 @@ weight: 930
 
 <!--more-->
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 热恋中的女性往往会原谅男人的不轨行为，而男人却做不到这一点。
 

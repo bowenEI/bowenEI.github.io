@@ -13,7 +13,7 @@ weight: 710
 
 ## 亲密关系中的沟通
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 做一个好听众，鼓励别人说说他们自己。
 

@@ -71,7 +71,7 @@ $$
 
 Frobenius 范数实际上就是将矩阵的系数按一定顺序排列后所生成的相应向量的 \(\ell_2\)-范数。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 向量的 Euclid 范数和 \(\ell_2\)-范数是一回事，但是矩阵的 Frobenius 范数和 \(\ell_2\)-范数不是一回事。后文详述。
 {{< /callout >}}
 

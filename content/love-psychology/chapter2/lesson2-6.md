@@ -11,7 +11,7 @@ weight: 260
 
 <!--more-->
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 亲密关系像建筑物一样，如果得不到维护和改善，那么它就会随着时间的流逝而衰败。
 

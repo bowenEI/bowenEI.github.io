@@ -97,7 +97,7 @@ weight: 830
 
 不要因为自己一时的无法面对而做出过激的事情。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 有一种爱叫放手。
 

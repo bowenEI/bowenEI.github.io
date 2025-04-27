@@ -13,7 +13,7 @@ weight: 60
 
 ## 为什么母胎 solo 很难进入爱情
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **母胎 solo**
 

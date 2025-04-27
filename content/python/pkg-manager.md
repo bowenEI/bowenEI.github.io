@@ -23,7 +23,7 @@ weight: 150
 pip --version
 ```
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **当 Python2 与 Python3 共存**
 

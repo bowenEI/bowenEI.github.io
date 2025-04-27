@@ -49,7 +49,7 @@ Transformer[^1] 是一种 Encoder-Decoder 结构的模型，它被认为是 LLM 
 - Linear：输出的线性层
 - Softmax：激活函数
 
-![](b942cec77fa0bc17ef4016894aae2f2e.png "Transformer Architecture." numbered="true")
+![](b942cec77fa0bc17ef4016894aae2f2e.png "Transformer Architecture.")
 
 LLM 超参数定义如下：
 
@@ -74,7 +74,7 @@ $$
 
 在那之前，需要将每个 token 从 \(d_{\textrm{model}}\) 维映射到 \(d_k(d_v)\) 维。（在 Transformer 模型中，\(d_{\textrm{model}} = 512\)，而 \(d_k = d_v = \frac{d_{\textrm{model}}}{h} = 64\)，这里 \(h = 8\)。）所以，输入的 \(Q, K, V\) 向量都需要进行投影操作，共需 3 个线性变换矩阵 \(W_K, W_Q, W_V\)，维度均为 `(M, D)`。
 
-![](9b71910d735ee7b15951fdc350cc411d.png "Multi-Head Self-Attention Block." numbered="true")
+![](9b71910d735ee7b15951fdc350cc411d.png "Multi-Head Self-Attention Block.")
 
 最终将每个 head 拼接起来，得到 \(d_v \times h = d_{\textrm{model}}\) 维。这个结果再投影到 \(d_{\textrm{model}}\) 维，需 1 个线性变换矩阵 \(W_O\)，维度为 `(M, M)`。即
 

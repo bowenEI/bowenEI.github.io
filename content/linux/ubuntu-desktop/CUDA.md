@@ -48,7 +48,7 @@ uname -r
 sudo apt install linux-headers-$(uname -r)
 ```
 
-{{< callout warning >}}
+{{< callout type="warning" >}}
 
 **特别注意！**
 

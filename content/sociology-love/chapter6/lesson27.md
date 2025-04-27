@@ -69,7 +69,7 @@ weight: 270
 
 ### 4. 寻求法律保护：申请人身隔离令
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **人身保护令**
 

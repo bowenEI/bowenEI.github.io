@@ -19,7 +19,7 @@ weight: 250
 
 如果函数 \(f\) 既是拟凸函数又是拟凹函数，则称函数 \(f\) 为拟线性函数，并且其定义域和其所有的水平集 \(\{ x \mid f(x) = \alpha \}\) 都是凸集。
 
-{{< callout warning >}}
+{{< callout type="warning" >}}
 
 **注意**
 

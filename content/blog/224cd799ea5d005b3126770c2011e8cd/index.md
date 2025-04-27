@@ -70,7 +70,7 @@ $$
 \end{aligned}
 $$
 
-![](7d4385cb2c81b46986ad15c348bff081.png "圆锥曲线" numbered="true")
+![](7d4385cb2c81b46986ad15c348bff081.png "圆锥曲线")
 
 ### 圆锥曲线的一般方程
 
@@ -248,7 +248,7 @@ $$
 
 接着，求出旋转变换的逆矩阵即可反解出 \(x, y\)，代入原式即可证明。
 
-![](31776221c1df4ce29b9bc0ceff5c2f3e.png "反比例函数和对勾函数" numbered="true")
+![](31776221c1df4ce29b9bc0ceff5c2f3e.png "反比例函数和对勾函数")
 
 ### 矩阵相似对角化
 
@@ -370,7 +370,7 @@ $$
 \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \quad (a, b, c > 0)
 $$
 
-![](751b2a631516019ae91ce04695f59ef0.png "椭球面" numbered="true")
+![](751b2a631516019ae91ce04695f59ef0.png "椭球面")
 
 特别地，当 \(a = b = c = r\) 时，方程表示球面
 
@@ -386,7 +386,7 @@ $$
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = z^2 \quad (a, b > 0)
 $$
 
-![](45700debec6c599f244344cda2f57379.png "椭圆锥面" numbered="true")
+![](45700debec6c599f244344cda2f57379.png "椭圆锥面")
 
 特别地，当 \(a = b = r\) 时，方程表示圆锥面
 
@@ -406,7 +406,7 @@ $$
 \end{aligned}
 $$
 
-![](64cd27b202370d223b5d961972e386aa.png "二次柱面" numbered="true")
+![](64cd27b202370d223b5d961972e386aa.png "二次柱面")
 
 ### 双曲面
 
@@ -419,7 +419,7 @@ $$
 \end{aligned}
 $$
 
-![](846aa704fe15c8bfc6ae0df1cdedbb6e.png "双曲面" numbered="true")
+![](846aa704fe15c8bfc6ae0df1cdedbb6e.png "双曲面")
 
 ### 抛物面
 
@@ -432,7 +432,7 @@ $$
 \end{aligned}
 $$
 
-![](6c51497c026ff58802c71be06122b2ad.png "抛物面" numbered="true")
+![](6c51497c026ff58802c71be06122b2ad.png "抛物面")
 
 ### 二次曲面的一般方程
 

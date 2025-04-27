@@ -41,7 +41,7 @@ weight: 270
 
 优化原则：一个最优决策序列的任何子序列本身一定是相对于子序列的初始和结束状态的最优决策序列。
 
-{{< callout warning >}}
+{{< callout type="warning" >}}
 
 **反例**
 

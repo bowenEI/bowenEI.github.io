@@ -59,7 +59,7 @@ $$
 
 定义 \(P: \mathbf{R}^{n+1} \rightarrow \mathbf{R}^{n}\)，\(P(z, t) = z/t\) 为透视函数，其定义域为 \(\operatorname{dom} P = \mathbf{R}^{n} \times \mathbf{R}_{++}\)。透视函数对向量进行伸缩，或称为规范化，使得最后一维分量为 \(1\) 并舍弃之。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **小孔成像**
 

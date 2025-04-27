@@ -78,7 +78,7 @@ $$
 \end{aligned}
 $$
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 **仿射**
 

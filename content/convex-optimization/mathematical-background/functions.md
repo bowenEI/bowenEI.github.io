@@ -23,7 +23,7 @@ $$
 
 则称函数 \(f: \mathbf{R}^n \rightarrow \mathbf{R}^m\) 在 \(x \in \operatorname{dom} f\) 处**连续**。
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 \(\operatorname{dom} f\) 表示函数 \(f: \mathbf{R}^n \rightarrow \mathbf{R}^m\) 的**前域**。根据离散数学的相关知识，\(f\) 是笛卡尔积 \(\mathbf{R}^n \times \mathbf{R}^m\) 的子集，其前域（定义域）是 \(\mathbf{R}^n\) 的子集。
 

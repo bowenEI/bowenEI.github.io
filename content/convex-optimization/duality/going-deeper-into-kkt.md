@@ -11,7 +11,7 @@ weight: 455
 
 <!--more-->
 
-{{< callout note >}}
+{{< callout type="info" >}}
 
 本节将对上一小节[最优性条件](../optimality-conditions)中提出的 KKT 条件进行深入的理解和分析。
 
