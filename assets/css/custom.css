@@ -152,3 +152,8 @@ pre.mermaid.hx\:mt-6 {
 .hx\:border-green-200 {
     border-color: var(--hx-color-green-200);
 } */
+
+/* 链接去除下划线 */
+.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    text-decoration-line: unset;
+}
