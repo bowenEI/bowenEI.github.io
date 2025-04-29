@@ -4,8 +4,12 @@
     --hx-color-neutral-900: #222222;
 }
 
+/* 取消主题调整按钮的阴影效果 */
 .hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
     --tw-shadow: 0 -12px 16px var(--tw-shadow-color, --hx-color-dark);
+}
+.hx\:shadow-\[0_-12px_16px_\#fff\] {
+    box-shadow: inherit;
 }
 
 /* 首页标题 */
@@ -156,4 +160,13 @@ pre.mermaid.hx\:mt-6 {
 /* 链接去除下划线 */
 .content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)) {
     text-decoration-line: unset;
+}
+/* 添加 hover 事件样式 */
+.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)):hover {
+    color: var(--hx-color-primary-300);
+}
+
+/* 自定义 3 倍空格外衬线 */
+.hx\:mt-3 {
+    margin-top: calc(var(--hx-spacing)*3);
 }
