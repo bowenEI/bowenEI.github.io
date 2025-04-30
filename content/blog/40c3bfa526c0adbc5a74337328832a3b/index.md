@@ -87,9 +87,15 @@ Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM
       - 更新全局最大值 \(m_{i}^{\mathrm{new} } = \max (m_{i}, \tilde{m}_{ij})\)      - 更新全局和 \(\ell_{i}^{\mathrm{new} } = e^{m_{i} - m_{i}^{\mathrm{new} } } \ell_{i} + e^{\tilde{m}_{ij} - m_{i}^{\mathrm{new} } } \tilde{l}_{ij}\)      - 累和修正
         - 之前计算的 Softmax 值需要乘以 \(\ell_i/\ell_{i}^{\mathrm{new}}\)
         - 还要再加上 \(\dfrac{e^{\tilde{m}_{i j}-m_{i}^{\mathrm {new}}}}{\ell_{i}^{\mathrm {new}}}\) 倍的 \(\tilde{\mathbf{P}}_{ij} \mathbf{V}_{j}\)
+
 下面的动画演示了整个循环计算的过程：
 
-<!-- video src="flash_attention.mp4" controls="yes" -->
+<figure>
+  <video controls>
+    <source src="/blog/40c3bfa526c0adbc5a74337328832a3b/flash_attention.mp4" type="video/mp4">
+  </video>
+  <figcaption>Flash Attention 计算过程动画演示</figcaption>
+</figure>
 
 动画中的计算过程是一个示例，Softmax 计算被分成了 12 块。此时我们再回头看算法的分割阶段，不难理解，\(B_c, B_r\) 分别决定了 \(\mathbf{Q}, \mathbf{K}, \mathbf{V}, \mathbf{O}\) 的存储空间大小。\(T_c, T_r\) 分别表示分块的数量，在这个示例中，\(T_c = T_r = 12\)。
 
