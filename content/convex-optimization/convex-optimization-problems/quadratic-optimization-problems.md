@@ -17,7 +17,7 @@ weight: 340
 
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^{\top}Px + q^{\top}x + r \\
+    \mathrm{minimize} \quad & \dfrac{1}{2} x^{\top}Px + q^{\top}x + r \\
     \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}
@@ -33,8 +33,8 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^{\top}Px + q^{\top}x + r \\
-    \mathrm{subject\ to} \quad & \frac{1}{2} x^{\top}P_ix + q^{\top}_ix + r_i \leqslant 0 \\
+    \mathrm{minimize} \quad & \dfrac{1}{2} x^{\top}Px + q^{\top}x + r \\
+    \mathrm{subject\ to} \quad & \dfrac{1}{2} x^{\top}P_ix + q^{\top}_ix + r_i \leqslant 0 \\
     \quad & Ax = b
 \end{aligned}
 $$

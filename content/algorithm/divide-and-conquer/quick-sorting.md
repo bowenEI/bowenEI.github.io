@@ -53,7 +53,7 @@ void quickSort(int *arr, int begin, int end)
 
 $$
 \begin{aligned}
-T(n) &= 2 T \left( \frac{n}{2} \right) + O(n) \\
+T(n) &= 2 T \left( \dfrac{n}{2} \right) + O(n) \\
 &= O(n \log {n})
 \end{aligned}
 $$
@@ -64,7 +64,7 @@ $$
 
 $$
 \begin{aligned}
-T(n) \leqslant 2 T \left( \frac{n}{2} \right) + n = O(n \log {n})
+T(n) \leqslant 2 T \left( \dfrac{n}{2} \right) + n = O(n \log {n})
 \end{aligned}
 $$
 
@@ -74,7 +74,7 @@ $$
 
 $$
 \begin{aligned}
-\sum_{i=1}^{n-1} (n-i) = \frac{n(n-1)}{2} = O(n^2)
+\sum_{i=1}^{n-1} (n-i) = \dfrac{n(n-1)}{2} = O(n^2)
 \end{aligned}
 $$
 

@@ -88,7 +88,7 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} \| y \|^2 \\
+    \mathrm{minimize} \quad & \dfrac{1}{2} \| y \|^2 \\
     \mathrm{subject\ to} \quad & Ax-b = y
 \end{aligned}
 $$

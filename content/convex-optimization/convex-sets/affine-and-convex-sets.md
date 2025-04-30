@@ -73,7 +73,7 @@ $$
 
 ## 仿射维数与相对内部
 
-集合 \(C\) 的**仿射维数** 为其仿射包的维数。例如，\(\mathbf{R}^{2}\) 上的单位圆环 \(\{x \in \mathbf{R}^{2} \mid x_1^2+x_2^2=1\}\) 的仿射包是全空间 \(\mathbf{R}^{2}\)，故其仿射维数为 \(2\)。
+集合 \(C\) 的**仿射维数** 为其仿射包的维数。例如，\(\mathbf{R}^{2}\) 上的单位圆环 \(\{x \in \mathbf{R}^{2} \mid x_1^2+x_2^2=1\}\) 的仿射包是全空间 \(\mathbf{R}^{2}\)，故其仿射维数为 2。
 
 考虑 \(\mathbf{R}^{3}\) 中处于 \((x_1,x_2)\) 平面的一个正方形，定义
 
@@ -83,7 +83,7 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 \end{aligned}
 $$
 
-其仿射包为 \(x_1, x_2\) 平面，即 \(\operatorname{aff}C = \{x \in \mathbf{R}^{3} \mid x_3=0\}\)。\(C\) 的仿射维数小于 \(3\)，其相对内部为
+其仿射包为 \(x_1, x_2\) 平面，即 \(\operatorname{aff}C = \{x \in \mathbf{R}^{3} \mid x_3=0\}\)。\(C\) 的仿射维数小于 3，其相对内部为
 
 $$
 \begin{aligned}

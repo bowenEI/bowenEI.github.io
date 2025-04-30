@@ -53,7 +53,7 @@ $$
 如果几何规划问题的不等式约束是 \(f(x) \leqslant h(x)\)，我们可以在不等式两边同除以 \(h(x)\)，得到
 
 $$
-\frac{f(x)}{h(x)} \leqslant 1
+\dfrac{f(x)}{h(x)} \leqslant 1
 $$
 
 根据上述性质，不等号左边的函数仍然是一个正项式，仍然满足几何规划问题的定义。
@@ -61,7 +61,7 @@ $$
 类似地，如果几何规划问题的等式约束是 \(h_1(x) = h_2(x)\)，我们同样也可以在等式两边同除以 \(h_2(x)\)，得到
 
 $$
-\frac{h_1(x)}{h_2(x)} = 1
+\dfrac{h_1(x)}{h_2(x)} = 1
 $$
 
 根据上述性质，不等号左边的函数仍然是一个单项式，仍然满足几何规划问题的定义。
@@ -70,10 +70,10 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & \frac{x}{y} \\
+    \mathrm{maximize} \quad & \dfrac{x}{y} \\
     \mathrm{subject\ to} \quad & 2 \leqslant x \leqslant 3 \\
-    \quad & x^2 + \frac{3y}{z} \leqslant \sqrt{y} \\
-    \quad & \frac{x}{y} = z^2
+    \quad & x^2 + \dfrac{3y}{z} \leqslant \sqrt{y} \\
+    \quad & \dfrac{x}{y} = z^2
 \end{aligned}
 $$
 
@@ -83,7 +83,7 @@ $$
 \begin{aligned}
     \mathrm{minimize} \quad & x^{-1} y \\
     \mathrm{subject\ to} \quad & 2 x^{-1} \leqslant 1 \\
-    \quad & \frac{1}{3} x \leqslant 1 \\
+    \quad & \dfrac{1}{3} x \leqslant 1 \\
     \quad & x^2 y^{-1/2} + 3 y^{1/2} z^{-1} \leqslant 1 \\
     \quad & x y^{-1} z^{-2} = 1
 \end{aligned}

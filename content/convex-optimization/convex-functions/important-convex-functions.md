@@ -25,8 +25,8 @@ weight: 220
 
 $$
 \begin{aligned}
-    \lim _{x \rightarrow 0^{+}} x \log{x} &= \lim _{x \rightarrow 0^{+}} \frac{\log{x}}{1/x}  \\
-    &= \lim _{x \rightarrow 0^{+}} \frac{1/x}{-1/x^2} \\
+    \lim _{x \rightarrow 0^{+}} x \log{x} &= \lim _{x \rightarrow 0^{+}} \dfrac{\log{x}}{1/x}  \\
+    &= \lim _{x \rightarrow 0^{+}} \dfrac{1/x}{-1/x^2} \\
     &= 0
 \end{aligned}
 $$
@@ -34,7 +34,7 @@ $$
 函数 \(f\) 的导数和二阶导数为
 
 $$
-f^{\prime}(x) = \log{x} + 1, \quad f^{\prime \prime}(x) = \frac{1}{x} > 0
+f^{\prime}(x) = \log{x} + 1, \quad f^{\prime \prime}(x) = \dfrac{1}{x} > 0
 $$
 
 ### 范数
@@ -43,7 +43,7 @@ $$
 
 ### 二次-线性分式函数
 
-二元函数 \(f(x,y) = \frac{x^2}{y}\) 是凸函数，其定义域为
+二元函数 \(f(x,y) = \dfrac{x^2}{y}\) 是凸函数，其定义域为
 
 $$
 \operatorname{dom} f = \mathbf{R} \times \mathbf{R} _{++} = \{ (x, y) \in \mathbf{R} ^2 \mid y > 0 \}

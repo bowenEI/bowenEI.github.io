@@ -166,7 +166,7 @@ $$
 \lim_{x \to 0} \dfrac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} \dfrac{f(x)}{x} = m
 $$
 
-可以证明 B 选项正确。而 A 选项恰好是其逆命题，不一定成立。这是因为 \(f(0)\) 不一定等于 \(0\)，下面给出一个反例
+可以证明 B 选项正确。而 A 选项恰好是其逆命题，不一定成立。这是因为 \(f(0)\) 不一定等于 0，下面给出一个反例
 
 $$
 f(x) = \begin{cases}
@@ -862,8 +862,8 @@ $$
 $$
 \begin{aligned}
     \cdots &= 2 \iint_{D_1} \dfrac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y \\
-    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\frac{1}{2}} \mathrm{d} x^2 \\
-    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\frac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
+    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\dfrac{1}{2}} \mathrm{d} x^2 \\
+    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\dfrac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
     &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y
 \end{aligned}
 $$
@@ -882,10 +882,10 @@ $$
 
 $$
 \begin{aligned}
-    \cdots &= 2 \int_{0}^{\frac{\pi}{4}} (\sec{\theta} - 1) \sec^2{\theta} \mathrm{d}\theta \\
-    &= 2 \int_{0}^{\frac{\pi}{4}} \frac{\cos{\theta}}{\cos^4{\theta}} \mathrm{d}\theta - 2 \int_{0}^{\frac{\pi}{4}} \sec^2{\theta} \mathrm{d}\theta \\
-    &= 2 \int_{0}^{\frac{\pi}{4}} \left. \frac{\mathrm{d} \sin{\theta}}{(1 - \sin^2{\theta})^2} - 2 \tan{\theta} \right|_{0}^{\frac{\pi}{4}} \\
-    &= 2 \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t+1)^2 (t-1)^2} - 2
+    \cdots &= 2 \int_{0}^{\dfrac{\pi}{4}} (\sec{\theta} - 1) \sec^2{\theta} \mathrm{d}\theta \\
+    &= 2 \int_{0}^{\dfrac{\pi}{4}} \dfrac{\cos{\theta}}{\cos^4{\theta}} \mathrm{d}\theta - 2 \int_{0}^{\dfrac{\pi}{4}} \sec^2{\theta} \mathrm{d}\theta \\
+    &= 2 \int_{0}^{\dfrac{\pi}{4}} \left. \dfrac{\mathrm{d} \sin{\theta}}{(1 - \sin^2{\theta})^2} - 2 \tan{\theta} \right|_{0}^{\dfrac{\pi}{4}} \\
+    &= 2 \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{\mathrm{d}t}{(t+1)^2 (t-1)^2} - 2
 \end{aligned}
 $$
 
@@ -929,19 +929,19 @@ $$
 
 $$
 \begin{aligned}
-    \cdots &= \frac{1}{2} \left[
-        \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{t+1} - \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{t-1} + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t+1)^2} + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t-1)^2}
+    \cdots &= \dfrac{1}{2} \left[
+        \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{\mathrm{d}t}{t+1} - \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{\mathrm{d}t}{t-1} + \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{\mathrm{d}t}{(t+1)^2} + \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{\mathrm{d}t}{(t-1)^2}
     \right] - 2 \\
-    &= \frac{1}{2} \left[
-        \ln{(t+1)} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \ln{(1-t)} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \frac{1}{t+1} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \frac{1}{t-1} \Big|_{0}^{\frac{\sqrt{2}}{2}}
+    &= \dfrac{1}{2} \left[
+        \ln{(t+1)} \Big|_{0}^{\dfrac{\sqrt{2}}{2}} - \ln{(1-t)} \Big|_{0}^{\dfrac{\sqrt{2}}{2}} - \dfrac{1}{t+1} \Big|_{0}^{\dfrac{\sqrt{2}}{2}} - \dfrac{1}{t-1} \Big|_{0}^{\dfrac{\sqrt{2}}{2}}
     \right] - 2 \\
-    &= \frac{1}{2} \left[
-        \ln{\frac{2+\sqrt{2}}{2-\sqrt{2}}} - \left(
-            \frac{2}{\sqrt{2}+2} - 1 + \frac{2}{\sqrt{2}-2} + 1
+    &= \dfrac{1}{2} \left[
+        \ln{\dfrac{2+\sqrt{2}}{2-\sqrt{2}}} - \left(
+            \dfrac{2}{\sqrt{2}+2} - 1 + \dfrac{2}{\sqrt{2}-2} + 1
         \right)
     \right] - 2 \\
-    &= \frac{1}{2} \left[
-        2 \ln{(\sqrt{2}+1)} - \frac{2 \times 2\sqrt{2}}{(\sqrt{2}+2)(\sqrt{2}-2)}
+    &= \dfrac{1}{2} \left[
+        2 \ln{(\sqrt{2}+1)} - \dfrac{2 \times 2\sqrt{2}}{(\sqrt{2}+2)(\sqrt{2}-2)}
     \right] - 2 \\
     &= \ln{(\sqrt{2}+1)} + \sqrt{2} - 2
 \end{aligned}
@@ -953,22 +953,22 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= y \sqrt{1+y^2} \Big|_{0}^{1} - \int_{0}^{1} \frac{y \cdot 2y}{2 \sqrt{1+y^2}} \mathrm{d}y \\
-    &= \sqrt{2} - \int_{0}^{1} \frac{y^2+1-1}{\sqrt{1+y^2}} \mathrm{d}y \\
-    &= \sqrt{2} - \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y + \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y \\
-    \Longrightarrow \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y
+    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= y \sqrt{1+y^2} \Big|_{0}^{1} - \int_{0}^{1} \dfrac{y \cdot 2y}{2 \sqrt{1+y^2}} \mathrm{d}y \\
+    &= \sqrt{2} - \int_{0}^{1} \dfrac{y^2+1-1}{\sqrt{1+y^2}} \mathrm{d}y \\
+    &= \sqrt{2} - \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y + \int_{0}^{1} \dfrac{1}{\sqrt{1+y^2}} \mathrm{d}y \\
+    \Longrightarrow \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \dfrac{\sqrt{2}}{2} + \dfrac{1}{2} \int_{0}^{1} \dfrac{1}{\sqrt{1+y^2}} \mathrm{d}y
 \end{aligned}
 $$
 
-下面计算定积分 \(\displaystyle \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y\)。此时再进行三角换元，计算量相对较小。
+下面计算定积分 \(\displaystyle \int_{0}^{1} \dfrac{1}{\sqrt{1+y^2}} \mathrm{d}y\)。此时再进行三角换元，计算量相对较小。
 
 $$
 \begin{aligned}
-    y &= \tan{\theta} \quad \theta \in [0, \frac{\pi}{4}] \\
-    \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y &= \int_{0}^{\frac{\pi}{4}} \frac{\sec^2{\theta}}{\sec{\theta}} \mathrm{d} \theta \\
-    &= \int_{0}^{\frac{\pi}{4}} \frac{1}{1-\sin^2{\theta}} \mathrm{d} \sin{\theta} \\
-    &= \frac{1}{2} \left( \int_{0}^{\frac{\sqrt{2}}{2}} \frac{1}{1+u} \mathrm{d}u + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{1}{1-u} \mathrm{d}u \right) \\
-    &= \frac{1}{2} \ln{\frac{1+u}{1-u}} \Big|_{0}^{\frac{\sqrt{2}}{2}} \\
+    y &= \tan{\theta} \quad \theta \in [0, \dfrac{\pi}{4}] \\
+    \int_{0}^{1} \dfrac{1}{\sqrt{1+y^2}} \mathrm{d}y &= \int_{0}^{\dfrac{\pi}{4}} \dfrac{\sec^2{\theta}}{\sec{\theta}} \mathrm{d} \theta \\
+    &= \int_{0}^{\dfrac{\pi}{4}} \dfrac{1}{1-\sin^2{\theta}} \mathrm{d} \sin{\theta} \\
+    &= \dfrac{1}{2} \left( \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{1}{1+u} \mathrm{d}u + \int_{0}^{\dfrac{\sqrt{2}}{2}} \dfrac{1}{1-u} \mathrm{d}u \right) \\
+    &= \dfrac{1}{2} \ln{\dfrac{1+u}{1-u}} \Big|_{0}^{\dfrac{\sqrt{2}}{2}} \\
     &= \ln{(\sqrt{2}+1)}
 \end{aligned}
 $$
@@ -977,7 +977,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \ln{(\sqrt{2}+1)}
+    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \dfrac{\sqrt{2}}{2} + \dfrac{1}{2} \ln{(\sqrt{2}+1)}
 \end{aligned}
 $$
 
@@ -1072,10 +1072,10 @@ $$
 $$
 \begin{aligned}
     f'(x, 0) &= 3x^2 - 2x = 0 \\
-    \Longrightarrow x &= 0 \text{ or } x = \frac{2}{3} \\
+    \Longrightarrow x &= 0 \text{ or } x = \dfrac{2}{3} \\
     f'(0, y) &= 3y^2 - 2y = 0 \\
-    \Longrightarrow y &= 0 \text{ or } y = \frac{2}{3} \\
-    f'(x, 3-x) &= \frac{\mathrm{d}}{\mathrm{d}x} [x^3 + (3-x)^3 - 6] \\
+    \Longrightarrow y &= 0 \text{ or } y = \dfrac{2}{3} \\
+    f'(x, 3-x) &= \dfrac{\mathrm{d}}{\mathrm{d}x} [x^3 + (3-x)^3 - 6] \\
     &= 3x^2 - 3(3-x)^2 \\
     &= 9(2x - 3) = 0 \\
     \Longrightarrow x &= \dfrac{3}{2} \\
@@ -1088,10 +1088,10 @@ $$
 
 $$
 \begin{aligned}
-    f(\frac{4}{3}, \frac{4}{3}) &= \frac{17}{27} \\
-    f(\frac{2}{3}, 0) &= \frac{77}{27} \\
-    f(0, \frac{2}{3}) &= \frac{77}{27} \\
-    f(\frac{3}{2}, \frac{3}{2}) &= \frac{3}{4}
+    f(\dfrac{4}{3}, \dfrac{4}{3}) &= \dfrac{17}{27} \\
+    f(\dfrac{2}{3}, 0) &= \dfrac{77}{27} \\
+    f(0, \dfrac{2}{3}) &= \dfrac{77}{27} \\
+    f(\dfrac{3}{2}, \dfrac{3}{2}) &= \dfrac{3}{4}
 \end{aligned}
 $$
 
@@ -1105,7 +1105,7 @@ $$
 \end{aligned}
 $$
 
-所以，最大值为 \(21\)，最小值为 \(\dfrac{17}{27}\)。
+所以，最大值为 21，最小值为 \(\dfrac{17}{27}\)。
 
 【点评】
 
@@ -1166,8 +1166,8 @@ $$
 $$
 \begin{aligned}
     \Phi(x) &= \varphi(x) - \dfrac{x(1-x)}{2} \\
-    \Longrightarrow \Phi'(x) &= \varphi'(x) + x - \frac{1}{2} \\
-    &= f'(x) - f(1) + f(0) + x - \frac{1}{2} \\
+    \Longrightarrow \Phi'(x) &= \varphi'(x) + x - \dfrac{1}{2} \\
+    &= f'(x) - f(1) + f(0) + x - \dfrac{1}{2} \\
     \Longrightarrow \Phi''(x) &= f''(x) + 1 \\
     \because |f''(x)| & \leqslant 1 \quad \therefore \Phi''(x) \geqslant 0 \\
 \end{aligned}
@@ -1180,8 +1180,8 @@ $$
 $$
 \begin{aligned}
     \Psi(x) &= \varphi(x) + \dfrac{x(1-x)}{2} \\
-    \Longrightarrow \Psi'(x) &= \varphi'(x) - x + \frac{1}{2} \\
-    &= f'(x) - f(1) + f(0) - x + \frac{1}{2} \\
+    \Longrightarrow \Psi'(x) &= \varphi'(x) - x + \dfrac{1}{2} \\
+    &= f'(x) - f(1) + f(0) - x + \dfrac{1}{2} \\
     \Longrightarrow \Psi''(x) &= f''(x) - 1 \\
     \because |f''(x)| & \leqslant 1 \quad \therefore \Psi''(x) \leqslant 0 \\
 \end{aligned}
@@ -1195,7 +1195,7 @@ $$
 
 $$
 \begin{aligned}
-    \left| f(\frac{1}{2}) - \frac{f(0) + f(1)}{2} \right| \leqslant \frac{1}{8}
+    \left| f(\dfrac{1}{2}) - \dfrac{f(0) + f(1)}{2} \right| \leqslant \dfrac{1}{8}
 \end{aligned}
 $$
 
@@ -1205,9 +1205,9 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{1} \left| f(x) - f(0)(1-x) - f(1)x \right| \mathrm{d}x & \leqslant \int_{0}^{1} \frac{x(1-x)}{2} \mathrm{d}x \\
-    &= \frac{1}{4} x^2 \Big|_{0}^{1} - \frac{1}{6} x^3 \Big|_{0}^{1} \\
-    &= \frac{1}{12}
+    \int_{0}^{1} \left| f(x) - f(0)(1-x) - f(1)x \right| \mathrm{d}x & \leqslant \int_{0}^{1} \dfrac{x(1-x)}{2} \mathrm{d}x \\
+    &= \dfrac{1}{4} x^2 \Big|_{0}^{1} - \dfrac{1}{6} x^3 \Big|_{0}^{1} \\
+    &= \dfrac{1}{12}
 \end{aligned}
 $$
 
@@ -1215,8 +1215,8 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{1} f(x) \mathrm{d}x + f(0) \cdot \frac{1}{2} (x-1)^2 \Big|_{0}^{1} - f(1) \cdot \frac{1}{2} x^2 \Big|_{0}^{1} & \leqslant \frac{1}{12} \\
-    \int_{0}^{1} f(x) \mathrm{d}x - \frac{f(0)+f(1)}{2} & \leqslant \frac{1}{12}
+    \int_{0}^{1} f(x) \mathrm{d}x + f(0) \cdot \dfrac{1}{2} (x-1)^2 \Big|_{0}^{1} - f(1) \cdot \dfrac{1}{2} x^2 \Big|_{0}^{1} & \leqslant \dfrac{1}{12} \\
+    \int_{0}^{1} f(x) \mathrm{d}x - \dfrac{f(0)+f(1)}{2} & \leqslant \dfrac{1}{12}
 \end{aligned}
 $$
 
@@ -1224,7 +1224,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{1} f(x) \mathrm{d}x - \frac{f(0)+f(1)}{2} & \geqslant -\frac{1}{12} \\
+    \int_{0}^{1} f(x) \mathrm{d}x - \dfrac{f(0)+f(1)}{2} & \geqslant -\dfrac{1}{12} \\
 \end{aligned}
 $$
 
@@ -1610,8 +1610,8 @@ $$
 $$
 \begin{aligned}
     E(T_c) = c E(X(n)) &= c \int_{0}^{\theta} x \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x \\
-    &= \frac{cn x^{n+1}}{(n+1) \theta^n} \Bigg|_{0}^{\theta} \\
-    &= \frac{cn}{(n+1)} \theta
+    &= \dfrac{cn x^{n+1}}{(n+1) \theta^n} \Bigg|_{0}^{\theta} \\
+    &= \dfrac{cn}{(n+1)} \theta
 \end{aligned}
 $$
 
@@ -1626,14 +1626,14 @@ $$
     &= E(T_c^2) - 2 \theta E(T_c) + \theta^2 \\
     &= c^2 E(X^2(n)) - 2 \theta c E(X(n)) + \theta^2 \\
     &= c^2 \int_{0}^{\theta} x^2 \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x - 2 \theta c \int_{0}^{\theta} x \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x + \theta^2 \\
-    &= \frac{\theta^2 n}{n+2} c^2 - \frac{2 \theta^2 n}{n+1} c + \theta^2
+    &= \dfrac{\theta^2 n}{n+2} c^2 - \dfrac{2 \theta^2 n}{n+1} c + \theta^2
 \end{aligned}
 $$
 
 易知 \(h(c)\) 是一个关于 \(c\) 的二次函数，其函数图像为开口向上的抛物线。因此，\(h(c)\) 在其对称轴处取到最小值，即
 
 $$
-c = \dfrac{\dfrac{2 \theta^2 n}{n+1}}{2 \cdot \dfrac{\theta^2 n}{n+2}} = \frac{n+2}{n+1}
+c = \dfrac{\dfrac{2 \theta^2 n}{n+1}}{2 \cdot \dfrac{\theta^2 n}{n+2}} = \dfrac{n+2}{n+1}
 $$
 
 【点评】

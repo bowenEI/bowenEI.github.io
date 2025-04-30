@@ -69,10 +69,10 @@ LLM 超参数定义如下：
 多头自注意力模块的每个 head 都需要 2 次 Self-Attention 的计算，即
 
 $$
-\text{Attention}(Q, K, V) = \text{Softmax}(\frac{QK^{\top}}{\sqrt{d_k}})V
+\text{Attention}(Q, K, V) = \text{Softmax}(\dfrac{QK^{\top}}{\sqrt{d_k}})V
 $$
 
-在那之前，需要将每个 token 从 \(d_{\textrm{model}}\) 维映射到 \(d_k(d_v)\) 维。（在 Transformer 模型中，\(d_{\textrm{model}} = 512\)，而 \(d_k = d_v = \frac{d_{\textrm{model}}}{h} = 64\)，这里 \(h = 8\)。）所以，输入的 \(Q, K, V\) 向量都需要进行投影操作，共需 3 个线性变换矩阵 \(W_K, W_Q, W_V\)，维度均为 `(M, D)`。
+在那之前，需要将每个 token 从 \(d_{\textrm{model}}\) 维映射到 \(d_k(d_v)\) 维。（在 Transformer 模型中，\(d_{\textrm{model}} = 512\)，而 \(d_k = d_v = \dfrac{d_{\textrm{model}}}{h} = 64\)，这里 \(h = 8\)。）所以，输入的 \(Q, K, V\) 向量都需要进行投影操作，共需 3 个线性变换矩阵 \(W_K, W_Q, W_V\)，维度均为 `(M, D)`。
 
 ![](9b71910d735ee7b15951fdc350cc411d.png "Multi-Head Self-Attention Block.")
 
@@ -121,7 +121,7 @@ $$
 
 $$
 \begin{aligned}
-    y = \frac{x - \mu}{\sigma + \epsilon} \times \gamma + \beta
+    y = \dfrac{x - \mu}{\sigma + \epsilon} \times \gamma + \beta
 \end{aligned}
 $$
 
@@ -250,7 +250,7 @@ LLaMA[^4] 是基于 Transformer 的 Decoder only 模型。考虑到 LLaMA 是参
 
 $$
 \begin{aligned}
-    \text{Arithmetic Intensity} = \frac{\text{FLOPS}}{\text{MOPS}}
+    \text{Arithmetic Intensity} = \dfrac{\text{FLOPS}}{\text{MOPS}}
 \end{aligned}
 $$
 
@@ -278,7 +278,7 @@ $$
 \end{aligned}
 $$
 
-其中，常数 \(2\) 表示一对显存读写操作，因为中间激活 tensor 需要先读取，再将结果写入显存。
+其中，常数 2 表示一对显存读写操作，因为中间激活 tensor 需要先读取，再将结果写入显存。
 
 对于 Self-Attention 计算，\(Q \times K\) 和 Score（用 \(P\) 表示）\(\times V\) 这 2 个线性算子的 FLOPS 与 \(B, S^2, H, D\) 成正比，即
 
@@ -324,14 +324,14 @@ $$
 
 |        Stage         |     FLOPS     |       MOPS        |                  Arithmetic Intensity                   |
 | :------------------: | :-----------: | :---------------: | :-----------------------------------------------------: |
-|   \(Q \times W_Q\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)\) |
-|   \(K \times W_K\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)\) |
-|   \(V \times W_V\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)\) |
-|    \(Q \times K\)    | \(O(BS^2M)\)  | \(O(2BSM+BS^2H)\) | \(O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)\)  |
-|    \(P \times V\)    | \(O(BS^2M)\)  | \(O(2BSM+BS^2H)\) | \(O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)\)  |
-|   \(A \times W_O\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)\) |
-| \(F \times W_{in}\)  | \(O(8BSM^2)\) |  \(O(BSM+4M^2)\)  | \(O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)\) |
-| \(F \times W_{out}\) | \(O(8BSM^2)\) |  \(O(BSM+4M^2)\)  | \(O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)\) |
+|   \(Q \times W_Q\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{BS} }\right)\) |
+|   \(K \times W_K\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{BS} }\right)\) |
+|   \(V \times W_V\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{BS} }\right)\) |
+|    \(Q \times K\)    | \(O(BS^2M)\)  | \(O(2BSM+BS^2H)\) | \(O\left(\dfrac{1}{\dfrac{1}{D}+\dfrac{1}{S} }\right)\)  |
+|    \(P \times V\)    | \(O(BS^2M)\)  | \(O(2BSM+BS^2H)\) | \(O\left(\dfrac{1}{\dfrac{1}{D}+\dfrac{1}{S} }\right)\)  |
+|   \(A \times W_O\)   | \(O(BSM^2)\)  |  \(O(2BSM+M^2)\)  | \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{BS} }\right)\) |
+| \(F \times W_{in}\)  | \(O(8BSM^2)\) |  \(O(BSM+4M^2)\)  | \(O\left(\dfrac{8}{\dfrac{1}{M}+\dfrac{4}{BS} }\right)\) |
+| \(F \times W_{out}\) | \(O(8BSM^2)\) |  \(O(BSM+4M^2)\)  | \(O\left(\dfrac{8}{\dfrac{1}{M}+\dfrac{4}{BS} }\right)\) |
 
 上表给出了 LLM 主要的 8 个线性算子的 FLOPS、MOPS 和算术强度，这些开销在 LLM 推理过程中占主导地位。具体来说，这 8 个线性算子可以分为如下两类：
 
@@ -351,14 +351,14 @@ $$
 
 |         Stage         |                  FLOPS                   |                       MOPS                        |                                       Arithmetic Intensity                                       |
 | :-------------------: | :--------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------------------------------------------: |
-|   \(Q \times W_Q\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(2BM+M^2)\)        |                      \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)\)                       |
-|   \(K \times W_K\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |  \(\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)\)  | \(\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}\) |
-|   \(V \times W_V\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |  \(\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)\)  | \(\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}\) |
-|    \(Q \times K\)    | \(\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)\) | \(\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])\) | \(\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}\)  |
-|    \(P \times V\)    | \(\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)\) | \(\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])\) | \(\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}\)  |
-|   \(A \times W_O\)    |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(2BM+M^2)\)        |                      \(O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)\)                       |
-| \(F \times W_{in}\)  |    \(\sum_{i=1}^{S_{out} }O(8BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(BM+4M^2)\)        |                      \(O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)\)                       |
-| \(F \times W_{out}\) |    \(\sum_{i=1}^{S_{out} }O(8BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(BM+4M^2)\)        |                      \(O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)\)                       |
+|   \(Q \times W_Q\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(2BM+M^2)\)        |                      \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{B} }\right)\)                       |
+|   \(K \times W_K\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |  \(\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)\)  | \(\dfrac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \dfrac{2(S_{in}+i-1)}{M} + \dfrac{1}{B} \right)}\) |
+|   \(V \times W_V\)   |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |  \(\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)\)  | \(\dfrac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \dfrac{2(S_{in}+i-1)}{M} + \dfrac{1}{B} \right)}\) |
+|    \(Q \times K\)    | \(\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)\) | \(\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])\) | \(\dfrac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \dfrac{1}{D} + \dfrac{1}{S_{in}+i} +1 \right)}\)  |
+|    \(P \times V\)    | \(\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)\) | \(\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])\) | \(\dfrac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \dfrac{1}{D} + \dfrac{1}{S_{in}+i} +1 \right)}\)  |
+|   \(A \times W_O\)    |     \(\sum_{i=1}^{S_{out} }O(BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(2BM+M^2)\)        |                      \(O\left(\dfrac{1}{\dfrac{2}{M}+\dfrac{1}{B} }\right)\)                       |
+| \(F \times W_{in}\)  |    \(\sum_{i=1}^{S_{out} }O(8BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(BM+4M^2)\)        |                      \(O\left(\dfrac{8}{\dfrac{1}{M}+\dfrac{4}{B} }\right)\)                       |
+| \(F \times W_{out}\) |    \(\sum_{i=1}^{S_{out} }O(8BM^2)\)     |        \(\sum_{i=1}^{S_{out} }O(BM+4M^2)\)        |                      \(O\left(\dfrac{8}{\dfrac{1}{M}+\dfrac{4}{B} }\right)\)                       |
 
 首先注意，增量推理阶段是一个自回归的过程，因此总的 FLOPS、MOPS 和算术强度为每次推理出一个 token 的叠加，这也是表格中求和符号的由来。
 
@@ -378,7 +378,7 @@ $$
 \end{aligned}
 $$
 
-在后续的 MHA 计算中，第 \(i\) 轮迭代的序列长度就变为 \(S_{in}+i\)。计算完 MHA 后，序列长度就恒为 \(1\) 了，故增量推理阶段 FFN block 的相关指标与全量推理阶段相同。
+在后续的 MHA 计算中，第 \(i\) 轮迭代的序列长度就变为 \(S_{in}+i\)。计算完 MHA 后，序列长度就恒为 1 了，故增量推理阶段 FFN block 的相关指标与全量推理阶段相同。
 
 通过上表，我们可以得出如下几点新的结论：
 
@@ -392,14 +392,14 @@ $$
 
 $$
 \begin{aligned}
-    & \frac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
-        \frac{S_{in}+i-1}{M} + \frac{1}{B}
+    & \dfrac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
+        \dfrac{S_{in}+i-1}{M} + \dfrac{1}{B}
     \right)} \\
-    =\ & \frac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
-        \frac{S_{in}+i-1}{M} + \frac{1}{B}{}
+    =\ & \dfrac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
+        \dfrac{S_{in}+i-1}{M} + \dfrac{1}{B}{}
     \right)} \\
-    =\ & \frac{S_{out}}{O\left(\frac{(S_{in}-1)S_{out}}{M} + \frac{S_{out}(S_{out}+1)}{2M} + \frac{S_{out}}{B}\right)} \\
-    =\ & O \left( \frac{2S_{in}+S_{out}-1}{2M} + \frac{1}{B} \right)
+    =\ & \dfrac{S_{out}}{O\left(\dfrac{(S_{in}-1)S_{out}}{M} + \dfrac{S_{out}(S_{out}+1)}{2M} + \dfrac{S_{out}}{B}\right)} \\
+    =\ & O \left( \dfrac{2S_{in}+S_{out}-1}{2M} + \dfrac{1}{B} \right)
 \end{aligned}
 $$
 
@@ -409,7 +409,7 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{i=1}^{S_{out}} \frac{1}{i+S_{in}}
+    \sum_{i=1}^{S_{out}} \dfrac{1}{i+S_{in}}
 \end{aligned}
 $$
 
@@ -417,10 +417,10 @@ $$
 
 $$
 \begin{aligned}
-    S(n) &= \sum_{i=1}^{n} \frac{1}{i} \\
-    \sum_{i=1}^{S_{out}} \frac{1}{i+S_{in}} &= S(S_{out}) - S(S_{in}) \\
+    S(n) &= \sum_{i=1}^{n} \dfrac{1}{i} \\
+    \sum_{i=1}^{S_{out}} \dfrac{1}{i+S_{in}} &= S(S_{out}) - S(S_{in}) \\
     & \approx \ln(S_{out}+1) - \ln(S_{in}+1) \\
-    &= \ln{\frac{S_{out}+1}{S_{in}+1}}
+    &= \ln{\dfrac{S_{out}+1}{S_{in}+1}}
 \end{aligned}
 $$
 
@@ -428,9 +428,9 @@ $$
 
 $$
 \begin{aligned}
-    & \frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)} \\
-    =\ & \frac{S_{out} }{O \left( \frac{S_{out}}{D} + \ln{\frac{S_{out}+1}{S_{in}+1}} + S_{out} \right)} \\
-    =\ & O \left( \frac{1}{\frac{1}{D}+1 + \frac{1}{S_{out}} \ln{\frac{S_{out}+1}{S_{in}+1}}} \right) \\
+    & \dfrac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \dfrac{1}{D} + \dfrac{1}{S_{in}+i} +1 \right)} \\
+    =\ & \dfrac{S_{out} }{O \left( \dfrac{S_{out}}{D} + \ln{\dfrac{S_{out}+1}{S_{in}+1}} + S_{out} \right)} \\
+    =\ & O \left( \dfrac{1}{\dfrac{1}{D}+1 + \dfrac{1}{S_{out}} \ln{\dfrac{S_{out}+1}{S_{in}+1}}} \right) \\
 \end{aligned}
 $$
 

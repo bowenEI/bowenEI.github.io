@@ -119,7 +119,7 @@ $$
 我们不妨来回忆以下高中时期我们接触到的凸函数定义，如下
 
 $$
-f\left(\frac{x+y}{2}\right) \leqslant \frac{f(x)+f(y)}{2}
+f\left(\dfrac{x+y}{2}\right) \leqslant \dfrac{f(x)+f(y)}{2}
 $$
 
 其实这就是由 Jensen 提出的最初的一个最简单的不等式。现在，我们可以称上述所有的不等式为 Jensen 不等式。

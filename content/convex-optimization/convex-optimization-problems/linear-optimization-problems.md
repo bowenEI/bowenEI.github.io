@@ -84,7 +84,7 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{c^{\top}x+d}{e^{\top}x+f} \\
+    \mathrm{minimize} \quad & \dfrac{c^{\top}x+d}{e^{\top}x+f} \\
     \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}

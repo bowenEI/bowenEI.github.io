@@ -23,10 +23,10 @@ $$
 f(\theta x+(1-\theta) y) \geqslant f(x)^{\theta} f(y)^{1-\theta}
 $$
 
-特别地，若令 \(\theta = \frac{1}{2}\)，则可以得到如下结论：对数凹函数在两点中间的函数值不小于这两点函数的几何平均值，即
+特别地，若令 \(\theta = \dfrac{1}{2}\)，则可以得到如下结论：对数凹函数在两点中间的函数值不小于这两点函数的几何平均值，即
 
 $$
-f(\frac{x + y}{2}) \geqslant \sqrt{f(x)f(y)}
+f(\dfrac{x + y}{2}) \geqslant \sqrt{f(x)f(y)}
 $$
 
 根据函数复合规则，我们知道如果函数 \(h\) 是凸函数，则函数 \(e^h\) 是凸函数，因此对数凸函数是凸函数。类似地，非负凹函数是对数凹函数。此外，由于对数函数是单调增函数，所以对数凸函数是拟凸函数，对数凹函数是拟凹函数。
@@ -42,7 +42,7 @@ $$
 - Gauss 概率密度函数的累积分布函数是对数凹函数。
 
 $$
-\Phi(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} e^{-u^{2} / 2} \mathrm{d} u
+\Phi(x)=\dfrac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} e^{-u^{2} / 2} \mathrm{d} u
 $$
 
 - \(\Gamma\) 函数在 \([1, +\infty)\) 上是对数凸函数。
@@ -62,7 +62,7 @@ $$
 假设函数 \(f\) 是二次可微的，并且 \(\operatorname{dom} f\) 是凸的，那么
 
 $$
-\nabla^{2} \log f(x)=\frac{1}{f(x)} \nabla^{2} f(x)-\frac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{\top}
+\nabla^{2} \log f(x)=\dfrac{1}{f(x)} \nabla^{2} f(x)-\dfrac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{\top}
 $$
 
 因此，判断函数 \(f\) 的对数凹凸性，只需要分别令二阶导数大于零（凸）和小于零（凹），即

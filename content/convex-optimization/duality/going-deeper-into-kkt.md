@@ -41,9 +41,9 @@ $$
 $$
 \left\{
     \begin{aligned}
-        \frac{\partial L}{\partial x} &= f_x(x, y) + \lambda g_x(x, y) = 0 \\
-        \frac{\partial L}{\partial y} &= f_y(x, y) + \lambda g_y(x, y) = 0 \\
-        \frac{\partial L}{\partial \lambda} &= g(x, y) = 0
+        \dfrac{\partial L}{\partial x} &= f_x(x, y) + \lambda g_x(x, y) = 0 \\
+        \dfrac{\partial L}{\partial y} &= f_y(x, y) + \lambda g_y(x, y) = 0 \\
+        \dfrac{\partial L}{\partial \lambda} &= g(x, y) = 0
     \end{aligned}
 \right.
 $$
@@ -147,23 +147,23 @@ $$
 
 $$
 \left\{\begin{aligned}
-    x &= \frac{1}{2} \lambda & (5) \\
-    y &= \frac{1}{2} \lambda - \frac{1}{2} \nu & (6)
+    x &= \dfrac{1}{2} \lambda & (5) \\
+    y &= \dfrac{1}{2} \lambda - \dfrac{1}{2} \nu & (6)
 \end{aligned}\right.
 $$
 
 代入等式约束 \(x+y=1\)，得到 \(\lambda\) 和 \(\nu\) 的函数关系
 
 $$
-\lambda = \frac{1}{2} \nu + 1
+\lambda = \dfrac{1}{2} \nu + 1
 $$
 
 再代入式 (5) 和 (6) 中，消去 \(\lambda\)
 
 $$
 \left\{\begin{aligned}
-    x &= \frac{1}{4} \nu + \frac{1}{2} & (7) \\
-    y &= -\frac{1}{4} \nu + \frac{1}{2} & (8)
+    x &= \dfrac{1}{4} \nu + \dfrac{1}{2} & (7) \\
+    y &= -\dfrac{1}{4} \nu + \dfrac{1}{2} & (8)
 \end{aligned}\right.
 $$
 
@@ -178,13 +178,13 @@ $$
 
 下面对参数 \(\alpha\) 进行分类讨论：
 
-1. 若 \(\alpha > \frac{1}{2}\)，不难验证 \(\nu = 0 > 2 - 4 \alpha\)。此时满足所有的 KKT 条件，约束不等式是无效的。\(x^{\star} = y^{\star} = \frac{1}{2}\) 是内部解。
-2. 若 \(\alpha = \frac{1}{2}\)，\(\nu = 0 = 2 - 4 \alpha\)。此时满足所有的 KKT 条件，约束不等式是有效的。\(x^{\star} = y^{\star} = \frac{1}{2}\) 是边界解。
-3. 若 \(\alpha < \frac{1}{2}\)，\(\nu = 2 - 4 \alpha > 0\)。此时约束不等式是有效的。\(x^{\star} = 1 - \alpha\)，\(y^{\star} = \alpha\)。
+1. 若 \(\alpha > \dfrac{1}{2}\)，不难验证 \(\nu = 0 > 2 - 4 \alpha\)。此时满足所有的 KKT 条件，约束不等式是无效的。\(x^{\star} = y^{\star} = \dfrac{1}{2}\) 是内部解。
+2. 若 \(\alpha = \dfrac{1}{2}\)，\(\nu = 0 = 2 - 4 \alpha\)。此时满足所有的 KKT 条件，约束不等式是有效的。\(x^{\star} = y^{\star} = \dfrac{1}{2}\) 是边界解。
+3. 若 \(\alpha < \dfrac{1}{2}\)，\(\nu = 2 - 4 \alpha > 0\)。此时约束不等式是有效的。\(x^{\star} = 1 - \alpha\)，\(y^{\star} = \alpha\)。
 
 ![](2624b1be62172f5ceaff974be0b4133e.png)
 
-本题的几何意义如图所示。目标函数对应的曲面 \(\Gamma\) 是（椭）圆抛物面，等式约束对应平面 \(\pi\)，不等式约束对应以平面 \(\sigma\) 为边界的左半空间。曲面 \(\Gamma\) 和平面 \(\pi\) 的交线为图中的红色曲线（该曲线实际上是一个抛物线）。不考虑不等式约束，该优化问题的最优解为 \((x^{\star}, y^{\star}) = (\frac{1}{2}, \frac{1}{2})\)，最优值为 \(f(x^{\star}, y^{\star}) = \frac{1}{2}\)，对应图中红点的坐标 \((\frac{1}{2}, \frac{1}{2}, \frac{1}{2})\)。不等式约束实际上是让平面 \(\alpha\) 沿 \(y\) 轴方向平移，以 \(\alpha = \frac{1}{2}\) 为界，可以分三种情况讨论。
+本题的几何意义如图所示。目标函数对应的曲面 \(\Gamma\) 是（椭）圆抛物面，等式约束对应平面 \(\pi\)，不等式约束对应以平面 \(\sigma\) 为边界的左半空间。曲面 \(\Gamma\) 和平面 \(\pi\) 的交线为图中的红色曲线（该曲线实际上是一个抛物线）。不考虑不等式约束，该优化问题的最优解为 \((x^{\star}, y^{\star}) = (\dfrac{1}{2}, \dfrac{1}{2})\)，最优值为 \(f(x^{\star}, y^{\star}) = \dfrac{1}{2}\)，对应图中红点的坐标 \((\dfrac{1}{2}, \dfrac{1}{2}, \dfrac{1}{2})\)。不等式约束实际上是让平面 \(\alpha\) 沿 \(y\) 轴方向平移，以 \(\alpha = \dfrac{1}{2}\) 为界，可以分三种情况讨论。
 
 **参考**
 

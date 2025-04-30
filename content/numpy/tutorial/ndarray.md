@@ -35,7 +35,7 @@ np.empty([3, 2], dtype=int)
 
 
 
-创建全 \(1\) 矩阵
+创建全 1 矩阵
 
 
 ```python
@@ -51,7 +51,7 @@ np.ones((3, 2), dtype=np.int)
 
 
 
-创建全 \(0\) 矩阵
+创建全 0 矩阵
 
 
 ```python

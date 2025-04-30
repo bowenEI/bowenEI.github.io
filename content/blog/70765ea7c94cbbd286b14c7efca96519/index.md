@@ -139,11 +139,11 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 \(t\) 
 
 **BatchNorm 和 LayerNorm 的区别**
 
-沐神就 `BatchNorm` 和 `LayerNorm` 的区别作了详细讲解。我们知道，`Norm` 即 `Normalization`，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 \(0\) 方差为 \(1\) 的标准化向量。
+沐神就 `BatchNorm` 和 `LayerNorm` 的区别作了详细讲解。我们知道，`Norm` 即 `Normalization`，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 0 方差为 1 的标准化向量。
 
 $$
 \begin{aligned}
-Y = \frac{X - \mu}{\sigma}
+Y = \dfrac{X - \mu}{\sigma}
 \end{aligned}
 $$
 
@@ -182,7 +182,7 @@ $$
 
 $$
 \begin{aligned}
-\textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^{\top}}{\sqrt{d_k}}\right)V
+\textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\dfrac{QK^{\top}}{\sqrt{d_k}}\right)V
 \end{aligned}
 $$
 
@@ -190,7 +190,7 @@ $$
 
 $$
 \begin{aligned}
-\textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
+\textrm{similarity} = \cos{\theta} = \dfrac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
 \end{aligned}
 $$
 

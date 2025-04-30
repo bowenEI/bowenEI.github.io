@@ -34,7 +34,7 @@ projects: []
 
 ## 解析几何
 
-20. 已知曲线 \(C\) 的方程为 \(\frac{y^2}{a^2}+\frac{x^2}{b^2}=1 (a>b>0)\)，离心率为 \(\frac{\sqrt{5}}{3}\)，曲线过点 \(A(-2,0)\)。
+20. 已知曲线 \(C\) 的方程为 \(\dfrac{y^2}{a^2}+\dfrac{x^2}{b^2}=1 (a>b>0)\)，离心率为 \(\dfrac{\sqrt{5}}{3}\)，曲线过点 \(A(-2,0)\)。
 
 (1) 求曲线 \(C\) 的方程。
 
@@ -47,7 +47,7 @@ projects: []
 将点 \((-2,0)\) 代入曲线 \(C\) 的方程，得到
 
 $$
-\frac{4}{b^2} = 1
+\dfrac{4}{b^2} = 1
 $$
 
 解得 \(b=2\)（负值舍去）。
@@ -55,7 +55,7 @@ $$
 根据离心率的定义，可以列出如下方程
 
 $$
-\frac{a^2-b^2}{a^2} = (\frac{\sqrt{5}}{3})^2
+\dfrac{a^2-b^2}{a^2} = (\dfrac{\sqrt{5}}{3})^2
 $$
 
 将 \(b=2\) 代入，解得 \(a=3\)（负值舍去）。
@@ -63,7 +63,7 @@ $$
 因此曲线 \(C\) 的方程为
 
 $$
-\frac{y^2}{9}+\frac{x^2}{4}=1
+\dfrac{y^2}{9}+\dfrac{x^2}{4}=1
 $$
 
 **(2)**
@@ -93,8 +93,8 @@ $$
 
 $$
 \begin{aligned}
-x_1+x_2 &= -\frac{8k(2k+3)}{4k^2+9} \\
-x_1x_2 &= \frac{16k(k+3)}{4k^2+9}
+x_1+x_2 &= -\dfrac{8k(2k+3)}{4k^2+9} \\
+x_1x_2 &= \dfrac{16k(k+3)}{4k^2+9}
 \end{aligned}
 $$
 
@@ -102,8 +102,8 @@ $$
 
 $$
 \begin{aligned}
-l_{AP}: \frac{y}{x+2} = \frac{y_1}{x_1+2} \\
-l_{AQ}: \frac{y}{x+2} = \frac{y_2}{x_2+2}
+l_{AP}: \dfrac{y}{x+2} = \dfrac{y_1}{x_1+2} \\
+l_{AQ}: \dfrac{y}{x+2} = \dfrac{y_2}{x_2+2}
 \end{aligned}
 $$
 
@@ -111,27 +111,27 @@ $$
 
 $$
 \begin{aligned}
-M(0, \frac{2y_1}{x_1+2}) \\
-N(0, \frac{2y_2}{x_2+2})
+M(0, \dfrac{2y_1}{x_1+2}) \\
+N(0, \dfrac{2y_2}{x_2+2})
 \end{aligned}
 $$
 
 线段 \(MN\) 的中点坐标为
 
 $$
-(0, \frac{y_1}{x_1+2}+\frac{y_2}{x_2+2})
+(0, \dfrac{y_1}{x_1+2}+\dfrac{y_2}{x_2+2})
 $$
 
 下面计算线段 \(MN\) 中点的纵坐标
 
 $$
 \begin{aligned}
-& \frac{y_1}{x_1+2}+\frac{y_2}{x_2+2} \\
-=& \frac{x_1y_2+x_2y_1 + 2(y_1+y_2)}{x_1x_2 + 2(x_1+x_2) + 4} \\
-=& \frac{2kx_1x_2 + (4k+3)(x_1+x_2) + 4(2k+3)}{x_1x_2 + 2(x_1+x_2) + 4} \\
-=& \frac{\frac{32k^2(k+3)}{4k^2+9}-\frac{8k(4k+3)(2k+3)}{4k^2+9}+4(2k+3)}{\frac{16k(k+3)}{4k^2+9}-\frac{16k(2k+3)}{4k^2+9}+4} \\
-=& \frac{32k^2(k+3) - 8k(4k+3)(2k+3) + 4(2k+3)(4k^2+9)}{16k(k+3) - 16k(2k+3) + 4(4k^2+9)} \\
-=& \frac{32k^2(k+3) + (2k+3)(-16k^2-24k+36)}{36} \\
+& \dfrac{y_1}{x_1+2}+\dfrac{y_2}{x_2+2} \\
+=& \dfrac{x_1y_2+x_2y_1 + 2(y_1+y_2)}{x_1x_2 + 2(x_1+x_2) + 4} \\
+=& \dfrac{2kx_1x_2 + (4k+3)(x_1+x_2) + 4(2k+3)}{x_1x_2 + 2(x_1+x_2) + 4} \\
+=& \dfrac{\dfrac{32k^2(k+3)}{4k^2+9}-\dfrac{8k(4k+3)(2k+3)}{4k^2+9}+4(2k+3)}{\dfrac{16k(k+3)}{4k^2+9}-\dfrac{16k(2k+3)}{4k^2+9}+4} \\
+=& \dfrac{32k^2(k+3) - 8k(4k+3)(2k+3) + 4(2k+3)(4k^2+9)}{16k(k+3) - 16k(2k+3) + 4(4k^2+9)} \\
+=& \dfrac{32k^2(k+3) + (2k+3)(-16k^2-24k+36)}{36} \\
 =& 3
 \end{aligned}
 $$
@@ -323,11 +323,11 @@ class MyEllipse(MovingCameraScene):
 
 ## 函数与导数
 
-21. 已知函数 \(f(x) = (\frac{1}{x}+a)\ln(x+1)\)。
+21. 已知函数 \(f(x) = (\dfrac{1}{x}+a)\ln(x+1)\)。
 
 (1) 当 \(a=-1\) 时，求函数 \(f(x)\) 在 \((1,f(1))\) 处的切线方程。
 
-(2) 是否存在实数 \(a,b\)，使得函数 \(y = f(\frac{1}{x})\) 关于直线 \(x=b\) 对称？若存在，求出 \(a,b\) 的值。
+(2) 是否存在实数 \(a,b\)，使得函数 \(y = f(\dfrac{1}{x})\) 关于直线 \(x=b\) 对称？若存在，求出 \(a,b\) 的值。
 
 (3) 若函数 \(f(x)\) 在 \((0,+\infty)\) 内有极值点，求 \(a\) 的取值范围。
 
@@ -338,13 +338,13 @@ class MyEllipse(MovingCameraScene):
 当 \(a=-1\) 时，
 
 $$
-f(x) = (\frac{1}{x}-1)\ln(x+1)
+f(x) = (\dfrac{1}{x}-1)\ln(x+1)
 $$
 
 对其求一阶导数，得到
 
 $$
-f'(x) = -\frac{1}{x^2}\ln(x+1)+\frac{1}{x+1}(\frac{1}{x}-1)
+f'(x) = -\dfrac{1}{x^2}\ln(x+1)+\dfrac{1}{x+1}(\dfrac{1}{x}-1)
 $$
 
 可以计算出点 \((1,f(1))\) 的斜率 \(f'(1)=-\ln2\)。又 \(f(1)=0\)，故可以用点斜式写出切线方程
@@ -355,10 +355,10 @@ $$
 
 **(2)**
 
-令 \(g(x)=f(\frac{1}{x})\)，可以得到
+令 \(g(x)=f(\dfrac{1}{x})\)，可以得到
 
 $$
-g(x) = (x+a)\ln(\frac{1}{x}+1)
+g(x) = (x+a)\ln(\dfrac{1}{x}+1)
 $$
 
 其中
@@ -366,7 +366,7 @@ $$
 $$
 \begin{cases}
 x \ne 0 \\
-\frac{1}{x}+1 > 0
+\dfrac{1}{x}+1 > 0
 \end{cases}
 $$
 
@@ -381,7 +381,7 @@ $$
 对于 \(\forall x \in (-\infty,-1)\cup(0,+\infty)\) 恒成立，即
 
 $$
-(b+x+a)\ln(\frac{1}{b+x}+1) = (b-x+a)\ln(\frac{1}{b-x}+1)
+(b+x+a)\ln(\dfrac{1}{b+x}+1) = (b-x+a)\ln(\dfrac{1}{b-x}+1)
 $$
 
 对于恒成立的等式，参数的取值通常能够使变量 \(x\) 前的系数为零或者能够让含变量 \(x\) 的式子约分，最终使得等式不含变量 \(x\)。
@@ -389,16 +389,16 @@ $$
 然而，这个式子含有对数函数，不便于化简为参数和变量的线性运算的形式。而我们知道对数函数经过一次求导可以变成有理的幂函数，因此我们尝试求解 \(g(x)\) 的一阶导数
 
 $$
-g'(x) = \ln(\frac{1}{x}+1) - \frac{x+a}{x(x+1)}
+g'(x) = \ln(\dfrac{1}{x}+1) - \dfrac{x+a}{x(x+1)}
 $$
 
 由于原函数中的对数函数前有一个一次函数作为乘积，求一阶导数仍然存在常数倍的对数函数，所以继续求解 \(g(x)\) 的二阶导数
 
 $$
 \begin{aligned}
-g''(x) &= -\frac{1}{x(x+1)} - \frac{x(x+1)-(2x+1)(x+a)}{x^2(x+1)^2} \\
-&= \frac{(2x+1)(x+a)-2x(x+1)}{x^2(x+1)^2} \\
-&= \frac{(2a-1)x+a}{x^2(x+1)^2}
+g''(x) &= -\dfrac{1}{x(x+1)} - \dfrac{x(x+1)-(2x+1)(x+a)}{x^2(x+1)^2} \\
+&= \dfrac{(2x+1)(x+a)-2x(x+1)}{x^2(x+1)^2} \\
+&= \dfrac{(2a-1)x+a}{x^2(x+1)^2}
 \end{aligned}
 $$
 
@@ -419,21 +419,21 @@ $$
 此时，我们再将二阶导数相等的等式列出来
 
 $$
-\frac{(2a-1)(b+x)+a}{(b+x)^2(b+x+1)^2} = \frac{(2a-1)(b-x)+a}{(b-x)^2(b-x+1)^2}
+\dfrac{(2a-1)(b+x)+a}{(b+x)^2(b+x+1)^2} = \dfrac{(2a-1)(b-x)+a}{(b-x)^2(b-x+1)^2}
 $$
 
 我们稍稍对分子分母按 \(x\) 进行整理，得到
 
 $$
 \begin{aligned}
-& \frac{(2a-1)x+2ab+a-b}{(x^2+2bx+b^2)[x^2+2(b+1)x+(b+1)^2]} \\
-=& \frac{(1-2a)x+2ab+a-b}{(x^2-2bx+b^2)[x^2-2(b+1)x+(b+1)^2]}
+& \dfrac{(2a-1)x+2ab+a-b}{(x^2+2bx+b^2)[x^2+2(b+1)x+(b+1)^2]} \\
+=& \dfrac{(1-2a)x+2ab+a-b}{(x^2-2bx+b^2)[x^2-2(b+1)x+(b+1)^2]}
 \end{aligned}
 $$
 
 可以看到式子虽然有些复杂，但是有很多项的系数其实很相似，最后可以消去不少项。
 
-而我们的目标是，要解出 \(a,b\) 的值，让上面的等式与 \(x\) 无关。也就是说，我们最终应当让这个等式所有含 \(x\) 的项前的系数为 \(0\)。
+而我们的目标是，要解出 \(a,b\) 的值，让上面的等式与 \(x\) 无关。也就是说，我们最终应当让这个等式所有含 \(x\) 的项前的系数为 0。
 
 等式两边交叉相乘，得到
 
@@ -466,7 +466,7 @@ $$
 令 \(A=0\)，很容易就可以得到
 
 $$
-a = \frac{1}{2}
+a = \dfrac{1}{2}
 $$
 
 这很显然是恒成立的一个必要条件。然后我们将 \(a\) 的值代入回原等式化简，得到
@@ -487,17 +487,17 @@ $$
 令 \(C=0\)，同样也很容易得到
 
 $$
-b = -\frac{1}{2}
+b = -\dfrac{1}{2}
 $$
 
-故存在实数 \(a=\frac{1}{2},b=-\frac{1}{2}\)，使得函数 \(y = f(\frac{1}{x})\) 关于直线 \(x=b\) 对称。
+故存在实数 \(a=\dfrac{1}{2},b=-\dfrac{1}{2}\)，使得函数 \(y = f(\dfrac{1}{x})\) 关于直线 \(x=b\) 对称。
 
 **简便解法**
 
 由题意可知，\(g(x)\) 关于直线 \(x=b\) 对称，其中的一个必要条件是定义域关于点 \((b,0)\) 对称。利用这一点，就可以很快判断出
 
 $$
-b = -\frac{1}{2}
+b = -\dfrac{1}{2}
 $$
 
 这样，题目中所给的对称的条件就可以这样使用
@@ -510,8 +510,8 @@ $$
 
 $$
 \begin{aligned}
-(x+a)\ln(\frac{1}{x}+1) &= (-1-x+a)\ln(\frac{1}{-1-x}+1) \\
-(x+a)\ln(\frac{x+1}{x}) &= (-1-x+a)\ln(\frac{x}{x+1})
+(x+a)\ln(\dfrac{1}{x}+1) &= (-1-x+a)\ln(\dfrac{1}{-1-x}+1) \\
+(x+a)\ln(\dfrac{x+1}{x}) &= (-1-x+a)\ln(\dfrac{x}{x+1})
 \end{aligned}
 $$
 
@@ -520,7 +520,7 @@ $$
 $$
 \begin{aligned}
 x+a &= x+1-a \\
-a &= \frac{1}{2}
+a &= \dfrac{1}{2}
 \end{aligned}
 $$
 
@@ -536,7 +536,7 @@ $$
 由题意可知，函数 \(f(x)\) 在 \((0,+\infty)\) 内有极值点，等价于函数 \(f'(x)\) 在 \((0,+\infty)\) 上有零点。我们首先求解 \(f(x)\) 的一阶导数
 
 $$
-f'(x) = -\frac{1}{x^2}\ln(x+1)+\frac{1}{x+1}(\frac{1}{x}+a)
+f'(x) = -\dfrac{1}{x^2}\ln(x+1)+\dfrac{1}{x+1}(\dfrac{1}{x}+a)
 $$
 
 下面，我们分别采用上述两种思路解答这个问题。
@@ -546,28 +546,28 @@ $$
 观察 \(f(x)\) 一阶导数的解析式，我们发现对数函数前面有分式。对于这种情况，必须要把分母作为公因式提到括号外面，这样括号里面的式子求导之后就不会再出现对数函数了。因此，我们对 \(f'(x)\) 作如下变形
 
 $$
-f'(x) = \frac{1}{x^2}[\frac{ax^2+x}{x+1}-\ln(x+1)]
+f'(x) = \dfrac{1}{x^2}[\dfrac{ax^2+x}{x+1}-\ln(x+1)]
 $$
 
 然后我们令
 
 $$
-\varphi(x) = \frac{ax^2+x}{x+1}-\ln(x+1)
+\varphi(x) = \dfrac{ax^2+x}{x+1}-\ln(x+1)
 $$
 
 对 \(\varphi(x)\) 求一阶导数
 
 $$
 \begin{aligned}
-\varphi'(x) &= \frac{(2ax+1)(x+1)-ax^2-x}{(x+1)^2} - \frac{1}{x+1} \\
-&= \frac{x(ax+2a-1)}{(x+1)^2}
+\varphi'(x) &= \dfrac{(2ax+1)(x+1)-ax^2-x}{(x+1)^2} - \dfrac{1}{x+1} \\
+&= \dfrac{x(ax+2a-1)}{(x+1)^2}
 \end{aligned}
 $$
 
 考虑到 \(f(x)\) 的定义域为 \(x \in (0,+\infty)\)，因此 \(ax+2a-1\) 的正负就决定了 \(\varphi'(x)\) 的正负，也就决定了 \(\varphi(x)\) 的单调性。于是，我们令 \(ax+2a-1=0\)，用 \(x\) 表示 \(a\)，得到
 
 $$
-a = \frac{1}{x+2} \in (0,\frac{1}{2})
+a = \dfrac{1}{x+2} \in (0,\dfrac{1}{2})
 $$
 
 所以，我们应该分如下三种情况讨论。
@@ -580,7 +580,7 @@ $$
 
 那么，\(f(x)\) 在 \((0,+\infty)\) 上单调递减，不可能存在极值点。
 
-2. \(a \geqslant \frac{1}{2}\)
+2. \(a \geqslant \dfrac{1}{2}\)
 
 这时 \(ax+2a-1 \geqslant 0\)，\(\varphi'(x) \geqslant 0\)，\(\varphi(x)\) 单调递增。
 
@@ -588,25 +588,25 @@ $$
 
 那么，\(f(x)\) 在 \((0,+\infty)\) 上单调递增，同样也不可能存在极值点。
 
-3. \(0<a<\frac{1}{2}\)
+3. \(0<a<\dfrac{1}{2}\)
 
 这时 \(\varphi(x)\) 的导函数 \(\varphi'(x)\) 存在零点
 
 $$
-x = \frac{1-2a}{a}
+x = \dfrac{1-2a}{a}
 $$
 
 函数 \(\varphi(x)\) 导函数的正负以及原函数的单调性如下表：
 
 |            区间            | \(\varphi'(x)\) 的正负 | \(\varphi(x)\) 的单调性 |
 | :------------------------: | :------------------: | :-------------------: |
-|    \((0,\frac{1-2a}{a})\)    |         \(-\)          |      \(\searrow\)       |
-| \((\frac{1-2a}{a},+\infty)\) |         \(+\)          |      \(\nearrow\)       |
+|    \((0,\dfrac{1-2a}{a})\)    |         \(-\)          |      \(\searrow\)       |
+| \((\dfrac{1-2a}{a},+\infty)\) |         \(+\)          |      \(\nearrow\)       |
 
-又 \(\varphi(0)=0\)，所以 \(\varphi(\frac{1-2a}{a})<0\)。而 \(\lim_{x \rightarrow +\infty} \varphi(x)>0\)，由零点存在性定理可知
+又 \(\varphi(0)=0\)，所以 \(\varphi(\dfrac{1-2a}{a})<0\)。而 \(\lim_{x \rightarrow +\infty} \varphi(x)>0\)，由零点存在性定理可知
 
 $$
-\exists x \in (\frac{1-2a}{a},+\infty), \quad \textrm{s.t.} \quad \varphi(x)=0
+\exists x \in (\dfrac{1-2a}{a},+\infty), \quad \textrm{s.t.} \quad \varphi(x)=0
 $$
 
 记这个零点 \(x=\alpha\)。于是函数 \(\varphi(x)\) 的正负，函数 \(f(x)\) 导函数的正负以及原函数的单调性如下表：
@@ -618,7 +618,7 @@ $$
 
 这充分说明了 \(f(x)\) 有一个极值点 \(x=\alpha\)。
 
-综上所述，\(a\) 的取值范围是 \((0,\frac{1}{2})\)。
+综上所述，\(a\) 的取值范围是 \((0,\dfrac{1}{2})\)。
 
 **可视化**
 
@@ -651,9 +651,9 @@ class MyFunction(Scene):
         )
         self.grad_fx_axes.add_coordinates()
 
-        self.fx_label = MathTex(r"f(x) = (\frac{1}{x}+a) \ln(x+1)")
+        self.fx_label = MathTex(r"f(x) = (\dfrac{1}{x}+a) \ln(x+1)")
         self.fx_label.set_color(YELLOW).scale(0.75)
-        self.grad_fx_label = MathTex(r"f'(x) = -\frac{1}{x^2}\ln(x+1)+\frac{1}{x+1}(\frac{1}{x}+a)")
+        self.grad_fx_label = MathTex(r"f'(x) = -\dfrac{1}{x^2}\ln(x+1)+\dfrac{1}{x+1}(\dfrac{1}{x}+a)")
         self.grad_fx_label.set_color(GREEN).scale(0.75)
 
         self.group = Group(self.fx_axes, self.grad_fx_axes, self.fx_label, self.grad_fx_label).arrange_in_grid()
@@ -704,21 +704,21 @@ class MyFunction(Scene):
 令 \(f'(x)=0\)，把 \(a\) 表示成关于 \(x\) 的函数
 
 $$
-a = \frac{(x+1)\ln(x+1)}{x^2} - \frac{1}{x}
+a = \dfrac{(x+1)\ln(x+1)}{x^2} - \dfrac{1}{x}
 $$
 
 将这个关于 \(a\) 的函数记作 \(h(x)\)，即
 
 $$
-h(x) = \frac{(x+1)\ln(x+1)-x}{x^2}
+h(x) = \dfrac{(x+1)\ln(x+1)-x}{x^2}
 $$
 
 既然 \(f'(x)\) 存在零点，那么直线 \(y=a\) 与曲线 \(y=h(x)\) 应该有交点。于是问题转化为求 \(h(x)\) 的值域。我们首先对 \(h(x)\) 求一阶导数
 
 $$
 \begin{aligned}
-h'(x) &= \frac{[\ln(x+1)+1-1]x^2-2x[(x+1)\ln(x+1)-x]}{x^4} \\
-&= \frac{2x-(x+2)\ln(x+1)}{x^3}
+h'(x) &= \dfrac{[\ln(x+1)+1-1]x^2-2x[(x+1)\ln(x+1)-x]}{x^4} \\
+&= \dfrac{2x-(x+2)\ln(x+1)}{x^3}
 \end{aligned}
 $$
 
@@ -731,15 +731,15 @@ $$
 求解 \(m(x)\) 的一阶导数
 
 $$
-m'(x) = 1-\ln(x+1)-\frac{1}{x+1}
+m'(x) = 1-\ln(x+1)-\dfrac{1}{x+1}
 $$
 
 \(m(x)\) 的一阶导数还存在常数倍的对数函数，再求一次导就可以化为有理函数。
 
 $$
 \begin{aligned}
-m''(x) &= -\frac{1}{x+1} + \frac{1}{(x+1)^2} \\
-&= -\frac{x}{(x+1)^2} < 0
+m''(x) &= -\dfrac{1}{x+1} + \dfrac{1}{(x+1)^2} \\
+&= -\dfrac{x}{(x+1)^2} < 0
 \end{aligned}
 $$
 
@@ -761,32 +761,32 @@ $$
 
 $$
 \begin{aligned}
-\lim_{x \rightarrow 0^+} h(x) &= \lim_{x \rightarrow 0^+} \frac{(x+1)\ln(x+1)-x}{x^2} \\
-&= \lim_{x \rightarrow 0^+} \frac{(x+1)[x-\frac{1}{2}x^2+o(x^2)]-x}{x^2} \\
-&= \lim_{x \rightarrow 0^+} \frac{\frac{1}{2}x^2+x+o(x^2)-x}{x^2} \\
-&= \frac{1}{2}
+\lim_{x \rightarrow 0^+} h(x) &= \lim_{x \rightarrow 0^+} \dfrac{(x+1)\ln(x+1)-x}{x^2} \\
+&= \lim_{x \rightarrow 0^+} \dfrac{(x+1)[x-\dfrac{1}{2}x^2+o(x^2)]-x}{x^2} \\
+&= \lim_{x \rightarrow 0^+} \dfrac{\dfrac{1}{2}x^2+x+o(x^2)-x}{x^2} \\
+&= \dfrac{1}{2}
 \end{aligned}
 $$
 
-在计算上述极限时，将对数函数二阶泰勒展开，是因为对数函数前的多项式函数的最低次数为 \(0\)（含常数项），而分母的次数为 \(2\)，因此至少需要展开到二阶。
+在计算上述极限时，将对数函数二阶泰勒展开，是因为对数函数前的多项式函数的最低次数为 0（含常数项），而分母的次数为 2，因此至少需要展开到二阶。
 
 同理，\(h(x)\) 的最小值应该无限逼近 \(x \rightarrow +\infty\) 处的极限值，即
 
 $$
 \begin{aligned}
-\lim_{x \rightarrow +\infty} h(x) &= \lim_{x \rightarrow +\infty} \frac{(x+1)\ln(x+1)-x}{x^2} \\
-&= \lim_{x \rightarrow +\infty} \frac{\ln(x+1)+1-1}{2x} \\
-&= \lim_{x \rightarrow +\infty} \frac{1}{2(x+1)} \\
+\lim_{x \rightarrow +\infty} h(x) &= \lim_{x \rightarrow +\infty} \dfrac{(x+1)\ln(x+1)-x}{x^2} \\
+&= \lim_{x \rightarrow +\infty} \dfrac{\ln(x+1)+1-1}{2x} \\
+&= \lim_{x \rightarrow +\infty} \dfrac{1}{2(x+1)} \\
 &= 0
 \end{aligned}
 $$
 
-在计算上述极限时，原式是 \(\frac{\infty}{\infty}\) 型未定式，使用两次洛必达法则即可。
+在计算上述极限时，原式是 \(\dfrac{\infty}{\infty}\) 型未定式，使用两次洛必达法则即可。
 
 综合以上，可以得到 \(a\) 的取值范围
 
 $$
-a \in (0,\frac{1}{2})
+a \in (0,\dfrac{1}{2})
 $$
 
 ### 点评

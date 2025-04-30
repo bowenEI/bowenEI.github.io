@@ -82,7 +82,7 @@ $$
 
 $$
 \begin{aligned}
-\lambda_{\max}(A)=\sup_{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}
+\lambda_{\max}(A)=\sup_{x \neq 0} \dfrac{x^{\top} A x}{x^{\top} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \dfrac{x^{\top} A x}{x^{\top} x}
 \end{aligned}
 $$
 

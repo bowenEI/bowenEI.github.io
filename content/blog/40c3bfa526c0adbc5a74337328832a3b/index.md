@@ -101,7 +101,7 @@ Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM
 
 $$
 \begin{aligned}
-    \operatorname{softmax}(x_i) = \frac{e^{x_i}}{\displaystyle\sum_{j=1}^{n} e^{x_j}}
+    \operatorname{softmax}(x_i) = \dfrac{e^{x_i}}{\displaystyle\sum_{j=1}^{n} e^{x_j}}
 \end{aligned}
 $$
 
@@ -110,7 +110,7 @@ $$
 $$
 \begin{aligned}
     \tilde{m} &= \max_{i}{\lbrace x_i \rbrace} \\
-    \operatorname{softmax}(x_i) &= \frac{e^{x_i - \tilde{m}}}{\displaystyle\sum_{j=1}^{n} e^{x_j - \tilde{m}}}
+    \operatorname{softmax}(x_i) &= \dfrac{e^{x_i - \tilde{m}}}{\displaystyle\sum_{j=1}^{n} e^{x_j - \tilde{m}}}
 \end{aligned}
 $$
 

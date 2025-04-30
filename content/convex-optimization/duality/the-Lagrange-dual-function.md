@@ -107,14 +107,14 @@ $$
 $$
 \begin{aligned}
     \nabla_x L(x, \nu) = 2x + A^{\top} \nu &= 0 \\
-    x &= -\frac{1}{2} A^{\top} \nu
+    x &= -\dfrac{1}{2} A^{\top} \nu
 \end{aligned}
 $$
 
 因此，对偶函数为
 
 $$
-g(\nu) = -\frac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
+g(\nu) = -\dfrac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
 $$
 
 它是一个二次凹函数，定义域为 \(\mathbf{R}^p\)。

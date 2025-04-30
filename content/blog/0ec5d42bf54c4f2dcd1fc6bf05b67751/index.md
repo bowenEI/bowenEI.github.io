@@ -43,7 +43,7 @@ toc: true
 在高等数学和数学分析的课程中，我们知道一元函数 \(y = f(x)\) 的导数定义为
 
 $$
-\frac{\mathrm{d}y}{\mathrm{d}x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\dfrac{\mathrm{d}y}{\mathrm{d}x} = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
 $$
 
 而对于多元函数，则会引入方向导数和梯度的概念。
@@ -60,10 +60,10 @@ $$
 
 $$
 \nabla f(\mathbf{x}) = \begin{bmatrix}
-    \frac{y}{\partial x_1} \\
-    \frac{y}{\partial x_2} \\
+    \dfrac{y}{\partial x_1} \\
+    \dfrac{y}{\partial x_2} \\
     \vdots \\
-    \frac{y}{\partial x_n}
+    \dfrac{y}{\partial x_n}
 \end{bmatrix}
 $$
 
@@ -94,10 +94,10 @@ $$
 $$
 \begin{aligned}
     \mathbf{J}(\mathbf{x}) &= \begin{bmatrix}
-        \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} & \cdots & \frac{\partial y_1}{\partial x_n} \\
-        \frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_2}{\partial x_n} \\
+        \dfrac{\partial y_1}{\partial x_1} & \dfrac{\partial y_1}{\partial x_2} & \cdots & \dfrac{\partial y_1}{\partial x_n} \\
+        \dfrac{\partial y_2}{\partial x_1} & \dfrac{\partial y_2}{\partial x_2} & \cdots & \dfrac{\partial y_2}{\partial x_n} \\
         \vdots & \vdots & \ddots & \vdots \\
-        \frac{\partial y_m}{\partial x_1} & \frac{\partial y_m}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_n}
+        \dfrac{\partial y_m}{\partial x_1} & \dfrac{\partial y_m}{\partial x_2} & \cdots & \dfrac{\partial y_m}{\partial x_n}
     \end{bmatrix} \\
     &= \begin{bmatrix}
         \nabla f_1(\mathbf{x}) &
@@ -139,12 +139,12 @@ $$
 $$
 \begin{aligned}
     \mathbf{H}(\mathbf{x}) &= \nabla^{2} f(\mathbf{x}) \\
-    &= \frac{\partial}{\partial \mathbf{x}} \left( \frac{\partial y}{\partial \mathbf{x}} \right) \\
+    &= \dfrac{\partial}{\partial \mathbf{x}} \left( \dfrac{\partial y}{\partial \mathbf{x}} \right) \\
     &= \begin{bmatrix}
-    \frac{\partial^2 y}{\partial x_1^2} & \frac{\partial^2 y}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 y}{\partial x_1 \partial x_n} \\
-    \frac{\partial^2 y}{\partial x_2 \partial x_1} & \frac{\partial^2 y}{\partial x_2^2} & \cdots & \frac{\partial^2 y}{\partial x_2 \partial x_n} \\
+    \dfrac{\partial^2 y}{\partial x_1^2} & \dfrac{\partial^2 y}{\partial x_1 \partial x_2} & \cdots & \dfrac{\partial^2 y}{\partial x_1 \partial x_n} \\
+    \dfrac{\partial^2 y}{\partial x_2 \partial x_1} & \dfrac{\partial^2 y}{\partial x_2^2} & \cdots & \dfrac{\partial^2 y}{\partial x_2 \partial x_n} \\
     \vdots & \vdots & \ddots & \vdots \\
-    \frac{\partial^2 y}{\partial x_n \partial x_1} & \frac{\partial^2 y}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 y}{\partial x_n^2}
+    \dfrac{\partial^2 y}{\partial x_n \partial x_1} & \dfrac{\partial^2 y}{\partial x_n \partial x_2} & \cdots & \dfrac{\partial^2 y}{\partial x_n^2}
 \end{bmatrix}
 \end{aligned}
 $$
@@ -163,7 +163,7 @@ $$
 其链式求导法则为
 
 $$
-\frac{\mathrm{d}f(x)}{\mathrm{d}x} = \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdot \frac{\mathrm{d}f_1(x)}{\mathrm{d}x}
+\dfrac{\mathrm{d}f(x)}{\mathrm{d}x} = \dfrac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \dfrac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \dfrac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdot \dfrac{\mathrm{d}f_1(x)}{\mathrm{d}x}
 $$
 
 不过，如果自变量是一个向量或者矩阵，那么由于矩阵乘法不满足交换律，于是就存在分母表达式和分子表达式两种形式。
@@ -174,8 +174,8 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\mathrm{d}f(x)}{\mathrm{d}x} &= \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \\
-    &= \frac{\mathrm{d}f_1(x)}{\mathrm{d}x} \cdot \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdots \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \\
+    \dfrac{\mathrm{d}f(x)}{\mathrm{d}x} &= \dfrac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \dfrac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \dfrac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \\
+    &= \dfrac{\mathrm{d}f_1(x)}{\mathrm{d}x} \cdot \dfrac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdots \dfrac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \\
 \end{aligned}
 $$
 
@@ -192,12 +192,12 @@ $$
 $$
 \begin{aligned}
     \mathbf{y} &= \mathbf{Wx} \quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^m) \\
-    \frac{\partial \mathbf{y}}{\partial \mathbf{x}}
+    \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}
     &= \begin{bmatrix}
-        \frac{\partial y_1}{\partial x_1} & \frac{\partial y_2}{\partial x_1} & \cdots & \frac{\partial y_m}{\partial x_1} \\
-        \frac{\partial y_1}{\partial x_2} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_2} \\
+        \dfrac{\partial y_1}{\partial x_1} & \dfrac{\partial y_2}{\partial x_1} & \cdots & \dfrac{\partial y_m}{\partial x_1} \\
+        \dfrac{\partial y_1}{\partial x_2} & \dfrac{\partial y_2}{\partial x_2} & \cdots & \dfrac{\partial y_m}{\partial x_2} \\
         \vdots & \vdots & \ddots & \vdots \\
-        \frac{\partial y_1}{\partial x_n} & \frac{\partial y_2}{\partial x_n} & \cdots & \frac{\partial y_m}{\partial x_n}
+        \dfrac{\partial y_1}{\partial x_n} & \dfrac{\partial y_2}{\partial x_n} & \cdots & \dfrac{\partial y_m}{\partial x_n}
     \end{bmatrix} \\
     &= \mathbf{W}^{\top}
 \end{aligned}
@@ -211,8 +211,8 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\partial \mathbf{Wx}}{\partial \mathbf{x}} &= \mathbf{W}^{\top} \\
-    \frac{\partial \mathbf{Wx}}{\partial \mathbf{W}} &= \mathbf{x}^{\top}
+    \dfrac{\partial \mathbf{Wx}}{\partial \mathbf{x}} &= \mathbf{W}^{\top} \\
+    \dfrac{\partial \mathbf{Wx}}{\partial \mathbf{W}} &= \mathbf{x}^{\top}
 \end{aligned}
 $$
 
@@ -237,17 +237,17 @@ $$
         x_n
     \end{bmatrix} \\
     &= \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
-    \frac{\partial y}{\partial \mathbf{x}} &= \begin{bmatrix}
-        \frac{\partial}{\partial x_1} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
-        \frac{\partial}{\partial x_2} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
+    \dfrac{\partial y}{\partial \mathbf{x}} &= \begin{bmatrix}
+        \dfrac{\partial}{\partial x_1} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
+        \dfrac{\partial}{\partial x_2} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
         \vdots \\
-        \frac{\partial}{\partial x_n} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j
+        \dfrac{\partial}{\partial x_n} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j
     \end{bmatrix} \\
     &= \begin{bmatrix}
-        \frac{\partial}{\partial x_1} [w_{11}x_1^2 + (w_{12}x_1x_2 + \cdots + w_{1n}x_1x_n) + (w_{21}x_2x_1 + \cdots + w_{n1}x_nx_1)] \\
-        \frac{\partial}{\partial x_2} [w_{22}x_2^2 + (w_{21}x_2x_1 + \cdots + w_{2n}x_2x_n) + (w_{12}x_1x_2 + \cdots + w_{n2}x_nx_2)] \\
+        \dfrac{\partial}{\partial x_1} [w_{11}x_1^2 + (w_{12}x_1x_2 + \cdots + w_{1n}x_1x_n) + (w_{21}x_2x_1 + \cdots + w_{n1}x_nx_1)] \\
+        \dfrac{\partial}{\partial x_2} [w_{22}x_2^2 + (w_{21}x_2x_1 + \cdots + w_{2n}x_2x_n) + (w_{12}x_1x_2 + \cdots + w_{n2}x_nx_2)] \\
         \vdots \\
-        \frac{\partial}{\partial x_n} [w_{nn}x_n^2 + (w_{n1}x_nx_1 + \cdots + w_{n(n-1)}x_nx_{n-1}) + (w_{1n}x_1x_n + \cdots + w_{(n-1)n}x_{n-1}x_n)]
+        \dfrac{\partial}{\partial x_n} [w_{nn}x_n^2 + (w_{n1}x_nx_1 + \cdots + w_{n(n-1)}x_nx_{n-1}) + (w_{1n}x_1x_n + \cdots + w_{(n-1)n}x_{n-1}x_n)]
     \end{bmatrix} \\
     &= \begin{bmatrix}
         2w_{11}x_1 + (w_{12}x_2 + \cdots + w_{1n}x_n) + (w_{21}x_2 + \cdots + w_{n1}x_n) \\
@@ -305,14 +305,14 @@ $$
 它是一个典型的一次多项式向量函数，其导数为
 
 $$
-\frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{x}} = \mathbf{W}^{\top}
+\dfrac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{x}} = \mathbf{W}^{\top}
 $$
 
 一般地，全连接层的参数矩阵 \(\mathbf{W}\) 是可学习的参数，需要通过梯度下降法来更新，就不可避免地需要对其求导数。显然
 
 $$
 \begin{aligned}
-    \frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{W}} = \mathbf{x}^{\top}
+    \dfrac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{W}} = \mathbf{x}^{\top}
 \end{aligned}
 $$
 
@@ -328,7 +328,7 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{ReLU}(x)
+    \dfrac{\mathrm{d}}{\mathrm{d}x} \mathrm{ReLU}(x)
     &= \begin{cases}
         1 & x > 0 \\
         0 & x \leqslant 0
@@ -345,7 +345,7 @@ $$
 \end{aligned}
 $$
 
-它是一个对角线上的元素可能为 \(0\) 或 \(1\)，而其他元素均为 \(0\) 的矩阵。
+它是一个对角线上的元素可能为 0 或 1，而其他元素均为 0 的矩阵。
 
 {{< callout type="info" >}}
 
@@ -379,10 +379,10 @@ $$
 
 ### 归一化层
 
-不论是 BatchNorm 还是 LayerNorm，其函数形式都相同，都是将任何特征分布转化为均值为 \(0\)，方差为 \(1\) 的特征分布。
+不论是 BatchNorm 还是 LayerNorm，其函数形式都相同，都是将任何特征分布转化为均值为 0，方差为 1 的特征分布。
 
 $$
-\mathbf{y} = \frac{\mathbf{x} - \mathbf{\mu}}{\sqrt{\sigma^2 + \varepsilon}} \cdot \gamma + \mathbf{\beta}
+\mathbf{y} = \dfrac{\mathbf{x} - \mathbf{\mu}}{\sqrt{\sigma^2 + \varepsilon}} \cdot \gamma + \mathbf{\beta}
 \quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^n)
 $$
 
@@ -404,10 +404,10 @@ $$
         \vdots \\
         x_n
     \end{bmatrix} - \begin{bmatrix}
-        \frac{1}{n} \sum_{i=1}^{n} x_i \\
-        \frac{1}{n} \sum_{i=1}^{n} x_i \\
+        \dfrac{1}{n} \sum_{i=1}^{n} x_i \\
+        \dfrac{1}{n} \sum_{i=1}^{n} x_i \\
         \vdots \\
-        \frac{1}{n} \sum_{i=1}^{n} x_i
+        \dfrac{1}{n} \sum_{i=1}^{n} x_i
     \end{bmatrix} \\
     &= \begin{bmatrix}
         1 & 0 & \cdots & 0 \\
@@ -419,7 +419,7 @@ $$
         x_2 \\
         \vdots \\
         x_n
-    \end{bmatrix} - \frac{1}{n} \begin{bmatrix}
+    \end{bmatrix} - \dfrac{1}{n} \begin{bmatrix}
         1 & 1 & \cdots & 1 \\
         1 & 1 & \cdots & 1 \\
         \vdots & \vdots & \ddots & \vdots \\
@@ -430,12 +430,12 @@ $$
         \vdots \\
         x_n
     \end{bmatrix} \\
-    &= \mathbf{I} \mathbf{x} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \mathbf{x} \\
-    &= \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} \tag{1}
+    &= \mathbf{I} \mathbf{x} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \mathbf{x} \\
+    &= \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} \tag{1}
 \end{aligned}
 $$
 
-其中，\(\mathbf{I}\) 是单位矩阵，\(\mathbf{1}\) 是元素全为 \(1\) 的列向量。
+其中，\(\mathbf{I}\) 是单位矩阵，\(\mathbf{1}\) 是元素全为 1 的列向量。
 
 分母的被开方数用线性代数表示为
 
@@ -444,11 +444,11 @@ $$
     \sigma^2 + \varepsilon
     &= \left\| \mathbf{x} - \mathbf{\mu} \right\|_{2}^{2} + \varepsilon \\
     &= (\mathbf{x} - \mathbf{\mu})^{\top} (\mathbf{x} - \mathbf{\mu}) + \varepsilon \\
-    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right)^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
-    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
-    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \frac{1}{n^2} \mathbf{1} \mathbf{1}^{\top} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
-    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
-    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \tag{2}
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right)^{\top} \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \dfrac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \dfrac{1}{n^2} \mathbf{1} \mathbf{1}^{\top} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \dfrac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \tag{2}
 \end{aligned}
 $$
 
@@ -459,7 +459,7 @@ $$
 $$
 \begin{aligned}
     \mathbf{y}
-    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \frac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}} \cdot \gamma + \beta
+    &= \sqrt{\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \dfrac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}} \cdot \gamma + \beta
 \end{aligned}
 $$
 
@@ -468,10 +468,10 @@ $$
 $$
 \begin{aligned}
     \mathbf{J}(\mathbf{x})
-    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \left[ \frac{\mathbf{I}}{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} \left(
-        \sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} - \frac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}}
+    &= \sqrt{\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \left[ \dfrac{\mathbf{I}}{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} \left(
+        \sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} - \dfrac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}}
     \right) \right] \times \mathrm{diag}(\gamma) \\
-    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \frac{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon) \mathbf{1} - \mathbf{x}}{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon)^{\frac{3}{2}}} \times \mathrm{diag}(\gamma)
+    &= \sqrt{\mathbf{I} - \dfrac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \dfrac{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon) \mathbf{1} - \mathbf{x}}{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon)^{\dfrac{3}{2}}} \times \mathrm{diag}(\gamma)
 \end{aligned}
 $$
 
@@ -495,7 +495,7 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{out}}}
+    \dfrac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{out}}}
     &= \mathbf{h}
 \end{aligned}
 $$
@@ -506,8 +506,8 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{in}}}
-    &= \frac{\mathrm{d} \mathbf{g}}{\mathrm{d} \mathbf{W_{in}}} \times \frac{\mathrm{d} \mathbf{h}}{\mathrm{d} \mathbf{g}} \times \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{h}} \\
+    \dfrac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{in}}}
+    &= \dfrac{\mathrm{d} \mathbf{g}}{\mathrm{d} \mathbf{W_{in}}} \times \dfrac{\mathrm{d} \mathbf{h}}{\mathrm{d} \mathbf{g}} \times \dfrac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{h}} \\
     &= \mathbf{x} \times \mathrm{diag}(\mathbf{g} > 0) \times \mathbf{W_{out}}
 \end{aligned}
 $$

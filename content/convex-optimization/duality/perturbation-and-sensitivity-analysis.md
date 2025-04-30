@@ -54,8 +54,8 @@ $$
 
 $$
 \begin{aligned}
-    \lambda_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\
-    \nu_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial v_i}
+    \lambda_i^{\star} &= -\dfrac{\partial p^{\star}(0, 0)}{\partial u_i} \\
+    \nu_i^{\star} &= -\dfrac{\partial p^{\star}(0, 0)}{\partial v_i}
 \end{aligned}
 $$
 

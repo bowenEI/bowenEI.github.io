@@ -31,7 +31,7 @@ $$
 
 $$
 \begin{aligned}
-T(n) = 3 T\left( \frac{n}{2} \right) + \Theta(n)
+T(n) = 3 T\left( \dfrac{n}{2} \right) + \Theta(n)
 \end{aligned}
 $$
 

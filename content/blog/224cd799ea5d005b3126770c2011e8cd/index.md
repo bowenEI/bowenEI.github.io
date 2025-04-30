@@ -40,7 +40,7 @@ toc: true
 
 $$
 \begin{aligned}
-  \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \quad (a, b > 0)
+  \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 \quad (a, b > 0)
 \end{aligned}
 $$
 
@@ -56,8 +56,8 @@ $$
 
 $$
 \begin{aligned}
-  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \quad (a, b > 0) \\
-  \frac{y^2}{a^2} - \frac{x^2}{b^2} = 1 \quad (a, b > 0)
+  \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1 \quad (a, b > 0) \\
+  \dfrac{y^2}{a^2} - \dfrac{x^2}{b^2} = 1 \quad (a, b > 0)
 \end{aligned}
 $$
 
@@ -82,7 +82,7 @@ $$
 \end{aligned}
 $$
 
-之所以有部分项的前面有系数 \(2\)，是为了方便用高等代数的形式来表示，即
+之所以有部分项的前面有系数 2，是为了方便用高等代数的形式来表示，即
 
 $$
 \begin{aligned}
@@ -164,8 +164,8 @@ $$
     u \\
     v
   \end{bmatrix} &= \begin{bmatrix}
-    \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\
-    \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+    \dfrac{\sqrt{2}}{2} & -\dfrac{\sqrt{2}}{2} \\
+    \dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2}
   \end{bmatrix} \begin{bmatrix}
     x \\
     y
@@ -181,8 +181,8 @@ $$
     x \\
     y
   \end{bmatrix} &= \begin{bmatrix}
-    \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\
-    -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+    \dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2} \\
+    -\dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2}
   \end{bmatrix} \begin{bmatrix}
     u \\
     v
@@ -194,10 +194,10 @@ $$
 
 $$
 \begin{aligned}
-  \left(\frac{\sqrt{2}}{2}u + \frac{\sqrt{2}}{2}v \right)
-  \left(-\frac{\sqrt{2}}{2}u + \frac{\sqrt{2}}{2}v\right) &= k \\
+  \left(\dfrac{\sqrt{2}}{2}u + \dfrac{\sqrt{2}}{2}v \right)
+  \left(-\dfrac{\sqrt{2}}{2}u + \dfrac{\sqrt{2}}{2}v\right) &= k \\
   v^2 - u^2 &= 2k \\
-  \frac{v^2}{2k} - \frac{u^2}{2k} &= 1
+  \dfrac{v^2}{2k} - \dfrac{u^2}{2k} &= 1
 \end{aligned}
 $$
 
@@ -205,7 +205,7 @@ $$
 
 $$
 \begin{aligned}
-  y = x + \frac{k}{x}
+  y = x + \dfrac{k}{x}
 \end{aligned}
 $$
 
@@ -226,8 +226,8 @@ $$
     u \\
     v
   \end{bmatrix} &= \begin{bmatrix}
-    \cos \frac{\pi}{8} & -\sin \frac{\pi}{8} \\
-    \sin \frac{\pi}{8} & \cos \frac{\pi}{8}
+    \cos \dfrac{\pi}{8} & -\sin \dfrac{\pi}{8} \\
+    \sin \dfrac{\pi}{8} & \cos \dfrac{\pi}{8}
   \end{bmatrix} \begin{bmatrix}
     x \\
     y
@@ -235,14 +235,14 @@ $$
 \end{aligned}
 $$
 
-由角平分线第二定理，可以快速计算出 \(\frac{\pi}{8}\) 的正弦值为
+由角平分线第二定理，可以快速计算出 \(\dfrac{\pi}{8}\) 的正弦值为
 
 $$
 \begin{aligned}
-  \sin \frac{\pi}{8} &= \sin \frac{\pi}{4} \cdot \frac{1}{\sqrt{2} + 1} \\
-  &= 1 - \frac{\sqrt{2}}{2} \\
-  \Longrightarrow \cos \frac{\pi}{8} &= \sqrt{1 - \sin^{2} \frac{\pi}{8}} \\
-  &= \sqrt{\sqrt{2} - \frac{1}{2}}
+  \sin \dfrac{\pi}{8} &= \sin \dfrac{\pi}{4} \cdot \dfrac{1}{\sqrt{2} + 1} \\
+  &= 1 - \dfrac{\sqrt{2}}{2} \\
+  \Longrightarrow \cos \dfrac{\pi}{8} &= \sqrt{1 - \sin^{2} \dfrac{\pi}{8}} \\
+  &= \sqrt{\sqrt{2} - \dfrac{1}{2}}
 \end{aligned}
 $$
 
@@ -326,7 +326,7 @@ $$
 并且，可以确定椭圆或双曲线的离心率为
 
 $$
-e = \sqrt{1 - \frac{\lambda_1}{\lambda_2}} \begin{cases}
+e = \sqrt{1 - \dfrac{\lambda_1}{\lambda_2}} \begin{cases}
   = 0 \quad \text{圆} \\
   \in (0, 1) \quad \text{椭圆} \\
   = 1 \quad \text{抛物线} \\
@@ -367,7 +367,7 @@ $$
 ### 椭球面
 
 $$
-\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \quad (a, b, c > 0)
+\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1 \quad (a, b, c > 0)
 $$
 
 ![](751b2a631516019ae91ce04695f59ef0.png "椭球面")
@@ -383,7 +383,7 @@ $$
 ### 椭圆锥面
 
 $$
-\frac{x^2}{a^2} + \frac{y^2}{b^2} = z^2 \quad (a, b > 0)
+\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = z^2 \quad (a, b > 0)
 $$
 
 ![](45700debec6c599f244344cda2f57379.png "椭圆锥面")
@@ -391,7 +391,7 @@ $$
 特别地，当 \(a = b = r\) 时，方程表示圆锥面
 
 $$
-\frac{x^2}{r^2} + \frac{y^2}{r^2} = z^2 \quad (r > 0)
+\dfrac{x^2}{r^2} + \dfrac{y^2}{r^2} = z^2 \quad (r > 0)
 $$
 
 ### 二次柱面
@@ -400,8 +400,8 @@ $$
 
 $$
 \begin{aligned}
-  \frac{x^2}{a^2} + \frac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
-  \frac{x^2}{a^2} - \frac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
+  \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
+  \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} &= 1 \quad (a, b > 0) \\
   y^2 &= 2px
 \end{aligned}
 $$
@@ -414,8 +414,8 @@ $$
 
 $$
 \begin{aligned}
-  \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
-  \frac{x^2}{a^2} - \frac{y^2}{b^2} - \frac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
+  \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
+  \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} &= 1 \quad (a, b, c > 0) \\
 \end{aligned}
 $$
 
@@ -427,8 +427,8 @@ $$
 
 $$
 \begin{aligned}
-  \frac{x^2}{a^2} + \frac{y^2}{b^2} &= z \quad (a, b > 0) \\
-  \frac{x^2}{a^2} - \frac{y^2}{b^2} &= z \quad (a, b > 0)
+  \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} &= z \quad (a, b > 0) \\
+  \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} &= z \quad (a, b > 0)
 \end{aligned}
 $$
 
@@ -585,9 +585,9 @@ $$
 f(x, y, z) = ax^2 + by^2 + cz^2 = k \quad (k \geqslant 0)
 $$
 
-- 若 \(a, b, c\) 都大于 \(0\)，二次型表示椭球面。
-- 若 \(a, b, c\) 有且仅有一个小于 \(0\)，二次型表示单叶双曲面。
-- 若 \(a, b, c\) 有且仅有两个小于 \(0\)，二次型表示双叶双曲面。
+- 若 \(a, b, c\) 都大于 0，二次型表示椭球面。
+- 若 \(a, b, c\) 有且仅有一个小于 0，二次型表示单叶双曲面。
+- 若 \(a, b, c\) 有且仅有两个小于 0，二次型表示双叶双曲面。
 - 若 \(abc = 0\)，二次型是一个柱面。
 - 若 \(a, b, c\) 不都同号，且 \(k = 0\)，二次型表示椭圆锥面。
 
@@ -597,10 +597,10 @@ $$
 
 通过上述分析，我们发现二次型的标准形的正负是一个重要指标。通过可逆变换（不能是正交变换），可以把二次型化为规范形。
 
-二次型的规范形经过伸缩变换，特征值发生了变化，且取值范围只能是 \(\{1, -1, 0\}\)。大于 \(0\) 的特征值个数称为**正惯性指数**，小于 \(0\) 的特征值个数称为**负惯性指数**。
+二次型的规范形经过伸缩变换，特征值发生了变化，且取值范围只能是 \(\{1, -1, 0\}\)。大于 0 的特征值个数称为**正惯性指数**，小于 0 的特征值个数称为**负惯性指数**。
 
 ### 正定二次型
 
-如果一个二次型的特征值都大于 \(0\)，即正惯性指数 \(p = n\)，那么该二次型就是一个**正定二次型**。显然，椭圆、椭球面都是正定二次型，双曲线、双曲面都是不定二次型。
+如果一个二次型的特征值都大于 0，即正惯性指数 \(p = n\)，那么该二次型就是一个**正定二次型**。显然，椭圆、椭球面都是正定二次型，双曲线、双曲面都是不定二次型。
 
 不难发现，不论是二维平面的椭圆，还是三维空间的椭球面，它们具有一个共同的特点：封闭。这意味着，如果一个多元函数是正定的，那么它必然存在最优解。这在凸优化等领域得到广泛应用。

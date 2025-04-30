@@ -17,7 +17,7 @@ weight: 50
 
 $$
 \begin{aligned}
-\lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
+\lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \dfrac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
 \end{aligned}
 $$
 
@@ -37,7 +37,7 @@ $$
 
 $$
 \begin{aligned}
-D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \quad j=1, \cdots, n
+D f(x) _{ij}=\dfrac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \quad j=1, \cdots, n
 \end{aligned}
 $$
 
@@ -53,7 +53,7 @@ $$
 
 $$
 \begin{aligned}
-\nabla f(x) _{i}=\frac{\partial f(x)}{\partial x _{i}}, \quad i=1, \cdots, n
+\nabla f(x) _{i}=\dfrac{\partial f(x)}{\partial x _{i}}, \quad i=1, \cdots, n
 \end{aligned}
 $$
 
@@ -104,7 +104,7 @@ $$
 
 $$
 \begin{aligned}
-\nabla^{2} f(x) _{ij}=\frac{\partial^{2} f(x)}{\partial x _{i} \partial x _{j}}, \quad i=1, \cdots, n, \quad j=1, \cdots, n
+\nabla^{2} f(x) _{ij}=\dfrac{\partial^{2} f(x)}{\partial x _{i} \partial x _{j}}, \quad i=1, \cdots, n, \quad j=1, \cdots, n
 \end{aligned}
 $$
 
@@ -112,7 +112,7 @@ $$
 
 $$
 \begin{aligned}
-\widehat{f}(z)=f(x)+\nabla f(x)^{\top}(z-x)+\frac{1}{2}(z-x)^{\top} \nabla^{2} f(x)(z-x)
+\widehat{f}(z)=f(x)+\nabla f(x)^{\top}(z-x)+\dfrac{1}{2}(z-x)^{\top} \nabla^{2} f(x)(z-x)
 \end{aligned}
 $$
 

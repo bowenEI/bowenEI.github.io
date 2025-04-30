@@ -90,7 +90,7 @@ $$
 
 $$
 \begin{aligned}
-    f_0(x) &= \frac{1}{x} \\
+    f_0(x) &= \dfrac{1}{x} \\
     p^{\star} &= 0
 \end{aligned}
 $$
@@ -109,7 +109,7 @@ $$
 $$
 \begin{aligned}
     f_0(x) &= x \log x \\
-    p^{\star} &= \frac{1}{e}
+    p^{\star} &= \dfrac{1}{e}
 \end{aligned}
 $$
 

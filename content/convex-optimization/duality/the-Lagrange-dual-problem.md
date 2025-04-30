@@ -127,7 +127,7 @@ $$
 其相应的对偶问题为
 
 $$
-\mathrm{maximize} \quad -\frac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
+\mathrm{maximize} \quad -\dfrac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
 $$
 
 它是一个凹二次函数的无约束极大化问题。Slater 条件此时即是原问题的可行性条件。

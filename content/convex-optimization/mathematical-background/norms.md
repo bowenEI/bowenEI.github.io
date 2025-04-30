@@ -33,7 +33,7 @@ $$
 
 $$
 \begin{aligned}
-\cos \left ( x,y \right ) = \frac{x^{\top}y}{\|x\|_2\|y\|_2} 
+\cos \left ( x,y \right ) = \dfrac{x^{\top}y}{\|x\|_2\|y\|_2} 
 \end{aligned}
 $$
 
@@ -98,7 +98,7 @@ $$
 
 ### 单位球
 
-范数小于或等于 \(1\) 的所有向量的集合称为单位球。
+范数小于或等于 1 的所有向量的集合称为单位球。
 
 $$
 \begin{aligned}

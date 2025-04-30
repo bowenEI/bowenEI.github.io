@@ -34,8 +34,8 @@ toc: true
 
 $$
 \begin{aligned}
-    & \sum_{i=1}^{S_{out}} \frac{1}{S_{in}+i} \\
-    =\ & \sum_{i=1}^{S_{out}} \frac{1}{i} - \sum_{i=1}^{S_{in}} \frac{1}{i} \\
+    & \sum_{i=1}^{S_{out}} \dfrac{1}{S_{in}+i} \\
+    =\ & \sum_{i=1}^{S_{out}} \dfrac{1}{i} - \sum_{i=1}^{S_{in}} \dfrac{1}{i} \\
 \end{aligned}
 $$
 
@@ -49,7 +49,7 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{n=1}^{\infty} \frac{1}{n^p} \begin{cases}
+    \sum_{n=1}^{\infty} \dfrac{1}{n^p} \begin{cases}
         \ \text{发散}, & p \leqslant 1 \\
         \ \text{收敛}, & p>1 
     \end{cases}
@@ -60,7 +60,7 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{n=1}^{\infty} \frac{1}{n}
+    \sum_{n=1}^{\infty} \dfrac{1}{n}
 \end{aligned}
 $$
 
@@ -68,7 +68,7 @@ $$
 
 $$
 \begin{aligned}
-    f_{n}(x) &= \sum_{k=1}^{n} \frac{x^k}{k} \\
+    f_{n}(x) &= \sum_{k=1}^{n} \dfrac{x^k}{k} \\
 \end{aligned}
 $$
 
@@ -77,7 +77,7 @@ $$
 $$
 \begin{aligned}
     f_{n}^{\prime}(x) &= \sum_{k=1}^{n} x^{k-1} \\
-    &= \frac{1-x^{n}}{1-x}
+    &= \dfrac{1-x^{n}}{1-x}
 \end{aligned}
 $$
 
@@ -85,9 +85,9 @@ $$
 
 $$
 \begin{aligned}
-    f_{n}(x) &= \int \frac{1-x^{n}}{1-x} \mathrm{d}x \\
-    \Longrightarrow f_n(1) &= \int_{0}^{1} \frac{1-x^{n}}{1-x} \mathrm{d}x + f_{n}(0) \\
-    &= \int_{0}^{1} \frac{1-x^{n}}{1-x} \mathrm{d}x \\
+    f_{n}(x) &= \int \dfrac{1-x^{n}}{1-x} \mathrm{d}x \\
+    \Longrightarrow f_n(1) &= \int_{0}^{1} \dfrac{1-x^{n}}{1-x} \mathrm{d}x + f_{n}(0) \\
+    &= \int_{0}^{1} \dfrac{1-x^{n}}{1-x} \mathrm{d}x \\
 \end{aligned}
 $$
 
@@ -113,8 +113,8 @@ Gamma 函数也被称为第二类欧拉积分。而 Digamma 函数的定义为�
 
 $$
 \begin{aligned}
-    \Psi(x) &= \frac{\mathrm{d\ln{\Gamma(x)}}}{\mathrm{d}x} \\
-    &= \frac{\Gamma^{\prime}(x)}{\Gamma(x)}
+    \Psi(x) &= \dfrac{\mathrm{d\ln{\Gamma(x)}}}{\mathrm{d}x} \\
+    &= \dfrac{\Gamma^{\prime}(x)}{\Gamma(x)}
 \end{aligned}
 $$
 
@@ -122,13 +122,13 @@ $$
 
 $$
 \begin{aligned}
-    \Gamma^{\prime}(x) &= \frac{\mathrm{d}}{\mathrm{d}x} \int_{0}^{+\infty} t^{x-1} e^{-t} \mathrm{d}t \\
+    \Gamma^{\prime}(x) &= \dfrac{\mathrm{d}}{\mathrm{d}x} \int_{0}^{+\infty} t^{x-1} e^{-t} \mathrm{d}t \\
     &= \int_{0}^{+\infty} t^{x-1} e^{-t} \ln{t} \mathrm{d}t \\
     \Longrightarrow \Gamma^{\prime}(1) &= \int_{0}^{+\infty} e^{-t} \ln{t} \mathrm{d}t \\
     &= \int_{0}^{1} e^{-t} \ln{t} \mathrm{d}t + \int_{1}^{+\infty} e^{-t} \ln{t} \mathrm{d}t \\
-    &= \int_{0}^{1} \frac{e^{-t}-1}{t} \mathrm{d}t + \int_{1}^{+\infty} \frac{e^{-t}}{t} \mathrm{d}t \\
+    &= \int_{0}^{1} \dfrac{e^{-t}-1}{t} \mathrm{d}t + \int_{1}^{+\infty} \dfrac{e^{-t}}{t} \mathrm{d}t \\
     &= -\lim_{n \to \infty} \left(
-        \sum_{k=1}^{n} \frac{1}{k} - \ln{n}
+        \sum_{k=1}^{n} \dfrac{1}{k} - \ln{n}
     \right)
 \end{aligned}
 $$
@@ -150,7 +150,7 @@ $$
 $$
 \begin{aligned}
     \gamma &= \lim_{n \to \infty} \gamma_{n} \\
-    &= \lim_{n \to \infty} \left( \sum_{k=1}^{n} \frac{1}{k} - \ln{n} \right)
+    &= \lim_{n \to \infty} \left( \sum_{k=1}^{n} \dfrac{1}{k} - \ln{n} \right)
 \end{aligned}
 $$
 
@@ -168,7 +168,7 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{k=1}^{n} \frac{1}{k} \sim \ln{n}
+    \sum_{k=1}^{n} \dfrac{1}{k} \sim \ln{n}
 \end{aligned}
 $$
 
@@ -176,7 +176,7 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{k=1}^{n} \frac{1}{k} \approx \ln{n} + \gamma
+    \sum_{k=1}^{n} \dfrac{1}{k} \approx \ln{n} + \gamma
 \end{aligned}
 $$
 
@@ -184,7 +184,7 @@ $$
 
 $$
 \begin{aligned}
-    \ln{(n+1)} < \sum_{k=1}^{n} \frac{1}{k} < \ln{n} + 1
+    \ln{(n+1)} < \sum_{k=1}^{n} \dfrac{1}{k} < \ln{n} + 1
 \end{aligned}
 $$
 
@@ -194,7 +194,7 @@ $$
 
 $$
 \begin{aligned}
-    \Psi(x) &= -\gamma + \int_{0}^{1} \frac{1-t^{x-1}}{1-t} \mathrm{d}t 
+    \Psi(x) &= -\gamma + \int_{0}^{1} \dfrac{1-t^{x-1}}{1-t} \mathrm{d}t 
 \end{aligned}
 $$
 
@@ -202,8 +202,8 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{k=1}^{n} \frac{1}{n} &= f_{n}(1) \\
-    &= \int_{0}^{1} \frac{1-t^{n}}{1-x} \mathrm{d}x \\
+    \sum_{k=1}^{n} \dfrac{1}{n} &= f_{n}(1) \\
+    &= \int_{0}^{1} \dfrac{1-t^{n}}{1-x} \mathrm{d}x \\
     &= \Psi(n+1) + \gamma
 \end{aligned}
 $$

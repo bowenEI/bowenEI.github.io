@@ -53,7 +53,7 @@ $$
 f(x) = -\log x, \quad \operatorname{dom} f = \mathbf{R}_{++}
 $$
 
-当 \(y > 0\) 时，函数 \(xy + \log x\) 无上界；当 \(y < 0\) 时，在 \(x = - \frac{1}{y}\) 处取最大值。因此，负对数函数的共轭函数为
+当 \(y > 0\) 时，函数 \(xy + \log x\) 无上界；当 \(y < 0\) 时，在 \(x = - \dfrac{1}{y}\) 处取最大值。因此，负对数函数的共轭函数为
 
 $$
 f^{*}(y) = -\log (-y) - 1, \quad \operatorname{dom} f^{*} = -\mathbf{R}_{++}
@@ -86,10 +86,10 @@ $$
 #### 反比例函数
 
 $$
-f(x) = \frac{1}{x}, \quad \operatorname{dom} f = \mathbf{R}_{++}
+f(x) = \dfrac{1}{x}, \quad \operatorname{dom} f = \mathbf{R}_{++}
 $$
 
-当 \(y > 0\) 时，\(yx - 1/x\) 无上界；当 \(y = 0\) 时，函数有上确界 \(0\)；当 \(y < 0\) 时，在 \(x = (-y)^{1/2}\) 处达到上确界。因此，反比例函数的共轭函数为
+当 \(y > 0\) 时，\(yx - 1/x\) 无上界；当 \(y = 0\) 时，函数有上确界 0；当 \(y < 0\) 时，在 \(x = (-y)^{1/2}\) 处达到上确界。因此，反比例函数的共轭函数为
 
 $$
 f^{*}(y) = -2 (-y)^{1/2}, \quad \operatorname{dom} f^{*} = \mathbf{R}_{+}
@@ -98,13 +98,13 @@ $$
 #### 严格凸的二次函数
 
 $$
-f(x)=\frac{1}{2} x^{\top} Q x, \quad Q \in \mathbf{S}_{++}^{n}
+f(x)=\dfrac{1}{2} x^{\top} Q x, \quad Q \in \mathbf{S}_{++}^{n}
 $$
 
-对所有的 \(y\)，关于 \(x\) 的函数 \(y^{\top} x-\frac{1}{2} x^{\top} Q x\) 都有上界并在 \(x = Q^{-1}y\) 处达到上确界。因此
+对所有的 \(y\)，关于 \(x\) 的函数 \(y^{\top} x-\dfrac{1}{2} x^{\top} Q x\) 都有上界并在 \(x = Q^{-1}y\) 处达到上确界。因此
 
 $$
-f^{*}(y)=\frac{1}{2} y^{\top} Q^{-1} y
+f^{*}(y)=\dfrac{1}{2} y^{\top} Q^{-1} y
 $$
 
 这是一个很好的性质，严格凸的二次函数求共轭函数只需要求其二次型矩阵的逆矩阵即可。
@@ -162,10 +162,10 @@ $$
 
 如果 \(f\) 可微，上式亦可称为 Young 不等式。
 
-令 \(f(x) = \frac{1}{2} x^{\top}Qx\)，其中 \(Q \in \mathbf{S}_{++}\)，利用 Fenchel 不等式，我们可以如下结论：
+令 \(f(x) = \dfrac{1}{2} x^{\top}Qx\)，其中 \(Q \in \mathbf{S}_{++}\)，利用 Fenchel 不等式，我们可以如下结论：
 
 $$
-x^{\top}y \leqslant \frac{1}{2} x^{\top}Qx + \frac{1}{2} y^{\top}Q^{-1}y
+x^{\top}y \leqslant \dfrac{1}{2} x^{\top}Qx + \dfrac{1}{2} y^{\top}Q^{-1}y
 $$
 
 ### 共轭的共轭

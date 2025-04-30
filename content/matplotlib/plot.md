@@ -350,8 +350,8 @@ fig
 
 
 ```python
-xticklabels = [0, r'\(\frac {\pi} {3}\)', r'\(\frac {2 \pi} {3}\)', r'\(\pi\)',
-               r'\(\frac {4 \pi} {3}\)', r'\(\frac {5 \pi} {3}\)', r'\(2 \pi\)']
+xticklabels = [0, r'\(\dfrac {\pi} {3}\)', r'\(\dfrac {2 \pi} {3}\)', r'\(\pi\)',
+               r'\(\dfrac {4 \pi} {3}\)', r'\(\dfrac {5 \pi} {3}\)', r'\(2 \pi\)']
 ax.set_xticklabels(xticklabels)
 ```
 
@@ -359,11 +359,11 @@ ax.set_xticklabels(xticklabels)
 
 
     [Text(0.0, 0, '0'),
-     Text(1.0471975511965976, 0, '\(\\frac {\\pi} {3}\)'),
-     Text(2.0943951023931953, 0, '\(\\frac {2 \\pi} {3}\)'),
+     Text(1.0471975511965976, 0, '\(\\dfrac {\\pi} {3}\)'),
+     Text(2.0943951023931953, 0, '\(\\dfrac {2 \\pi} {3}\)'),
      Text(3.141592653589793, 0, '\(\\pi\)'),
-     Text(4.1887902047863905, 0, '\(\\frac {4 \\pi} {3}\)'),
-     Text(5.235987755982988, 0, '\(\\frac {5 \\pi} {3}\)'),
+     Text(4.1887902047863905, 0, '\(\\dfrac {4 \\pi} {3}\)'),
+     Text(5.235987755982988, 0, '\(\\dfrac {5 \\pi} {3}\)'),
      Text(6.283185307179586, 0, '\(2 \\pi\)')]
 
 
@@ -388,7 +388,7 @@ fig
 
 
 ```python
-yticklabels = ['-1', r'\(- \frac {1} {2}\)', '0', r'\(\frac {1} {2}\)', '1']
+yticklabels = ['-1', r'\(- \dfrac {1} {2}\)', '0', r'\(\dfrac {1} {2}\)', '1']
 ax.set_yticklabels(yticklabels)
 ```
 
@@ -396,9 +396,9 @@ ax.set_yticklabels(yticklabels)
 
 
     [Text(0, -1.0, '-1'),
-     Text(0, -0.5, '\(- \\frac {1} {2}\)'),
+     Text(0, -0.5, '\(- \\dfrac {1} {2}\)'),
      Text(0, 0.0, '0'),
-     Text(0, 0.5, '\(\\frac {1} {2}\)'),
+     Text(0, 0.5, '\(\\dfrac {1} {2}\)'),
      Text(0, 1.0, '1')]
 
 
@@ -738,7 +738,7 @@ fig
 
 ```python
 ax.annotate(
-    text=r'\(\frac {T} {2}\)',
+    text=r'\(\dfrac {T} {2}\)',
     fontsize=20,
     xy=(np.pi, 0),
     xytext=(4, 0.5),

@@ -68,7 +68,7 @@ Type RandomizedSelect(Type a[], int p, int r, int k) {
 
 设数组 `S` 的长度为 \(n\)。若 \(n < 50\)，则采用堆排序的方法找出第 \(k\) 小元素。否则，
 
-- 将 \(n\) 个元素分为 \(\left \lceil n/5 \right \rceil\) 组，每组 \(5\) 个元素并排序。
-- 将每组的第 \(3\) 个元素取出，得到大小为 \(\left \lceil n/5 \right \rceil\) 的数组 `M`。
+- 将 \(n\) 个元素分为 \(\left \lceil n/5 \right \rceil\) 组，每组 5 个元素并排序。
+- 将每组的第 3 个元素取出，得到大小为 \(\left \lceil n/5 \right \rceil\) 的数组 `M`。
 - 在数组 `M` 中找第 \(\left \lceil \left \lceil n/5 \right \rceil /2 \right \rceil\) 小的元素 `m`。
 - 将原数组 `S` 分为大于 `m`、等于 `m` 和小于 `m` 的三个集合，并计算集合中元素的个数，并将之与 \(k\) 作比较，确定第 \(k\) 小元素所在的集合。

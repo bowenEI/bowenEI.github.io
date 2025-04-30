@@ -33,7 +33,7 @@ toc: true
 【问题】计算广义积分
 
 $$
-\int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x
+\int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x
 $$
 
 <!--more-->
@@ -45,13 +45,13 @@ $$
 记
 
 $$
-I = \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x
+I = \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x
 $$
 
 构造函数
 
 $$
-f(x) = \int_{0}^{+\infty} e^{-xt} \frac{\sin{t}}{t} \mathrm{d}t \quad (x \geqslant 0)
+f(x) = \int_{0}^{+\infty} e^{-xt} \dfrac{\sin{t}}{t} \mathrm{d}t \quad (x \geqslant 0)
 $$
 
 则
@@ -66,10 +66,10 @@ $$
 
 $$
 \begin{aligned}
-    0 &\leqslant \left|\int_{0}^{+\infty} e^{-xt} \frac{\sin{t}}{t} \mathrm{d}t \right| \\
-    &\leqslant \int_{0}^{+\infty} e^{-xt} \left|\frac{\sin{t}}{t}\right| \mathrm{d}t \\
+    0 &\leqslant \left|\int_{0}^{+\infty} e^{-xt} \dfrac{\sin{t}}{t} \mathrm{d}t \right| \\
+    &\leqslant \int_{0}^{+\infty} e^{-xt} \left|\dfrac{\sin{t}}{t}\right| \mathrm{d}t \\
     &\leqslant \int_{0}^{+\infty} e^{-xt} \mathrm{d}t \\
-    &= \frac{1}{x}
+    &= \dfrac{1}{x}
 \end{aligned}
 $$
 
@@ -136,8 +136,8 @@ $$
 
 $$
 \begin{aligned}
-    f'(x) &= \int_{0}^{+\infty} \frac{\partial e^{-xt}}{\partial x} \cdot \frac{\sin{t}}{t} \mathrm{d}t \\
-    &= -t \int_{0}^{+\infty} e^{-xt} \frac{\sin{t}}{t} \mathrm{d}t \\
+    f'(x) &= \int_{0}^{+\infty} \dfrac{\partial e^{-xt}}{\partial x} \cdot \dfrac{\sin{t}}{t} \mathrm{d}t \\
+    &= -t \int_{0}^{+\infty} e^{-xt} \dfrac{\sin{t}}{t} \mathrm{d}t \\
     &= - \int_{0}^{+\infty} e^{-xt} \sin{t} \mathrm{d}t
 \end{aligned}
 $$
@@ -153,21 +153,21 @@ $$
 $$
 \begin{aligned}
     \Phi &= - \int_{0}^{+\infty} e^{-xt} \sin{t} \mathrm{d}t \\
-    &= \frac{1}{x} \int_{0}^{+\infty} \sin{t} \mathrm{d} e^{-xt} \\
-    &= \frac{1}{x} \left(
+    &= \dfrac{1}{x} \int_{0}^{+\infty} \sin{t} \mathrm{d} e^{-xt} \\
+    &= \dfrac{1}{x} \left(
         e^{-xt} \sin{t} \Big|_{0}^{+\infty}
         - \int_{0}^{+\infty} e^{-xt} \mathrm{d} \sin{t}
     \right) \\
-    &= \frac{1}{x^{2}} \int_{0}^{+\infty} \cos{t} \mathrm{d} e^{-xt} \\
-    &= \frac{1}{x^{2}} \left(e^{-xt} \cos{t} \Big|_{0}^{+\infty} - \int_{0}^{+\infty} e^{-xt} \mathrm{d} \cos{t} \right) \\
-    &= - \frac{1}{x^2} \left( 1 + \Phi \right)
+    &= \dfrac{1}{x^{2}} \int_{0}^{+\infty} \cos{t} \mathrm{d} e^{-xt} \\
+    &= \dfrac{1}{x^{2}} \left(e^{-xt} \cos{t} \Big|_{0}^{+\infty} - \int_{0}^{+\infty} e^{-xt} \mathrm{d} \cos{t} \right) \\
+    &= - \dfrac{1}{x^2} \left( 1 + \Phi \right)
 \end{aligned}
 $$
 
 解得
 
 $$
-\Phi = - \frac{1}{x^2 + 1}
+\Phi = - \dfrac{1}{x^2 + 1}
 $$
 
 于是
@@ -175,7 +175,7 @@ $$
 $$
 \begin{aligned}
     f'(x) &= - \int_{0}^{+\infty} e^{-xt} \sin{t} \mathrm{d}t \\
-    &= - \frac{1}{x^2 + 1}
+    &= - \dfrac{1}{x^2 + 1}
 \end{aligned}
 $$
 
@@ -183,7 +183,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} f'(x) &= - \int_{0}^{+\infty} \frac{1}{x^2 + 1} \mathrm{d}x = - \arctan{x} \Big|_{0}^{+\infty} = -\frac{\pi}{2} \\
+    \int_{0}^{+\infty} f'(x) &= - \int_{0}^{+\infty} \dfrac{1}{x^2 + 1} \mathrm{d}x = - \arctan{x} \Big|_{0}^{+\infty} = -\dfrac{\pi}{2} \\
     &= \lim_{x \rightarrow +\infty} f(x) - f(0) = -I
 \end{aligned}
 $$
@@ -191,7 +191,7 @@ $$
 解得
 
 $$
-I = \frac{\pi}{2}
+I = \dfrac{\pi}{2}
 $$
 
 ## 解法二：化为二重积分
@@ -200,8 +200,8 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} e^{-xy} \mathrm{d}y &= -\frac{1}{x} e^{-xy} \Big|_{0}^{+\infty} \\
-    &= \frac{1}{x}
+    \int_{0}^{+\infty} e^{-xy} \mathrm{d}y &= -\dfrac{1}{x} e^{-xy} \Big|_{0}^{+\infty} \\
+    &= \dfrac{1}{x}
 \end{aligned}
 $$
 
@@ -209,7 +209,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \sin{x} \left( \int_{0}^{+\infty} e^{-xy} \mathrm{d}y \right) \mathrm{d}x \\
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \sin{x} \left( \int_{0}^{+\infty} e^{-xy} \mathrm{d}y \right) \mathrm{d}x \\
     &= \iint_{\mathbb{R}_{+}^{2}} \sin{x} e^{-xy} \mathrm{d}x \mathrm{d}y
 \end{aligned} 
 $$
@@ -218,7 +218,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \left( \int_{0}^{+\infty} \sin{x} e^{-xy} \mathrm{d}x \right) \mathrm{d}y
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \left( \int_{0}^{+\infty} \sin{x} e^{-xy} \mathrm{d}x \right) \mathrm{d}y
 \end{aligned} 
 $$
 
@@ -226,9 +226,9 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \frac{1}{y^2 + 1} \mathrm{d}y \\
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \int_{0}^{+\infty} \dfrac{1}{y^2 + 1} \mathrm{d}y \\
     &= \arctan{x} \Big|_{0}^{+\infty} \\
-    &= \frac{\pi}{2}
+    &= \dfrac{\pi}{2}
 \end{aligned} 
 $$
 
@@ -241,7 +241,7 @@ $$
 洛朗级数负幂项的系数
 
 $$
-\mathrm{Res}[f(z), a] = \frac{1}{2 \pi i} \oint_{z = a + \rho e^{i \theta}} f(z) \mathrm{d}z
+\mathrm{Res}[f(z), a] = \dfrac{1}{2 \pi i} \oint_{z = a + \rho e^{i \theta}} f(z) \mathrm{d}z
 $$
 
 {{< /callout >}}
@@ -262,7 +262,7 @@ $$
 
 $$
 \begin{aligned}
-    \sin{x} &= \frac{1}{2i}\left(e^{ix} - e^{-ix}\right)
+    \sin{x} &= \dfrac{1}{2i}\left(e^{ix} - e^{-ix}\right)
 \end{aligned}
 $$
 
@@ -270,26 +270,26 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \frac{1}{2i} \int_{0}^{+\infty} \frac{e^{ix} - e^{-ix}}{x} \mathrm{d}x \\
-    &= \frac{1}{2i} \int_{0}^{+\infty} \frac{e^{ix}}{x} \mathrm{d}x - \frac{1}{2i} \int_{0}^{-\infty} \frac{e^{-ix}}{-x} \mathrm{d}(-x) \\
-    &= \frac{1}{2i} \int_{0}^{+\infty} \frac{e^{ix}}{x}  \mathrm{d}x + \frac{1}{2i} \int_{-\infty}^{0} \frac{e^{ix}}{x} \mathrm{d}x \\
-    &= \frac{1}{2i} \int_{-\infty}^{+\infty} \frac{e^{ix}}{x} \mathrm{d}x
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \dfrac{1}{2i} \int_{0}^{+\infty} \dfrac{e^{ix} - e^{-ix}}{x} \mathrm{d}x \\
+    &= \dfrac{1}{2i} \int_{0}^{+\infty} \dfrac{e^{ix}}{x} \mathrm{d}x - \dfrac{1}{2i} \int_{0}^{-\infty} \dfrac{e^{-ix}}{-x} \mathrm{d}(-x) \\
+    &= \dfrac{1}{2i} \int_{0}^{+\infty} \dfrac{e^{ix}}{x}  \mathrm{d}x + \dfrac{1}{2i} \int_{-\infty}^{0} \dfrac{e^{ix}}{x} \mathrm{d}x \\
+    &= \dfrac{1}{2i} \int_{-\infty}^{+\infty} \dfrac{e^{ix}}{x} \mathrm{d}x
 \end{aligned}
 $$
 
 构造复变函数
 
 $$
-f(z) = \frac{e^{iz}}{z}
+f(z) = \dfrac{e^{iz}}{z}
 $$
 
 它有一个孤立奇点 \(z_0=0\)。由留数定理得
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \frac{1}{2i} \int_{-\infty}^{+\infty} \frac{e^{ix}}{x} \mathrm{d}x \\
-    &= \frac{1}{2i} \cdot i \pi \mathrm{Res}[f(z), z_0] \\
-    &= \frac{\pi}{2} \mathrm{Res}[f(z), z_0]
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \dfrac{1}{2i} \int_{-\infty}^{+\infty} \dfrac{e^{ix}}{x} \mathrm{d}x \\
+    &= \dfrac{1}{2i} \cdot i \pi \mathrm{Res}[f(z), z_0] \\
+    &= \dfrac{\pi}{2} \mathrm{Res}[f(z), z_0]
 \end{aligned}
 $$
 
@@ -297,9 +297,9 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \frac{\pi}{2} \mathrm{Res}[f(z), z_0] \\
-    &= \frac{\pi}{2} \cdot \frac{1}{2 \pi i} \oint_{|z|=\varepsilon} f(z) \mathrm{d}z \\
-    &= \frac{1}{4i} \oint_{|z|=\varepsilon} \frac{e^{iz}}{z} \mathrm{d}z
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \dfrac{\pi}{2} \mathrm{Res}[f(z), z_0] \\
+    &= \dfrac{\pi}{2} \cdot \dfrac{1}{2 \pi i} \oint_{|z|=\varepsilon} f(z) \mathrm{d}z \\
+    &= \dfrac{1}{4i} \oint_{|z|=\varepsilon} \dfrac{e^{iz}}{z} \mathrm{d}z
 \end{aligned}
 $$
 
@@ -318,11 +318,11 @@ $$
 
 $$
 \begin{aligned}
-    \oint_{|z|=\varepsilon} \frac{e^{iz}}{z} \mathrm{d}z &= \oint_{|z|=\varepsilon} \frac{e^{iz}}{iz} \mathrm{d}(iz) \\
-    &= \oint_{|z|=\varepsilon} \frac{e^{z}}{z} \mathrm{d}z \\
-    &= \oint_{|z|=\varepsilon} \frac{1}{z} \left( \sum_{n=0}^{\infty} \frac{z^n}{n!} \right) \mathrm{d}z \\
-    &= \oint_{|z|=\varepsilon} \left( \frac{1}{z} + \sum_{n=1}^{\infty} \frac{z^{n-1}}{n!} \right) \mathrm{d}z \\
-    &= \oint_{|z|=\varepsilon} \frac{1}{z} \mathrm{d}z + \oint_{|z|=\varepsilon} \sum_{n=1}^{\infty} \frac{z^{n-1}}{n!} \mathrm{d}z
+    \oint_{|z|=\varepsilon} \dfrac{e^{iz}}{z} \mathrm{d}z &= \oint_{|z|=\varepsilon} \dfrac{e^{iz}}{iz} \mathrm{d}(iz) \\
+    &= \oint_{|z|=\varepsilon} \dfrac{e^{z}}{z} \mathrm{d}z \\
+    &= \oint_{|z|=\varepsilon} \dfrac{1}{z} \left( \sum_{n=0}^{\infty} \dfrac{z^n}{n!} \right) \mathrm{d}z \\
+    &= \oint_{|z|=\varepsilon} \left( \dfrac{1}{z} + \sum_{n=1}^{\infty} \dfrac{z^{n-1}}{n!} \right) \mathrm{d}z \\
+    &= \oint_{|z|=\varepsilon} \dfrac{1}{z} \mathrm{d}z + \oint_{|z|=\varepsilon} \sum_{n=1}^{\infty} \dfrac{z^{n-1}}{n!} \mathrm{d}z
 \end{aligned}
 $$
 
@@ -330,7 +330,7 @@ $$
 
 $$
 \begin{aligned}
-    \oint_{|z|=\varepsilon} \sum_{n=1}^{\infty} \frac{z^{n-1}}{n!} \mathrm{d}z &= 0
+    \oint_{|z|=\varepsilon} \sum_{n=1}^{\infty} \dfrac{z^{n-1}}{n!} \mathrm{d}z &= 0
 \end{aligned}
 $$
 
@@ -338,7 +338,7 @@ $$
 
 $$
 \begin{aligned}
-    \oint_{|z|=\varepsilon} \frac{1}{z} \mathrm{d}z
+    \oint_{|z|=\varepsilon} \dfrac{1}{z} \mathrm{d}z
 \end{aligned}
 $$
 
@@ -346,7 +346,7 @@ $$
 
 $$
 \begin{aligned}
-    \oint_{|z|=\varepsilon} \frac{1}{z} \mathrm{d}z &= \int_{0}^{2 \pi} \frac{1}{e^{i \theta}} \mathrm{d}(e^{i \theta}) \\
+    \oint_{|z|=\varepsilon} \dfrac{1}{z} \mathrm{d}z &= \int_{0}^{2 \pi} \dfrac{1}{e^{i \theta}} \mathrm{d}(e^{i \theta}) \\
     &= i \int_{0}^{2 \pi} \mathrm{d}\theta \\
     &= 2 \pi i
 \end{aligned}
@@ -356,9 +356,9 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \frac{1}{4i} \oint_{|z|=\varepsilon} \frac{e^{iz}}{z} \mathrm{d}z \\
-    &= \frac{1}{4i} \cdot 2 \pi i \\
-    &= \frac{\pi}{2}
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \dfrac{1}{4i} \oint_{|z|=\varepsilon} \dfrac{e^{iz}}{z} \mathrm{d}z \\
+    &= \dfrac{1}{4i} \cdot 2 \pi i \\
+    &= \dfrac{\pi}{2}
 \end{aligned}
 $$
 
@@ -368,8 +368,8 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &= \frac{1}{2i} \int_{-\infty}^{+\infty} \frac{e^{ix}}{x} \mathrm{d}x \\
-    &= \frac{1}{2i} \left( \int_{-\infty}^{0} \frac{e^{ix}}{x} \mathrm{d}x + \int_{0}^{+\infty} \frac{e^{ix}}{x} \mathrm{d}x \right)
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &= \dfrac{1}{2i} \int_{-\infty}^{+\infty} \dfrac{e^{ix}}{x} \mathrm{d}x \\
+    &= \dfrac{1}{2i} \left( \int_{-\infty}^{0} \dfrac{e^{ix}}{x} \mathrm{d}x + \int_{0}^{+\infty} \dfrac{e^{ix}}{x} \mathrm{d}x \right)
 \end{aligned}
 $$
 
@@ -377,7 +377,7 @@ $$
 
 $$
 \begin{aligned}
-    f(z) = \frac{e^{iz}}{z}
+    f(z) = \dfrac{e^{iz}}{z}
 \end{aligned}
 $$
 
@@ -399,11 +399,11 @@ $$
 
 $$
 \begin{aligned}
-    \oint_{C} \frac{e^{iz}}{z} \mathrm{d}z &=
-    \int_{C_{R}} \frac{e^{iz}}{z} \mathrm{d}z +
-    \int_{-R}^{-r} \frac{e^{ix}}{x} \mathrm{d}x +
-    \int_{C_{r}} \frac{e^{iz}}{z} \mathrm{d}z +
-    \int_{r}^{R} \frac{e^{ix}}{x} \mathrm{d}x \\
+    \oint_{C} \dfrac{e^{iz}}{z} \mathrm{d}z &=
+    \int_{C_{R}} \dfrac{e^{iz}}{z} \mathrm{d}z +
+    \int_{-R}^{-r} \dfrac{e^{ix}}{x} \mathrm{d}x +
+    \int_{C_{r}} \dfrac{e^{iz}}{z} \mathrm{d}z +
+    \int_{r}^{R} \dfrac{e^{ix}}{x} \mathrm{d}x \\
     &= 0
 \end{aligned}
 $$
@@ -412,14 +412,14 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x &=
-    \frac{1}{2i} \lim_{\substack{r \to 0 \\ R \to +\infty}} \left(
-        \int_{-R}^{-r} \frac{e^{ix}}{x} \mathrm{d}x + 
-        \int_{r}^{R} \frac{e^{ix}}{x} \mathrm{d}x
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x &=
+    \dfrac{1}{2i} \lim_{\substack{r \to 0 \\ R \to +\infty}} \left(
+        \int_{-R}^{-r} \dfrac{e^{ix}}{x} \mathrm{d}x + 
+        \int_{r}^{R} \dfrac{e^{ix}}{x} \mathrm{d}x
     \right) \\
-    &= -\frac{1}{2i} \left(
-        \lim_{R \to +\infty} \int_{C_{R}} \frac{e^{iz}}{z} \mathrm{d}z +
-        \lim_{r \to 0} \int_{C_{r}} \frac{e^{iz}}{z} \mathrm{d}z \tag{*}
+    &= -\dfrac{1}{2i} \left(
+        \lim_{R \to +\infty} \int_{C_{R}} \dfrac{e^{iz}}{z} \mathrm{d}z +
+        \lim_{r \to 0} \int_{C_{r}} \dfrac{e^{iz}}{z} \mathrm{d}z \tag{*}
     \right)
 \end{aligned}
 $$
@@ -428,21 +428,21 @@ $$
 
 $$
 \begin{aligned}
-    \int_{C_{R}} \frac{e^{iz}}{z} \mathrm{d}z &\leqslant \int_{C_{R}} \frac{\left|e^{iz}\right|}{|z|} \mathrm{d}s \\
-    &= \frac{1}{R} \int_{C_{R}} \left|e^{ix-y}\right| \mathrm{d}s \\
-    &= \frac{1}{R} \int_{C_{R}} e^{-y} \mathrm{d}s \\
+    \int_{C_{R}} \dfrac{e^{iz}}{z} \mathrm{d}z &\leqslant \int_{C_{R}} \dfrac{\left|e^{iz}\right|}{|z|} \mathrm{d}s \\
+    &= \dfrac{1}{R} \int_{C_{R}} \left|e^{ix-y}\right| \mathrm{d}s \\
+    &= \dfrac{1}{R} \int_{C_{R}} e^{-y} \mathrm{d}s \\
     &= \int_{0}^{\pi} e^{-R \sin{\theta}} \mathrm{d}\theta \\
-    &= 2 \int_{0}^{\frac{\pi}{2}} e^{-R \sin{\theta}} \mathrm{d}\theta \\
-    &\leqslant 2 \int_{0}^{\frac{\pi}{2}} e^{-\frac{2R}{\pi} \theta} \mathrm{d}\theta \\
-    &= -\frac{\pi}{R} e^{-\frac{2R}{\pi} \theta} \Big|_0^{\frac{\pi}{2}} \\
-    &= \frac{\pi}{R} \left(1 - e^{-R} \right)
+    &= 2 \int_{0}^{\dfrac{\pi}{2}} e^{-R \sin{\theta}} \mathrm{d}\theta \\
+    &\leqslant 2 \int_{0}^{\dfrac{\pi}{2}} e^{-\dfrac{2R}{\pi} \theta} \mathrm{d}\theta \\
+    &= -\dfrac{\pi}{R} e^{-\dfrac{2R}{\pi} \theta} \Big|_0^{\dfrac{\pi}{2}} \\
+    &= \dfrac{\pi}{R} \left(1 - e^{-R} \right)
 \end{aligned}
 $$
 
-这里进行了两次放大。第一次是利用积分的基本性质（保号性的推论），第二次是将曲线简化为割线。具体来说，对于 \(\theta \in [0, \frac{\pi}{2}]\)
+这里进行了两次放大。第一次是利用积分的基本性质（保号性的推论），第二次是将曲线简化为割线。具体来说，对于 \(\theta \in [0, \dfrac{\pi}{2}]\)
 
 $$
-\sin{\theta} \geqslant \frac{2}{\pi} \theta
+\sin{\theta} \geqslant \dfrac{2}{\pi} \theta
 $$
 
 而根据被积函数的单调性，达到化曲为直、放大结果的目的。
@@ -451,7 +451,7 @@ $$
 
 $$
 \begin{aligned}
-    \lim_{R \to +\infty} \int_{C_{R}} \frac{e^{iz}}{z} \mathrm{d}z &= 0 \tag{1}
+    \lim_{R \to +\infty} \int_{C_{R}} \dfrac{e^{iz}}{z} \mathrm{d}z &= 0 \tag{1}
 \end{aligned}
 $$
 
@@ -459,12 +459,12 @@ $$
 
 $$
 \begin{aligned}
-    \int_{C_{r}} \frac{e^{iz}}{z} \mathrm{d}z &=
-    \int_{C_{r}} \frac{1}{z} \sum_{n=0}^{\infty} \frac{i^{n}z^{n}}{n!} \mathrm{d}z \\
-    &= \int_{C_{r}} \left( \frac{1}{z} + \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \right) \mathrm{d}z \\
-    &= \int_{C_{r}} \frac{1}{z} \mathrm{d}z + \int_{C_{r}} \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \mathrm{d}z \\
-    &= \int_{\pi}^{0} \frac{ire^{i \theta}}{re^{i \theta}} \mathrm{d}\theta + \int_{C_{r}} \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \mathrm{d}z \\
-    &= \int_{C_{r}} \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \mathrm{d}z - i\pi
+    \int_{C_{r}} \dfrac{e^{iz}}{z} \mathrm{d}z &=
+    \int_{C_{r}} \dfrac{1}{z} \sum_{n=0}^{\infty} \dfrac{i^{n}z^{n}}{n!} \mathrm{d}z \\
+    &= \int_{C_{r}} \left( \dfrac{1}{z} + \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \right) \mathrm{d}z \\
+    &= \int_{C_{r}} \dfrac{1}{z} \mathrm{d}z + \int_{C_{r}} \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \mathrm{d}z \\
+    &= \int_{\pi}^{0} \dfrac{ire^{i \theta}}{re^{i \theta}} \mathrm{d}\theta + \int_{C_{r}} \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \mathrm{d}z \\
+    &= \int_{C_{r}} \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \mathrm{d}z - i\pi
 \end{aligned}
 $$
 
@@ -473,7 +473,7 @@ $$
 下面研究正幂项的积分，令
 
 $$
-\varphi(z) = \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \mathrm{d}z
+\varphi(z) = \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \mathrm{d}z
 $$
 
 则
@@ -481,8 +481,8 @@ $$
 $$
 \begin{aligned}
     \left| \int_{C_{r}} \varphi(z) \mathrm{d}z \right| &\leqslant \int_{C_{r}} \left| \varphi(z) \right| \mathrm{d}s \\
-    &= \int_{C_{r}} \left| \sum_{n=1}^{\infty} \frac{i}{n} \cdot \frac{i^{n-1}z^{n-1}}{(n-1)!} \right| \mathrm{d}s \\
-    &\leqslant \int_{C_{r}} \left| \sum_{n=1}^{\infty} \frac{i^{n-1}z^{n-1}}{(n-1)!}\right| \mathrm{d}s \\
+    &= \int_{C_{r}} \left| \sum_{n=1}^{\infty} \dfrac{i}{n} \cdot \dfrac{i^{n-1}z^{n-1}}{(n-1)!} \right| \mathrm{d}s \\
+    &\leqslant \int_{C_{r}} \left| \sum_{n=1}^{\infty} \dfrac{i^{n-1}z^{n-1}}{(n-1)!}\right| \mathrm{d}s \\
     &= \int_{C_{r}} \left| e^{iz} \right| \mathrm{d}s \\
     &= r \int_{0}^{\pi} \mathrm{d}\theta \\
     &= \pi r
@@ -503,8 +503,8 @@ $$
 
 $$
 \begin{aligned}
-    \lim_{r \to 0} \int_{C_{r}} \frac{e^{iz}}{z} \mathrm{d}z
-    &= \lim_{r \to 0} \int_{C_{r}} \sum_{n=1}^{\infty} \frac{i^{n}z^{n-1}}{n!} \mathrm{d}z - i\pi \\
+    \lim_{r \to 0} \int_{C_{r}} \dfrac{e^{iz}}{z} \mathrm{d}z
+    &= \lim_{r \to 0} \int_{C_{r}} \sum_{n=1}^{\infty} \dfrac{i^{n}z^{n-1}}{n!} \mathrm{d}z - i\pi \\
     &= -i \pi \tag{2}
 \end{aligned}
 $$
@@ -513,13 +513,13 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x
-    &= -\frac{1}{2i} \left(
-        \lim_{R \to +\infty} \int_{C_{R}} \frac{e^{iz}}{z} \mathrm{d}z
-        + \lim_{r \to 0} \int_{C_{r}} \frac{e^{iz}}{z} \mathrm{d}z
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x
+    &= -\dfrac{1}{2i} \left(
+        \lim_{R \to +\infty} \int_{C_{R}} \dfrac{e^{iz}}{z} \mathrm{d}z
+        + \lim_{r \to 0} \int_{C_{r}} \dfrac{e^{iz}}{z} \mathrm{d}z
     \right) \\
-    &= \left(-\frac{1}{2i} \right) \cdot (-i \pi) \\
-    &= \frac{\pi}{2}
+    &= \left(-\dfrac{1}{2i} \right) \cdot (-i \pi) \\
+    &= \dfrac{\pi}{2}
 \end{aligned}
 $$
 
@@ -574,12 +574,12 @@ plt.show()  # 显示图形
 
 $$
 \begin{aligned}
-    \frac{1}{2\pi} \int_{-1}^{1} \pi e^{iwt} \mathrm{d}w
-    &= \frac{1}{2it} e^{iwt} \Big|_{-1}^{1} \\
-    &= \frac{1}{2it} \left(
+    \dfrac{1}{2\pi} \int_{-1}^{1} \pi e^{iwt} \mathrm{d}w
+    &= \dfrac{1}{2it} e^{iwt} \Big|_{-1}^{1} \\
+    &= \dfrac{1}{2it} \left(
         e^{it} - e^{-it}
     \right) \\
-    &= \frac{\sin{t}}{t} 
+    &= \dfrac{\sin{t}}{t} 
 \end{aligned}
 $$
 
@@ -599,7 +599,7 @@ $$
     F(w)
     &= \mathscr{F}(f(t)) \\
     &= \int_{-\infty}^{+\infty} f(t) e^{-iwt} \mathrm{d}t \\
-    &= \int_{-1}^{1} \frac{\sin{t}}{t} e^{-iwt} \mathrm{d}t \\
+    &= \int_{-1}^{1} \dfrac{\sin{t}}{t} e^{-iwt} \mathrm{d}t \\
     &= \pi
 \end{aligned}
 $$
@@ -609,7 +609,7 @@ $$
 $$
 \begin{aligned}
     F(0)
-    &= \int_{-\infty}^{+\infty} \frac{\sin{t}}{t} \mathrm{d}t \\
+    &= \int_{-\infty}^{+\infty} \dfrac{\sin{t}}{t} \mathrm{d}t \\
     &= \pi
 \end{aligned}
 $$
@@ -618,9 +618,9 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x
-    &= \frac{1}{2} \int_{-\infty}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x \\
-    &= \frac{\pi}{2}
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x
+    &= \dfrac{1}{2} \int_{-\infty}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x \\
+    &= \dfrac{\pi}{2}
 \end{aligned}
 $$
 
@@ -630,7 +630,7 @@ $$
 
 $$
 \begin{aligned}
-    f(t) = \int_{0}^{+\infty} \frac{\sin{tx}}{x} \mathrm{d}x \quad (t > 0)
+    f(t) = \int_{0}^{+\infty} \dfrac{\sin{tx}}{x} \mathrm{d}x \quad (t > 0)
 \end{aligned}
 $$
 
@@ -640,10 +640,10 @@ $$
 \begin{aligned}
     F(s) = \mathscr{L}(f(t))
     &= \int_{0}^{+\infty} \left(
-        \int_{0}^{+\infty} \frac{\sin{tx}}{x} \mathrm{d}x
+        \int_{0}^{+\infty} \dfrac{\sin{tx}}{x} \mathrm{d}x
     \right) e^{-st} \mathrm{d}t \\
-    &= \iint_{\mathbb{R}_{+}^{2}} \frac{\sin{tx}}{x} e^{-st} \mathrm{d}x \mathrm{d}t \\
-    &= \int_{0}^{+\infty} \frac{1}{x} \left(
+    &= \iint_{\mathbb{R}_{+}^{2}} \dfrac{\sin{tx}}{x} e^{-st} \mathrm{d}x \mathrm{d}t \\
+    &= \int_{0}^{+\infty} \dfrac{1}{x} \left(
          \int_{0}^{+\infty} \sin{tx} e^{-st} \mathrm{d}t 
     \right) \mathrm{d}x
 \end{aligned}
@@ -654,16 +654,16 @@ $$
 $$
 \begin{aligned}
     I &= \int_{0}^{+\infty} \sin{tx} e^{-st} \mathrm{d}t \\
-    &= -\frac{1}{s} \int_{0}^{+\infty} \sin{tx} \mathrm{d} e^{-st} \\
-    &= -\frac{1}{s} \left(
+    &= -\dfrac{1}{s} \int_{0}^{+\infty} \sin{tx} \mathrm{d} e^{-st} \\
+    &= -\dfrac{1}{s} \left(
         \sin{tx} e^{-st} \Big|_{0}^{+\infty} - x \int_{0}^{+\infty} \cos{tx} e^{-st} \mathrm{d}t
     \right) \\
-    &= \frac{x}{s} \int_{0}^{+\infty} \cos{tx} e^{-st} \mathrm{d}t \\
-    &= -\frac{x}{s^2} \int_{0}^{+\infty} \cos{tx}  \mathrm{d} e^{-st} \\
-    &= -\frac{x}{s^2} \left(
+    &= \dfrac{x}{s} \int_{0}^{+\infty} \cos{tx} e^{-st} \mathrm{d}t \\
+    &= -\dfrac{x}{s^2} \int_{0}^{+\infty} \cos{tx}  \mathrm{d} e^{-st} \\
+    &= -\dfrac{x}{s^2} \left(
         \cos{tx} e^{-st} \Big|_{0}^{+\infty} + x \int_{0}^{+\infty} \sin{tx} e^{-st} \mathrm{d}t
     \right) \\
-    &= -\frac{x}{s^2} \left(xI - 1\right)
+    &= -\dfrac{x}{s^2} \left(xI - 1\right)
 \end{aligned}
 $$
 
@@ -671,7 +671,7 @@ $$
 
 $$
 \begin{aligned}
-    I = \frac{x}{x^2 + s^2}
+    I = \dfrac{x}{x^2 + s^2}
 \end{aligned}
 $$
 
@@ -679,10 +679,10 @@ $$
 
 $$
 \begin{aligned}
-    F(s) &= \int_{0}^{+\infty} \frac{1}{x} \cdot \frac{x}{x^2 + s^2} \mathrm{d}x \\
-    &= \frac{1}{s} \int_{0}^{+\infty} \frac{1}{\left(\frac{x}{s}\right)^{2} + 1} \mathrm{d} \frac{x}{s} \\
-    &= \frac{1}{s} \arctan(\frac{x}{s}) \Big|_{0}^{+\infty} \\
-    &= \frac{\pi}{2s}
+    F(s) &= \int_{0}^{+\infty} \dfrac{1}{x} \cdot \dfrac{x}{x^2 + s^2} \mathrm{d}x \\
+    &= \dfrac{1}{s} \int_{0}^{+\infty} \dfrac{1}{\left(\dfrac{x}{s}\right)^{2} + 1} \mathrm{d} \dfrac{x}{s} \\
+    &= \dfrac{1}{s} \arctan(\dfrac{x}{s}) \Big|_{0}^{+\infty} \\
+    &= \dfrac{\pi}{2s}
 \end{aligned}
 $$
 
@@ -691,8 +691,8 @@ $$
 $$
 \begin{aligned}
     f(t) &= \mathscr{L}^{-1}(F(s)) \\
-    &= \frac{\pi}{2} \mathscr{L}^{-1}(\frac{1}{s}) \\
-    &= \frac{\pi}{2} \cdot \frac{1}{4\pi j} \int_{\beta-j\infty}^{\beta+j\infty} \frac{e^{-st}}{s} \mathrm{d}s
+    &= \dfrac{\pi}{2} \mathscr{L}^{-1}(\dfrac{1}{s}) \\
+    &= \dfrac{\pi}{2} \cdot \dfrac{1}{4\pi j} \int_{\beta-j\infty}^{\beta+j\infty} \dfrac{e^{-st}}{s} \mathrm{d}s
 \end{aligned}
 $$
 
@@ -700,7 +700,7 @@ $$
 
 $$
 \begin{aligned}
-    \frac{1}{s} \longleftrightarrow u(t)
+    \dfrac{1}{s} \longleftrightarrow u(t)
 \end{aligned}
 $$
 
@@ -718,10 +718,10 @@ $$
 
 $$
 \begin{aligned}
-    f(t) &= \frac{\pi}{2} \mathscr{L}^{-1}(\frac{1}{s}) \\
+    f(t) &= \dfrac{\pi}{2} \mathscr{L}^{-1}(\dfrac{1}{s}) \\
     &= \left\{ \begin{array}{rr}
         0, & t < 0 \\
-        \frac{\pi}{2}, & t > 0
+        \dfrac{\pi}{2}, & t > 0
     \end{array} \right.
 \end{aligned}
 $$
@@ -730,8 +730,8 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{x}}{x} \mathrm{d}x
-    = f(1) = \frac{\pi}{2}
+    \int_{0}^{+\infty} \dfrac{\sin{x}}{x} \mathrm{d}x
+    = f(1) = \dfrac{\pi}{2}
 \end{aligned}
 $$
 
@@ -739,7 +739,7 @@ $$
 
 $$
 \begin{aligned}
-    \int_{0}^{+\infty} \frac{\sin{nx}}{x} \mathrm{d}x
-    = \frac{\pi}{2}
+    \int_{0}^{+\infty} \dfrac{\sin{nx}}{x} \mathrm{d}x
+    = \dfrac{\pi}{2}
 \end{aligned}
 $$
