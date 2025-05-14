@@ -138,7 +138,7 @@ pre.mermaid.hx\:mt-6 {
 /* callout tips */
 /* dark mode */
 .hx\:dark\:text-green-200:where(.dark,.dark *) {
-    color: var(--hx-color-green-200);
+    color: var(--hx-color-green-300);
 }
 .hx\:dark\:bg-green-900\/30:where(.dark,.dark *) {
     background-color: color-mix(in oklab,var(--hx-color-green-900)20%,transparent);
