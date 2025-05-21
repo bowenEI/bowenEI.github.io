@@ -1,41 +1,3 @@
-/* 调整暗色模式下的背景颜色 */
-:root {
-    --hx-color-dark: #2a2a2a;
-    --hx-color-neutral-900: #222222;
-}
-
-/* 取消主题调整按钮的阴影效果 */
-.hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
-    --tw-shadow: 0 -12px 16px var(--tw-shadow-color, --hx-color-dark);
-}
-.hx\:shadow-\[0_-12px_16px_\#fff\] {
-    box-shadow: inherit;
-}
-
-/* 首页标题 */
-.hx\:mr-2.hx\:font-extrabold.hx\:inline.hx\:select-none {
-    font-size: 1.25rem;
-}
-
-/* 导航栏字体大小 */
-span.hx\:text-center {
-    font-size: 1.125rem;
-}
-
-/* 行间代码字体大小 */
-.hextra-code-block pre {
-    font-size: 1em;
-}
-
-/* 页面标题内顶边距 */
-.content :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)) {
-    margin-top: calc(var(--hx-spacing)*8);
-}
-
-.hx\:mt-2 {
-    margin-top: calc(var(--hx-spacing)*8);
-}
-
 /* About Me 组件样式 */
 .prose h1:first-child {
   margin-top: 0;
@@ -46,17 +8,8 @@ span.hx\:text-center {
   line-height: 1.6;
 }
 
-/* 去除 h2 标签下的横线 */
-.content :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
-    border-bottom: none;
-}
-
 /* 照片 */
-.hx\:rounded-full {
-    border-radius: 100%;
-}
-
-.content :where(img):not(:where([class~=not-prose],[class~=not-prose] *)) {
+.content :where(img):not(:where([class~=not-prose],[class~=not-prose] *))#author {
     margin-block: 0;
 }
 
@@ -79,50 +32,11 @@ h3#institute {
     margin-top: 0;
 }
 
-/* 主题切换按钮 */
-.hx\:sticky.hx\:bottom-0.hx\:max-h-\(--menu-height\).hx\:bg-transparent.hx\:mx-4.hx\:py-4.hx\:shadow-\[0_-12px_16px_\#fff\].hx\:flex.hx\:items-center.hx\:gap-2.hx\:border-gray-200.hx\:dark\:border-neutral-800.hx\:dark\:shadow-\[0_-12px_16px_\#111\].hx\:contrast-more\:border-neutral-400.hx\:contrast-more\:shadow-none {
-    margin-inline: 0;
-    width: calc(var(--hx-spacing)*7);
-}
-
-button#theme-toggle {
-    width: calc(var(--hx-spacing)*7);
-}
-
-.hx\:flex.hx\:items-center.hx\:gap-2.hx\:capitalize {
-    margin-left: -4px;
-}
-
-/* 详情 */
-.hx\:text-lg {
-    font-size: var(--hx-text-base);
-}
-
-/* 详情背景 */
-/* 深色主题 */
-.hx\:dark\:bg-neutral-800:where(.dark,.dark *) {
-    background-color: inherit;
-}
-/* 浅色主题 */
-.hx\:bg-neutral-50 {
-    background-color: inherit;
-}
-/* hover */
-summary.hx\:flex.hx\:items-center.hx\:cursor-pointer.hx\:select-none.hx\:list-none.hx\:p-1.hx\:rounded-sm.hx\:transition-colors.hx\:hover\:bg-gray-100.hx\:dark\:hover\:bg-neutral-800.hx\:before\:mr-1.hx\:before\:inline-block.hx\:before\:transition-transform.hx\:before\:content-\[\'\'\].hx\:dark\:before\:invert.hx\:rtl\:before\:rotate-180.hx\:group-open\:before\:rotate-90 {
-    background-color: inherit;
-}
-
 /* 分割线 */
 hr {
     color: var(--hx-color-gray-500);
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-/* 居中 */
-pre.mermaid.hx\:mt-6 {
-    justify-content: center;
-    display: flex;
+    margin-top: calc(var(--hx-spacing)*6);
+    margin-bottom: calc(var(--hx-spacing)*6);
 }
 
 /* 段落间距 */
@@ -133,40 +47,4 @@ pre.mermaid.hx\:mt-6 {
 .content :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)) {
     margin-top: calc(var(--hx-spacing)*3);
     font-style: normal;
-}
-
-/* callout tips */
-/* dark mode */
-.hx\:dark\:text-green-200:where(.dark,.dark *) {
-    color: var(--hx-color-green-300);
-}
-.hx\:dark\:bg-green-900\/30:where(.dark,.dark *) {
-    background-color: color-mix(in oklab,var(--hx-color-green-900)20%,transparent);
-}
-.hx\:dark\:border-green-200\/30:where(.dark,.dark *) {
-    border-color: color-mix(in oklab,var(--hx-color-green-200)30%,transparent);
-}
-/* light mode */
-/* .hx\:text-green-900 {
-    color: var(--hx-color-green-900);
-}
-.hx\:bg-green-100 {
-    background-color: var(--hx-color-green-100);
-}
-.hx\:border-green-200 {
-    border-color: var(--hx-color-green-200);
-} */
-
-/* 链接去除下划线 */
-.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)) {
-    text-decoration-line: unset;
-}
-/* 添加 hover 事件样式 */
-.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)):hover {
-    color: var(--hx-color-primary-300);
-}
-
-/* 自定义 3 倍空格外衬线 */
-.hx\:mt-3 {
-    margin-top: calc(var(--hx-spacing)*3);
 }
