@@ -8,7 +8,7 @@ authors: []
 tags: [数学, 高考, 解析几何, 函数与导数]
 categories: [Essay]
 date: 2023-06-14T20:32:12+08:00
-lastmod: 2023-06-14T20:32:12+08:00
+lastmod: 2025-06-16T20:32:12+08:00
 featured: false
 draft: false
 
@@ -440,9 +440,8 @@ $$
 $$
 \begin{aligned}
 & [(2a-1)x+(2ab+a-b)](x^2-2bx+b^2)[x^2-2(b+1)x+(b+1)^2] \\
-=& [(1-2a)x+(2ab+a-b)](x^2+2bx+b^2)[x^2+2(b+1)x+(b+1)^2]
+=\ & [(1-2a)x+(2ab+a-b)](x^2+2bx+b^2)[x^2+2(b+1)x+(b+1)^2]
 \end{aligned}
-
 $$
 
 观察上述等式，我们可以看出，这个等式是一个关于 \(x\) 的一元五次方程，即
