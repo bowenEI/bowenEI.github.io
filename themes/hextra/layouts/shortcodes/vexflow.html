@@ -38,24 +38,12 @@ Parameters:
   {{- .Page.Store.Set "vexflow-loaded" true -}}
 {{- end -}}
 
-<div id="{{ $id }}" style="background-color: transparent; padding: 1em; background-clip: content-box; background-color: #f0f0f0;"></div>
+<div id="{{ $id }}" style="background-color: transparent; padding: 1em; background-clip: content-box; background-color: white;"></div>
 <script>
   (function() {
     try {
-      const { Factory } = Vex.Flow;
-      const vf = new Factory({ 
-        renderer: { 
-          elementId: '{{ $id }}',
-          // width: {{ $width }},
-          // height: {{ $height }}
-        }
-      });
-      const score = vf.EasyScore();
-      const system = vf.System();
       // User's VexFlow code (processed to remove markdown syntax)
       {{ $innerContent | safeJS }}
-      // Draw the notation
-      vf.draw();
     } catch (error) {
       console.error('VexFlow rendering error:', error);
       document.getElementById('{{ $id }}').innerHTML = '<p style="color: red;">Music notation rendering failed: ' + error.message + '</p>';
