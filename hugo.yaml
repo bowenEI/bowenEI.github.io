@@ -7,7 +7,7 @@ title: Bowen's Home
 #     - path: github.com/imfing/hextra
 
 # import hextra as theme
-theme: hextra
+theme: hextra-0.11.1
 
 markup:
   # allow raw html
@@ -74,7 +74,8 @@ params:
   #   enable: true
   #   base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
   
-  math: true
+  math:
+    engine: katex
 
   theme:
     # light | dark | system
