@@ -19,3 +19,13 @@ sup, sub {
   left: -0.4em;
   margin-right: -0.44444em;
 }
+
+:root {
+  /* 页面宽度 - 也可以通过 hugo.yaml 中的 params.page.width 配置 */
+  --hextra-max-page-width: 90rem; /* 默认值：80rem（普通），90rem（宽版），100%（全宽） */
+  --hx-color-dark: #222;
+}
+
+.hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark,.dark *) {
+  --tw-shadow: 0 -12px 16px var(--tw-shadow-color,#222);
+}

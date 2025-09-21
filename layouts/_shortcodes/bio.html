@@ -1,0 +1,27 @@
+<div class="hx:flex hx:flex-col hx:md:flex-row hx:gap-8 hx:items-center hx:my-12 hx:bio-container">
+  <!-- 左侧头像 -->
+  <div class="hx:w-full hx:md:w-1/3 hx:flex hx:justify-center">
+    <div class="hx:w-64 hx:h-64 hx:rounded-circle hx:overflow-hidden">
+      <img
+        id="author" 
+        src='{{ .Site.Params.avatar | default "images/avatar.jpg" | relURL }}' 
+        alt='{{ .Site.Params.author | default "Author" }}'
+        class="hx:rounded-circle"
+      >
+    </div>
+  </div>
+  
+  <!-- 右侧文本 -->
+  <div class="hx:w-full hx:md:w-2/3 hx:prose hx:dark:prose-invert hx:bio-text">
+    <div class="hx:text-4xl hx:font-bold hx:text-center hx:mt-6">
+      {{ .Page.Params.author | default "Your Name" }}
+    </div>
+    <div class="hx:text-2xl hx:font-bold hx:text-center hx:mt-4">
+      {{ .Page.Params.role | default "Your Role" }}
+    </div>
+    <div class="hx:text-2xl hx:font-bold hx:text-center hx:mt-2">
+      {{ .Page.Params.institute | default "Your Institute" }}
+    </div>
+    {{ .Inner | safeHTML }}
+  </div>
+</div>
