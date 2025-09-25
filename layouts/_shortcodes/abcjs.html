@@ -1,7 +1,13 @@
 {{- $id := .Get "id" | default (printf "abcjs-%d" now.UnixNano) -}} {{-
 $innerContent := .Inner -}}
 
-<div id="{{ $id }}"></div>
+<style>
+.abcjs-container {
+    overflow-x: auto;
+}
+</style>
+
+<div class="abcjs-container" id="{{ $id }}"></div>
 
 <script>
     window.abcjs = window.ABCJS;
