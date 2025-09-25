@@ -1,0 +1,9 @@
+{{- $id := .Get "id" | default (printf "abcjs-%d" now.UnixNano) -}} {{-
+$innerContent := .Inner -}}
+
+<div id="{{ $id }}"></div>
+
+<script>
+    window.abcjs = window.ABCJS;
+    abcjs.renderAbc("{{ $id }}", "{{ $innerContent }}");
+</script>
