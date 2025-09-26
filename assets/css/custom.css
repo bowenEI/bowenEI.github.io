@@ -30,3 +30,7 @@ sub {
 .hx\:dark\:shadow-\[0_-12px_16px_\#111\]:where(.dark, .dark *) {
     --tw-shadow: 0 -12px 16px var(--tw-shadow-color, #222);
 }
+
+.hx\:dark\:hover\:bg-neutral-900:where(.dark,.dark *):hover {
+    background-color: var(--hx-color-neutral-800);
+}
