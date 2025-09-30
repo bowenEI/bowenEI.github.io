@@ -7,10 +7,12 @@ type: docs
 weight: 10
 ---
 
-![](cover.png)
+![](/marxism/assets/imgs/cover.png)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [中文马克思主义文库](https://www.marxists.org/chinese/index.html)

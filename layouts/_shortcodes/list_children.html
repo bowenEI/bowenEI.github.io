@@ -1,0 +1,14 @@
+{{- $currentPage := .Page }}
+{{- $children := $currentPage.CurrentSection.Pages }}
+
+{{- if $children }}
+<ul>
+  {{- range $children }} {{- if ne . $currentPage }} {{/* 排除当前页面自身 */}}
+  <li>
+    <a href="{{ .RelPermalink }}" >
+      {{ .Title }}
+    </a>
+  </li>
+  {{- end }} {{- end }}
+</ul>
+{{- end }}
