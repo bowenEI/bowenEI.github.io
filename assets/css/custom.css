@@ -34,3 +34,7 @@ sub {
 .hx\:dark\:hover\:bg-neutral-900:where(.dark,.dark *):hover {
     background-color: var(--hx-color-neutral-800);
 }
+
+.hx\:dark\:text-amber-200:where(.dark, .dark *) {
+    color: var(--hx-color-orange-300);
+}
