@@ -9,5 +9,6 @@ weight: 90
 
 ![](cover.jpg)
 
-## What you will learn
+## Contents
 
+{{< list_children >}}

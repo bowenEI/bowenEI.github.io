@@ -6,7 +6,6 @@ type: docs
 weight: 100
 ---
 
-<!--more-->
+## Contents
 
-## What you will learn
-
+{{< list_children >}}

@@ -9,8 +9,10 @@ weight: 80
 
 ![](/learn/matplotlib/logo2_compressed.svg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [Matplotlib.org](https://matplotlib.org/)

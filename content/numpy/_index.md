@@ -9,8 +9,10 @@ weight: 60
 
 ![](cover.svg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [NumPy.org](https://numpy.org/)

@@ -9,9 +9,11 @@ weight: 40
 
 ![](linux_logo_icon_171222.png)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [Linux.org](https://www.linux.org/)
 - [Ubuntu](https://ubuntu.com/)

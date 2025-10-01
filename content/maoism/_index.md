@@ -4,9 +4,9 @@
 title: "毛泽东思想"
 linktitle: "毛泽东思想"
 date: 2021-07-17T19:34:11+08:00
-type: docs
-summary: ""
-weight: 9
+cascade:
+  type: docs
+weight: 1
 ---
 
 ![](./assets/imgs/cover.jpg)

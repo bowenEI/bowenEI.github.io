@@ -9,7 +9,9 @@ summary: "从理工科的视角，学习乐理知识。重在理解乐理的本�
 weight: 130
 ---
 
-## What you will learn
+## Contents
+
+{{< list_children >}}
 
 ## References
 

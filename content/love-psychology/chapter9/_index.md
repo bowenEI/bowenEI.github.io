@@ -9,7 +9,6 @@ summary: ""
 weight: 900
 ---
 
-<!--more-->
+## Contents
 
-## What you will learn
-
+{{< list_children >}}

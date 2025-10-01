@@ -11,8 +11,10 @@ weight: 105
 
 ![](cover.jpg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [中国大学MOOC - 恋爱心理学](https://www.icourse163.org/course/CUMT-1003771003)

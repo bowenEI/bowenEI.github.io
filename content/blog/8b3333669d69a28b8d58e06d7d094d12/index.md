@@ -474,6 +474,6 @@ Sequential transition words indicate a sequence, whether it’s the order in whi
 </tbody>
 </table>
 
-## Thanks & References
+## References
 
 - [Transition Words & Phrases](https://www.scribbr.com/academic-writing/transition-words/)

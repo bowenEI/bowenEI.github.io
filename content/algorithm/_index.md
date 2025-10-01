@@ -9,9 +9,11 @@ weight: 110
 
 ![](cover.png)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [LeetCode](https://leetcode-cn.com/)
 - [中国大学MOOC - 算法分析与设计](https://www.icourse163.org/course/BUAA-1449777166)

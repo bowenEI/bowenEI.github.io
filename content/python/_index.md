@@ -9,9 +9,11 @@ weight: 50
 
 ![](cover.jpg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [Python.org](https://www.python.org)
 - [菜鸟教程](https://www.runoob.com/)

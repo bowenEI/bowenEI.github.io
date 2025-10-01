@@ -11,9 +11,11 @@ weight: 120
 
 ![](bv_cvxbook_cover.jpg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [bilibili - 凸优化](https://www.bilibili.com/video/BV1Jt411p7jE)
 - [Convex Optimization – Boyd and Vandenberghe](https://web.stanford.edu/~boyd/cvxbook/)

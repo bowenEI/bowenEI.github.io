@@ -11,5 +11,6 @@ weight: 500
 
 <!--more-->
 
-## What you will learn
+## Contents
 
+{{< list_children >}}

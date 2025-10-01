@@ -11,8 +11,6 @@ weight: 100
 
 ![](cover.jpg)
 
-## What you will learn
-
 [沈奕斐](https://ssdpp.fudan.edu.cn/84/c0/c21318a230592/page.htm)，复旦大学社会学系副教授。沈奕斐的社会学爱情思维课包含60讲视频，用社会学角度更专业、系统看待爱情，更自信、更勇敢地进入爱情，在感情中更有判断力。
 
 本文从学生视角，并结合马克思主义哲学的相关真理，对课程进行更深入的总结和分析，帮助各位读者树立良好的爱情观。
@@ -25,6 +23,10 @@ weight: 100
 
 {{< /callout >}}
 
-## Thanks & References
+## Contents
+
+{{< list_children >}}
+
+## References
 
 - [复旦沈奕斐的社会学爱情思维课](https://www.iqiyi.com/a_19rrhl74up.html)

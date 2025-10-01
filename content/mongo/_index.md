@@ -10,9 +10,9 @@ weight: 55
 draft: true
 ---
 
-<!--more-->
+## Contents
 
-## What you will learn
+{{< list_children >}}
 
 ## References
 

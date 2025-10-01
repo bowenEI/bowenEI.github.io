@@ -9,9 +9,11 @@ weight: 30
 
 ![](cover.png)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [Git](https://git-scm.com/)
 - [廖雪峰的官方网站](https://www.liaoxuefeng.com/)

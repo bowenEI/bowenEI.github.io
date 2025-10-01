@@ -1,12 +1,10 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "毛泽东选集"
-linktitle: "毛泽东选集"
+title: "毛泽东著作导读"
+linktitle: "毛泽东著作导读"
 date: 2021-07-17T19:34:11+08:00
-type: docs
-summary: ""
-weight: 9
+weight: 10
 ---
 
 毛泽东思想主要以《毛泽东选集》为载体。本站节选《毛泽东选集》中体现毛泽东思想的重要文章，并且辅之以一些个人的理解和图文说明。

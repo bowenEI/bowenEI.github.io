@@ -9,8 +9,10 @@ weight: 70
 
 ![](pandas_white.svg)
 
-## What you will learn
+## Contents
 
-## Thanks & References
+{{< list_children >}}
+
+## References
 
 - [pandas.org](https://pandas.pydata.org/)
