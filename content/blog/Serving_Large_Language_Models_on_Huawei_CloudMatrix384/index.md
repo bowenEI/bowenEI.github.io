@@ -2,7 +2,7 @@
 title: "Serving Large Language Models on Huawei CloudMatrix384"
 subtitle: "在华为超节点上部署大模型"
 date: 2025-10-03T01:35:10+08:00
-lastmod: 2025-10-0616:09:10+08:00
+lastmod: 2025-10-06T16:09:10+08:00
 draft: false
 tags:
     - LLM
