@@ -84,6 +84,10 @@ Tiling 不在本文的讨论范围内。
 
 {{< /callout >}}
 
+[^7]: FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness. [arXiv](https://arxiv.org/abs/2205.14135)
+
+> 若读者对 FlashAttention[^7] 感兴趣，可参考[图解 Flash Attention](../图解-flash-attention/) 一文。
+
 ## Data Parallelism 数据并行
 
 数据并行是指将批量数据切分成多个子批量，每个子批量在不同的设备上并行计算，最后将结果合并。由此可见，数据并行是典型将隐藏状态切分而将模型参数平铺的并行策略。
@@ -92,7 +96,9 @@ Tiling 不在本文的讨论范围内。
 
 ![](./assets/imgs/ZeRO.png "ZeRO 对 DP 的优化")
 
-ZeRO（Zero Redundancy Optimizer）是在标准数据并行（Data Parallelism, DP） 的基础上，通过消除模型状态的冗余存储来显著降低显存占用，从而支持训练超大规模模型（如百亿、千亿参数）。它不是改变并行策略本身，而是在 DP 的通信和计算流程中对模型状态进行分片。具体来说，在 DP 中，每个设备都会完整存储：
+ZeRO[^3]（Zero Redundancy Optimizer）是在标准数据并行（Data Parallelism, DP） 的基础上，通过消除模型状态的冗余存储来显著降低显存占用，从而支持训练超大规模模型（如百亿、千亿参数）。它不是改变并行策略本身，而是在 DP 的通信和计算流程中对模型状态进行分片。具体来说，在 DP 中，每个设备都会完整存储：
+
+[^3]: ZeRO: Memory Optimizations Toward Training Trillion Parameter Models. [arXiv](https://arxiv.org/abs/1910.02054)
 
 -   参数 P
 -   梯度 G
@@ -117,8 +123,90 @@ ZeRO 则在此基础上按照 DP 的并行度对这些数据进行分片。ZeRO 
 
 ## Tensor Parallelism 张量并行
 
+张量并行是指将模型权重切分成多个子权重，每个子权重在不同的设备上存储和计算。由此可见，张量并行是典型将模型参数切分而将隐藏状态平铺的并行策略。
+
+使用张量并行时需要满足一个重要的条件，即模型层一定是成对出现的。例如在 Transformer 中，注意力模块里前有 \( W_Q, W_K, W_V \) 三个线性层，后有 \( W_O \) 一个线性层；前馈网络里前有 \( W_{\mathrm{up}} \) 一个线性层，后有 \( W_{\mathrm{down}} \) 一个线性层。否则，会产生十分不和谐的情况。
+
+要解释清楚这个问题，首先我们来了解一下 Megatron-LM[^2] 的张量并行设计。
+
+[^2]: Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism. [arXiv](https://arxiv.org/abs/1909.08053)
+
+![](./assets/imgs/Megatron-LM.png "Megatron-LM 的张量并行设计")
+
+对于 MLP 层，公式推导如下：
+
+$$
+\begin{aligned}
+    Z = Y B &= X A B \\
+    &= X \begin{bmatrix}
+        A_1 & A_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        B_1 \\
+        B_2
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        X A_1 & X A_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        B_1 \\
+        B_2
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        Y_1 & Y_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        B_1 \\
+        B_2
+    \end{bmatrix} \\
+    &= Y_1 B_1 + Y_2 B_2
+\end{aligned}
+$$
+
+> 有关矩阵乘法的分块计算，读者可参考[分块矩阵的乘法](../分块矩阵的乘法)一文。
+
+注意公式的最后一行的加法，其所需的结果来源恰好是分布在不同的设备上的，这也就是为什么 TP 需要 AR 通信的原因。
+
+同时，TP 要求成对的两个投影层前者竖着切（Column Parallelism），后者横着切（Row Parallelism）。这样做是为了：
+
+1. 保证中间隐藏状态的维度不变
+2. 通信在计算完两个线性层后进行
+
+对于 Attention 层也是同理。既然隐藏状态的维度为 \([b, s, h]\)，那么一层 Decoder 的通信量包括前向传播的 2 次 AR 和反向传播的 2 次 AR，每次通信的数据量为 \( bsh \)。
+
+不过，在工程实践中，AR 可分解为单位通信量为 \( \dfrac{1}{d} \) 的 RS + AG。如图所示，这可以进一步降低通信开销。
+
+![](./assets/imgs/AR_RS_AG.svg "AR 的工程实现：RS + AG")
+
 ## Pipeline Parallelism 流水线并行
+
+流水线并行是指将模型的不同层分布在不同的设备上，形成一个计算流水线。每个设备只处理输入数据的一个子集，并将中间结果传递给下一个设备。这样可以充分利用设备的计算资源，提高训练效率。
+
+在流水线并行中，前向传播和反向传播的计算是交替进行的。具体来说，前向传播时，输入数据首先经过第一个设备的计算，然后将中间结果传递给第二个设备，依此类推。反向传播时，梯度从最后一个设备开始，逐层向前传递。
+
+GPipe[^4] 是一种经典的流水线并行实现。它将模型划分为多个阶段，每个阶段在不同的设备上计算。为了提高设备利用率，GPipe 引入了微批量（Micro-batch）的概念，将一个大批量数据切分为多个小批量数据，交替进行前向传播和反向传播。
+
+[^4]: GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism. [arXiv](https://arxiv.org/abs/1811.06965)
+
+![](./assets/imgs/GPipe.png "GPipe 的流水线并行设计")
+
+PP 的通信开销可以说是最低的，它仅仅只需要 \( d-1 \) 次 P2P 通信，每次通信的数据量为 \( bsh \)。这是因为每个设备只需要将中间激活传递给下一个设备，而不需要进行任何额外的计算。但是 PP 的痛点在于其致命的气泡（Bubble）率，这使得其在模型训练过程中设备利用率大打折扣。
+
+PipeDream[^5] 是一种改进的流水线并行方法，通过引入重叠计算和通信的机制，进一步提高了设备利用率。PipeDream 本质上相当于是一种异步的流水线并行。
+
+[^5]: PipeDream: Fast and Efficient Pipeline Parallel DNN Training. [arXiv](https://arxiv.org/abs/1806.03377)
+
+![](./assets/imgs/PipeDream.png "PipeDream 的流水线并行设计")
+
+GPipe 和 PipeDream 都是经典的流水线并行方法，但它们只是作为 PP 技术的铺垫。现代的 PP 方法通常采用 1F1B 调度策略[^6]，即每进行一次前向传播就进行一次反向传播，从而最大化设备利用率。
+
+[^6]: Memory-Efficient Pipeline-Parallel DNN Training. [arXiv](https://arxiv.org/abs/2006.09503)
+
+### TP-PP 混合并行
 
 ## Expert Parallelism 专家并行
 
+专家并行是混合专家模型（Mixture of Experts, MoE）独有的并行策略。既然 TP 需要直接切分模型权重，那么直接将 MoE 模型中不同的专家分配到不同的设备上则是一种更简单方便的实现模型并行的方式。
+
 ## Sequence Parallelism 序列并行
+
