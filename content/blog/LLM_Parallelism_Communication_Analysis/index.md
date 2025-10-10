@@ -1,6 +1,6 @@
 ---
 title: "大模型并行策略的通信开销分析"
-date: 2025-10-09T15:26:55+08:00
+date: 2025-10-10T19:41:55+08:00
 draft: true
 ---
 
@@ -57,7 +57,7 @@ $$
 
 所有的这些并行策略都需要在不同的设备之间进行通信，此时就需要一系列通信原语或者通信算子。常见的包括 All Reduce（AR）、All Gather（AG）、Reduce Scatter（RS）、All-to-All（A2A）等。
 
-> 强烈建议读者在阅读本文时，先对这些通信原语有一个基本的了解。读者可参考[并行计算集合通信初步](../并行计算集合通信初步)一文。
+> 强烈建议读者在阅读本文时，先对这些通信原语有一个基本的了解。读者可参考[并行计算集合通信初步](../Introduction_to_Parallel_Computing_Collective_Communication/)一文。
 
 ### 分片与平铺
 
@@ -86,13 +86,20 @@ Tiling 不在本文的讨论范围内。
 
 [^7]: FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness. [arXiv](https://arxiv.org/abs/2205.14135)
 
-> 若读者对 FlashAttention[^7] 感兴趣，可参考[图解 Flash Attention](../图解-flash-attention/) 一文。
+> 若读者对 FlashAttention[^7] 感兴趣，可参考[图解 Flash Attention](../Illustrated_Flash_Attention/) 一文。
 
-## Data Parallelism 数据并行
+## DP 数据并行
 
 数据并行是指将批量数据切分成多个子批量，每个子批量在不同的设备上并行计算，最后将结果合并。由此可见，数据并行是典型将隐藏状态切分而将模型参数平铺的并行策略。
 
-数据并行在前向传播时无需任何通信，仅在反向传播时需要通信，包括参数梯度的 AR（即我们常说的梯度平均）。在每个设备上，中间激活张量的维度为 \([\dfrac{b}{d}, s, h]\)。不过，由于梯度不是中间激活张量，所以反向传播时的通信开销与之无关，即通信量为 \( \Phi = 12 d^2 \)。
+数据并行在前向传播时无需任何通信，仅在反向传播时需要通信，包括参数梯度的 AR（即我们常说的梯度平均）。在每个设备上，中间激活张量的维度为 \([\dfrac{b}{d}, s, h]\)。不过，由于梯度不是中间激活张量，所以反向传播时的通信开销与之无关，即通信量为
+
+$$
+\begin{cases}
+    M_f = 0 \\
+    M_b = \Phi = 12 d^2
+\end{cases}
+$$
 
 ![](./assets/imgs/ZeRO.png "ZeRO 对 DP 的优化")
 
@@ -121,7 +128,7 @@ ZeRO 则在此基础上按照 DP 的并行度对这些数据进行分片。ZeRO 
 
 一般来说，越大的模型，才可以使用越高一级的 ZeRO 并行策略。
 
-## Tensor Parallelism 张量并行
+## TP 张量并行
 
 张量并行是指将模型权重切分成多个子权重，每个子权重在不同的设备上存储和计算。由此可见，张量并行是典型将模型参数切分而将隐藏状态平铺的并行策略。
 
@@ -163,7 +170,7 @@ $$
 \end{aligned}
 $$
 
-> 有关矩阵乘法的分块计算，读者可参考[分块矩阵的乘法](../分块矩阵的乘法)一文。
+> 有关矩阵乘法的分块计算，读者可参考[分块矩阵的乘法](../Block_Matrix_Multiplication/)一文。
 
 注意公式的最后一行的加法，其所需的结果来源恰好是分布在不同的设备上的，这也就是为什么 TP 需要 AR 通信的原因。
 
@@ -172,13 +179,23 @@ $$
 1. 保证中间隐藏状态的维度不变
 2. 通信在计算完两个线性层后进行
 
-对于 Attention 层也是同理。既然隐藏状态的维度为 \([b, s, h]\)，那么一层 Decoder 的通信量包括前向传播的 2 次 AR 和反向传播的 2 次 AR，每次通信的数据量为 \( bsh \)。
+对于 Attention 层也是同理。既然隐藏状态的维度为 \([b, s, h]\)，那么一层 Decoder 的通信量包括前向传播的 2 次 AR 和反向传播的 2 次 AR，每次通信的数据量为 \( bsh \)。因此，一层 Decoder 的总通信量为
+
+$$
+M_f = M_b = 2bsh (d-1)
+$$
 
 不过，在工程实践中，AR 可分解为单位通信量为 \( \dfrac{1}{d} \) 的 RS + AG。如图所示，这可以进一步降低通信开销。
 
 ![](./assets/imgs/AR_RS_AG.svg "AR 的工程实现：RS + AG")
 
-## Pipeline Parallelism 流水线并行
+据此，可以计算得出一层 Decoder 的总通信量为
+
+$$
+M_f = M_b = \dfrac{4bsh}{d} \cdot (d-1)
+$$
+
+## PP 流水线并行
 
 流水线并行是指将模型的不同层分布在不同的设备上，形成一个计算流水线。每个设备只处理输入数据的一个子集，并将中间结果传递给下一个设备。这样可以充分利用设备的计算资源，提高训练效率。
 
@@ -204,9 +221,47 @@ GPipe 和 PipeDream 都是经典的流水线并行方法，但它们只是作为
 
 ### TP-PP 混合并行
 
-## Expert Parallelism 专家并行
+## EP 专家并行
 
 专家并行是混合专家模型（Mixture of Experts, MoE）独有的并行策略。既然 TP 需要直接切分模型权重，那么直接将 MoE 模型中不同的专家分配到不同的设备上则是一种更简单方便的实现模型并行的方式。
 
-## Sequence Parallelism 序列并行
+## SP 序列并行
 
+序列并行是指将输入序列切分成多个子序列，每个子序列在不同的设备上并行计算。这样可以极大地减少单个设备上的显存占用，在训练中可以支持更长的序列长度，而在推理中可以降低 K/V 缓存的显存占用。其实 SP 和 DP 一样都是对隐藏状态进行切分，不过 SP 是在序列维度上切分，而 DP 是在批量维度上切分。
+
+使用 SP 不像 DP 那样，它以非常频繁的通信开销为代价。这其中的原因在于 Transformer 的自注意力机制。由于自注意力机制需要每个 token 都与其他 token 进行相似度的计算，在 Attention 的计算过程中，需要一边计算一边同步中间结果以保证正确性。
+
+这个想法最初是以 Ring Self-Attention（RSA）[^8] 的形式提出的。RSA 将序列切分成多个子序列，并在多个设备上并行计算自注意力。每个设备只计算自己子序列内的注意力，然后通过环形通信将中间结果传递给下一个设备，依此类推，直到所有设备都完成计算。
+
+[^8]: Sequence Parallelism: Long Sequence Training from System Perspective [arXiv](https://arxiv.org/abs/2105.13120)
+
+![](./assets/imgs/RSA.png "RSA 的计算流程")
+
+对于 \( Q \times K \) 和 \( S \times V \) 两个矩阵乘法，RSA 都需要进行 \( d-1 \) 次 P2P 环形通信，可进一步参考下面的动画深入理解。其中，\( Q \times K \) 的结果维度为 \([b, \dfrac{s}{d}, \dfrac{s}{d}, h]\)，所以每次通信的数据量为 \( bh \cdot \left( \dfrac{s}{d} \right)^2 \)；而 \( S \times V \) 的结果维度为 \([b, \dfrac{s}{d}, h]\)，所以每次通信的数据量为 \( bh \cdot \dfrac{s}{d} \)。所以一层 Decoder 的总通信量为
+
+$$
+bh \left[ \left( \dfrac{s}{d} \right)^2 + \dfrac{s}{d} \right] (d-1) = \dfrac{bh (s^2+sd) (d-1)}{d^2}
+$$
+
+![](./assets/imgs/RSA.gif "【动画演示】RSA 的计算流程")
+
+Context Parallelism（CP）[^9]也提出了类似的想法，不过它是基于 Group-Query Attention（GQA）[^10]实现的。GQA 将注意力头划分为多个组，每个组内的头只关注输入序列的一个子集，从而减少计算量和显存占用。对于不同稀疏模式的注意力机制，根据其设计的序列并行策略也有所不同。
+
+[^9]: Context Parallelism for Scalable Million-Token Inference. [arXiv](https://arxiv.org/abs/2411.01783)
+
+[^10]: GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints. [arXiv](https://arxiv.org/abs/2305.13245)
+
+![](./assets/imgs/CP.png "Ring Pass-KV 和 Ring Pass-Q 算法")
+
+由于 SP 的引入会导致 Attention 计算时的多次同步通信，DeepSpeed 团队索性就一劳永逸，在 Attention 计算前后各进行一次 A2A，保证 Attention 计算时的序列是完整的。这样一来，形成了 SP-HP-SP 的混合并行模式（HP，Head Parallelism），是为 Ulysses[^11]。这里的 HP 指的是将注意力头切分到不同设备上计算，其本质和 EP 相当。
+
+[^11]: DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models
+. [arXiv](https://arxiv.org/abs/2309.14509)
+
+![](./assets/imgs/DeepSpeed-Ulysses.png "DeepSpeed Ulysses 的 SP-HP-SP 混合并行设计")
+
+在这个混合并行策略中，输入和输入的隐藏状态维度为 \([b, \dfrac{s}{d}, h]\)，而在计算 Attention 时的维度为 \([b, s, \dfrac{h}{d}]\)。由此可见，采用 Ulysses 并行策略的一层 Decoder 中，总通信量为
+
+$$
+M_f = M_b = \dfrac{2bsh}{d} \cdot (d-1)
+$$
