@@ -58,7 +58,7 @@ $$
 
 所有的这些并行策略都需要在不同的设备之间进行通信，此时就需要一系列通信原语或者通信算子。常见的包括 All Reduce（AR）、All Gather（AG）、Reduce Scatter（RS）、All-to-All（A2A）等。
 
-> 强烈建议读者在阅读本文时，先对这些通信原语有一个基本的了解。读者可参考[并行计算集合通信初步](../Introduction_to_Parallel_Computing_Collective_Communication/)一文。
+> 强烈建议读者在阅读本文时，先对这些通信原语有一个基本的了解。读者可参考[并行计算集合通信初步](../introduction-to-parallel-computing-collective-communication/)一文。
 
 ### 分片与平铺
 
@@ -87,7 +87,7 @@ Tiling 不在本文的讨论范围内。
 
 [^7]: FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness. [arXiv](https://arxiv.org/abs/2205.14135)
 
-> 若读者对 FlashAttention[^7] 感兴趣，可参考[图解 Flash Attention](../Illustrated_Flash_Attention/) 一文。
+> 若读者对 FlashAttention[^7] 感兴趣，可参考[图解 Flash Attention](../illustrated-flash-attention/) 一文。
 
 ## DP 数据并行
 
@@ -171,7 +171,7 @@ $$
 \end{aligned}
 $$
 
-> 有关矩阵乘法的分块计算，读者可参考[分块矩阵的乘法](../Block_Matrix_Multiplication/)一文。
+> 有关矩阵乘法的分块计算，读者可参考[分块矩阵的乘法](../block-matrix-multiplication/)一文。
 
 注意公式的最后一行的加法，其所需的结果来源恰好是分布在不同的设备上的，这也就是为什么 TP 需要 AR 通信的原因。
 
