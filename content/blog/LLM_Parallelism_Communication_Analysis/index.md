@@ -1,7 +1,7 @@
 ---
 title: "大模型并行策略的通信开销分析"
-date: 2025-10-10T19:41:55+08:00
-draft: true
+date: 2025-10-11T02:41:55+08:00
+draft: false
 ---
 
 随着大模型（Large Language Model，LLM）规模的不断增大，模型参数数量和计算量也在不断增加，这使得模型的训练和推理变得越来越困难。为了应对这一挑战，研究人员提出了多种并行策略，包括数据并行（Data Parallelism，DP）、张量并行（Tensor Parallelism，TP）、流水线并行（Pipeline Parallelism，PP）、专家并行（Expert Parallelism，EP）和序列并行（Sequence Parallelism，SP）。本文将深入图解并给出这些并行策略的定量分析。
@@ -35,6 +35,7 @@ draft: true
 | \(h\) |    隐藏层维度（Hidden Size）    |              |
 | \(e\) |    专家数量（Expert Number）    | MoE 模型特有 |
 | \(k\) | 激活专家数量（取 top-k 个专家） | MoE 模型特有 |
+| \(l\) |  Decoder 层数（Layer Number）   |              |
 
 那么，根据以 Transformer 基础的 LLM 设计范式，一层 Decoder 总参数量可以近似认为是其线性层的参数量，包括：
 
@@ -219,11 +220,68 @@ GPipe 和 PipeDream 都是经典的流水线并行方法，但它们只是作为
 
 [^6]: Memory-Efficient Pipeline-Parallel DNN Training. [arXiv](https://arxiv.org/abs/2006.09503)
 
-### TP-PP 混合并行
+{{< callout type="info" >}}
+
+**TP-PP 混合并行**
+
+在大多数 LLM 并行训练框架中，TP 和 PP 通常是结合使用的。这样做的原因是：
+
+- 节点内的多 GPU 之间使用高速互联（如 NVLink），适合采用 TP，因为 TP 的每一层均需要 AR 通信。
+- 节点间的多节点之间使用相对较慢的网络（如 InfiniBand），适合采用 PP，因为 PP 的通信开销较低。
+
+在此基础上，PP 的 P2P 通信量可以被 TP 组进一步减小。假设 PP 的并行度为 \( d_{\mathrm{PP}} \)，TP 的并行度为 \( d_{\mathrm{TP}} \)。在完成 PP 的 P2P 通信时，节点内的每张卡只负责发送中间激活张量的 \( \dfrac{1}{d_{\mathrm{TP}}} \)，然后在目标节点内进行 AG 合并，如图所示。
+
+![](./assets/imgs/TP_PP.svg "TP-PP 混合并行的 PP P2P 通信设计")
+
+在这种情况下，PP 的 P2P 通信量变为
+
+$$
+M_f = M_b = \dfrac{bsh}{d_{\mathrm{TP}}} \cdot (d_{\mathrm{PP}} - 1)
+$$
+
+而 AG 的通信量为
+
+$$
+M_f = M_b = \dfrac{bsh}{d_{\mathrm{TP}}} \cdot (d_{\mathrm{TP}} - 1)
+$$
+
+{{< /callout >}}
 
 ## EP 专家并行
 
-专家并行是混合专家模型（Mixture of Experts, MoE）独有的并行策略。既然 TP 需要直接切分模型权重，那么直接将 MoE 模型中不同的专家分配到不同的设备上则是一种更简单方便的实现模型并行的方式。
+专家并行是混合专家模型（Mixture of Experts, MoE）独有的并行策略。既然 MoE 引入门控网络和多个 MLP 层组成的专家，那么就可以直接将 MoE 模型中不同的专家分配到不同的设备上，这相当于是一种更简单方便的实现模型并行的方式。
+
+看起来 EP 只是对模型权重进行分片，而不涉及到隐藏状态。不过由于 MoE 模型的路由机制，即每个 token 只激活一部分专家（即 top-k 加权），因此 EP 势必会影响到隐藏状态的分片。此时，需要引入 A2A 通信来在设备之间交换中间激活。在 MoE 模型中，将原始输入的各个 token 根据门控网络的输出路由到不同的专家进行处理的过程称为 **Dispatch**，而将各个专家的输出重新组合成原始输入顺序的过程称为 **Combine**。
+
+GShard[^12] 是最早提出 EP 的工作之一。其实现 EP 的方式至今仍被各大训练和推理框架所采用。
+
+[^12]: GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding. [arXiv](https://arxiv.org/abs/2006.16668)
+
+![](./assets/imgs/GShard.png "GShard 的专家并行设计")
+
+EP 通常会与 DP 结合使用，以进一步提高系统的吞吐量和资源利用率。此时，输入输出的隐藏状态的维度为 \([\dfrac{b}{d}, s, h]\)。在路由之后，维度变为 \([\dfrac{b}{d} \cdot s, k, h]\)，批次大小和序列长度相乘说明所有 token 被展平。而在 Dispatch 之后，假设第 \(i\) 个专家上被分配了 \( n_i \) 个 token，那么其隐藏状态的维度为 \([n_i, h]\)。这些参数之间应当满足以下关系：
+
+$$
+\sum_{i=1}^{e} n_i = b s k
+$$
+
+这说明每个专家所需推理的 token 数量的数学期望为
+
+$$
+E(n) = \dfrac{b s k}{e}
+$$
+
+接下来考虑 EP，那么单个设备上应当有 \(\dfrac{e}{d}\) 个专家。那么在 Dispatch 之后，单个设备上被分配到的 token 数量的数学期望为
+
+$$
+E(n) = \dfrac{b s k}{e} \cdot \dfrac{e}{d} = \dfrac{b s k}{d}
+$$
+
+由此可得，EP 的 A2A（包括 Dispatch 和 Combine）平均通信量均为 \( \dfrac{b s h k}{d} \)。那么，一层 MoE Decoder 的总通信量（的数学期望）为
+
+$$
+M_f = M_b = \dfrac{2 b s h k}{d} \cdot (d-1)
+$$
 
 ## SP 序列并行
 
@@ -265,3 +323,15 @@ Context Parallelism（CP）[^9]也提出了类似的想法，不过它是基于 
 $$
 M_f = M_b = \dfrac{2bsh}{d} \cdot (d-1)
 $$
+
+## 总结
+
+本文对 LLM 的五大并行策略及其通信开销进行了图解和定量分析。下表总结了各个并行策略的通信开销。
+
+| 并行策略 |  模型权重  |          隐藏状态          |               前向传播总通信量               |               反向传播总通信量               |
+| :------: | :--------: | :------------------------: | :------------------------------------------: | :------------------------------------------: |
+|    DP    | Replicated | \( [\dfrac{b}{d}, s, h] \) |                   \( 0 \)                    |              \( \Phi \cdot l \)              |
+|    TP    |  Sharding  |      \( [b, s, h] \)       |  \( \dfrac{4bsh}{d} \cdot (d-1) \cdot l \)   |  \( \dfrac{4bsh}{d} \cdot (d-1) \cdot l \)   |
+|    PP    |  Sharding  |      \( [b, s, h] \)       |            \( bsh \cdot (d-1) \)             |            \( bsh \cdot (d-1) \)             |
+|    EP    |  Sharding  |      \( [b, s, h] \)       |  \( \dfrac{2bshk}{d} \cdot (d-1) \cdot l \)  |  \( \dfrac{2bshk}{d} \cdot (d-1) \cdot l \)  |
+|    SP    | Replicated | \( [b, \dfrac{s}{d}, h] \) | \( \dfrac{bh (s^2+sd) (d-1)}{d^2} \cdot l \) | \( \dfrac{bh (s^2+sd) (d-1)}{d^2} \cdot l \) |
