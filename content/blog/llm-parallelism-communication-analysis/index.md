@@ -1,6 +1,7 @@
 ---
 title: "大模型并行策略的通信开销分析"
-date: 2025-10-11T02:41:55+08:00
+date: 2025-10-10T14:41:55+08:00
+lastmod: 2025-10-11T02:41:55+08:00
 draft: false
 ---
 
@@ -23,6 +24,25 @@ draft: false
 {{< /callout >}}
 
 > 关于分片的定义详见下文。
+
+```mermaid
+mindmap
+    root((并行策略))
+        DP
+            ZeRO
+        TP
+            Megatron-LM
+        PP
+            GPipe
+            PipeDream
+        EP
+            GShard
+        SP
+            RSA
+            CP
+            Ulysses
+            USP
+```
 
 ### 符号定义
 
@@ -324,6 +344,23 @@ $$
 M_f = M_b = \dfrac{2bsh}{d} \cdot (d-1)
 $$
 
+此外，后续的工作在系统分析和全面总结 Ring-Attention 和 DeepSpeed-Ulysess 的基础上，提出了统一的序列并行（Unified Sequence Parallelism, USP）[^13] 框架。该框架能够兼容不同 Transformer 架构（如标准注意力、滑动窗口注意力、稀疏注意力等）和不同的硬件网络拓扑（如 NVLink、InfiniBand 等）。
+
+[^13]: USP: A Unified Sequence Parallelism Approach for Long Context Generative AI. [arXiv](https://arxiv.org/abs/2405.07719)
+
+![](./assets/imgs/USP.png "USP 的统一序列并行设计，包括 SP-Ulysses 和 SP-Ring")
+
+具体来说，这篇论文认为 Ulysses 和 Ring-Attention 分别存在如下痛点：
+
+- Ulysses：并行度不能超过注意力头数量，因此对稀疏注意力（如 MQA[^14]、GQA[^10] 等）不友好。
+- Ring-Attention：通信开销较大，即便可以实现通算掩盖。
+
+[^14]: Fast Transformer Decoding: One Write-Head is All You Need. [arXiv](https://arxiv.org/abs/1911.02150)
+
+USP-Attention 的设计理念即中庸之道，将 SP-Ulysses 和 Sp-Ring 结合起来，形成 2D 混合并行。
+
+> TODO: USP 的通信开销定量分析。
+
 ## 总结
 
 本文对 LLM 的五大并行策略及其通信开销进行了图解和定量分析。下表总结了各个并行策略的通信开销。
@@ -335,3 +372,7 @@ $$
 |    PP    |  Sharding  |      \( [b, s, h] \)       |            \( bsh \cdot (d-1) \)             |            \( bsh \cdot (d-1) \)             |
 |    EP    |  Sharding  |      \( [b, s, h] \)       |  \( \dfrac{2bshk}{d} \cdot (d-1) \cdot l \)  |  \( \dfrac{2bshk}{d} \cdot (d-1) \cdot l \)  |
 |    SP    | Replicated | \( [b, \dfrac{s}{d}, h] \) | \( \dfrac{bh (s^2+sd) (d-1)}{d^2} \cdot l \) | \( \dfrac{bh (s^2+sd) (d-1)}{d^2} \cdot l \) |
+
+在 USP[^13] 这篇论文中，研究人员还提到了其提出的 SP 可以与 DP、TP 等并行策略结合使用，形成 4D 混合并行。它们也同样对这些并行策略进行了定量分析，如图所示：
+
+![](./assets/imgs/USP_Analysis.png "SP、DP、TP、ZeRO 等并行策略的通信开销和显存占用分析")
