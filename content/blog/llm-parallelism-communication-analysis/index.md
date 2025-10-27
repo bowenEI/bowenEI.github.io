@@ -1,8 +1,11 @@
 ---
 title: "大模型并行策略的通信开销分析"
 date: 2025-10-10T14:41:55+08:00
-lastmod: 2025-10-11T02:41:55+08:00
+lastmod: 2025-10-27T18:00:00+08:00
 draft: false
+tags:
+  - LLM
+  - Parallelism
 ---
 
 随着大模型（Large Language Model，LLM）规模的不断增大，模型参数数量和计算量也在不断增加，这使得模型的训练和推理变得越来越困难。为了应对这一挑战，研究人员提出了多种并行策略，包括数据并行（Data Parallelism，DP）、张量并行（Tensor Parallelism，TP）、流水线并行（Pipeline Parallelism，PP）、专家并行（Expert Parallelism，EP）和序列并行（Sequence Parallelism，SP）。本文将深入图解并给出这些并行策略的定量分析。
