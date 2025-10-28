@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-10-27T15:34:18+08:00
+lastmod: 2025-10-28T14:00:00+08:00
 draft: false
 ---
 
@@ -253,15 +253,15 @@ gvm use go1.4 [--default]
 
 #### Hugo
 
-[Hugo](https://gohugo.io/) 是一个流行的静态网站生成器，推荐使用它来搭建个人博客。Hugo 的安装需要先安装 Go 环境。
+[Hugo](https://gohugo.io/) 是一个流行的静态网站生成器，推荐使用它来搭建个人博客。Hugo 的安装需要先安装 Go 环境，当然使用 Debian 的包管理器可以自动安装 Go 的环境。
 
-一般来说，需要安装 `extended` 版本。通过 Snap 安装的 Hugo 已经包含了 `extended` 版本。
+一般来说，需要安装 `extended` 版本。通过 APT 安装的 Hugo 已经包含了 `extended` 版本。
 
 ```bash
-sudo snap install hugo
+sudo apt install hugo
 ```
 
-当然，也可以直接前往 [GitHub](https://github.com/gohugoio/hugo/releases) 发行版页面下载安装包。
+当然，也可以直接前往 [GitHub](https://github.com/gohugoio/hugo/releases) 发行版页面下载安装包。有些主题对于 Hugo 的版本有要求，建议安装最新版本。
 
 ### Tex
 
