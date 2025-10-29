@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-10-29T17:00:00+08:00
+lastmod: 2025-10-29T18:00:00+08:00
 draft: false
 ---
 
@@ -42,6 +42,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
 使用 [DesktopOK](https://www.softwareok.com/?seite=Microsoft/DesktopOK) 可以定制系统字体。
 
 字体推荐更纱黑体（Sarasa）。系统字体可以使用 Sarasa UI SC，编程和终端字体通常使用等宽字体，包括 Sarasa Mono SC、Sarasa Term SC、Sarasa Fixed SC。
+
+推荐在设置中启用**开发者模式**。首先它支持在 PowerShell 中使用 `New-Item` 命令时无需管理员权限。
+
+```powershell
+New-Item -ItemType SymbolicLink -Path <LINK_NAME> -Target <TARGET_PATH>
+```
 
 ## 常用软件安装
 
