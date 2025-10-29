@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-10-28T14:00:00+08:00
+lastmod: 2025-10-29T17:00:00+08:00
 draft: false
 ---
 
@@ -321,3 +321,37 @@ SQLite 为所有 Linux 发行版默认安装，无需额外配置。
 
 - 服务端：[Redis Open Source](https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/)
 - 客户端：[RedisInsight](https://redis.io/insight/)
+
+## 内网穿透
+
+推荐使用 [Tailscale](https://tailscale.com/) 进行内网穿透。其本质是基于 WireGuard 的零配置 VPN，只需要身份认证即可让多个端侧设备安全互联，而无需集中式 VPN 服务器。
+
+### 客户端
+
+通常情况下，客户端都是 Windows 系统，直接访问[官网](https://tailscale.com/download/windows)下载安装包即可。安装完成后同样需要进行身份认证。
+
+### 服务端
+
+通常情况下，服务端都是 Linux 系统，安装 Tailscale 服务端需要在 Linux 系统中执行安装脚本。
+
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+```
+
+这对于 WSL 也同样适用。
+
+根据安装提示，安装完成后需要执行下列命令来连接 Tailscale 网络。
+
+```bash
+tailscale up
+```
+
+此过程中，需要进行身份认证，认证成功后即可连接 Tailscale 网络。
+
+```bash
+sudo apt install ssh
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+最后，别忘了在服务端安装并启动 SSH 服务。
