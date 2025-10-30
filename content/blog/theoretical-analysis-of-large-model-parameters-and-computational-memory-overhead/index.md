@@ -5,7 +5,8 @@ title: "大模型的参数量及其计算访存开销的理论分析"
 subtitle: ""
 summary: ""
 authors: []
-tags: [LLM]
+tags:
+  - LLM
 categories: [Academic]
 date: 2023-11-01T13:09:34+08:00
 lastmod: 2023-12-21T13:09:34+08:00

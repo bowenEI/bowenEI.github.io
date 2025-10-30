@@ -5,7 +5,8 @@ title: "How to Read a Paper"
 subtitle: "如何阅读一篇文献"
 summary: ""
 authors: []
-tags: [文献精读]
+tags:
+  - 论文笔记
 categories: [Academic]
 date: 2021-06-29T15:28:16+08:00
 lastmod: 2021-06-29T15:28:16+08:00

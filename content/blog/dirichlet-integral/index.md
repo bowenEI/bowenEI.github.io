@@ -5,7 +5,9 @@ title: "Dirichlet 积分"
 subtitle: ""
 summary: ""
 authors: []
-tags: [数学, 微积分]
+tags:
+  - 数学
+  - 微积分
 categories: [Knowledge]
 date: 2023-11-26T09:09:56+08:00
 lastmod: 2023-11-26T09:09:56+08:00

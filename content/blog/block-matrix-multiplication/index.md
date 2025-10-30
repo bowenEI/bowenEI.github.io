@@ -5,7 +5,8 @@ title: "分块矩阵的乘法"
 subtitle: ""
 summary: ""
 authors: []
-tags: [数学, 线性代数]
+tags:
+  - 线性代数
 categories: [Knowledge]
 date: 2023-11-28T18:34:13+08:00
 lastmod: 2024-01-29T18:34:13+08:00

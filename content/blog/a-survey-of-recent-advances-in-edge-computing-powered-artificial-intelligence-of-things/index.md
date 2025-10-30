@@ -5,7 +5,10 @@ title: "A Survey of Recent Advances in Edge-Computing-Powered Artificial Intelli
 subtitle: "【文献精读】基于边缘计算的人工智能研究进展综述"
 summary: ""
 authors: []
-tags: [文献精读, 综述, 边缘智能]
+tags:
+  - 论文笔记
+  - 综述
+  - 边缘智能
 categories: [Academic]
 date: 2022-06-06T11:22:43+08:00
 lastmod: 2022-06-06T11:22:43+08:00

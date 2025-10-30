@@ -2,10 +2,12 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "系统爆破西方话语体系"
-subtitle: "【范神论】解构西方概念体系，打破中国话语赤字"
+subtitle: "解构西方概念体系，打破中国话语赤字"
 summary: ""
 authors: []
-tags: [范勇鹏]
+tags:
+  - 范勇鹏
+  - 文化自信
 categories: [Presentation]
 date: 2021-12-03T11:08:41+08:00
 lastmod: 2021-12-03T11:08:41+08:00

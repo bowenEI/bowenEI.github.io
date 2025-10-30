@@ -2,10 +2,12 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Attention Is All You Need"
-subtitle: "【文献精读】Transformer"
+subtitle: "Transformer"
 summary: ""
 authors: []
-tags: [Transformer]
+tags:
+  - 论文笔记
+  - Transformer
 categories: [Academic]
 date: 2021-11-09T22:59:13+08:00
 lastmod: 2021-11-09T22:59:13+08:00

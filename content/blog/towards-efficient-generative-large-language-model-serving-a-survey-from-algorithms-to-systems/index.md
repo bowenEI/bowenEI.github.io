@@ -5,7 +5,11 @@ title: "Towards Efficient Generative Large Language Model Serving: A Survey From
 subtitle: "面向高效生成式大语言模型的服务：从算法到系统的综述"
 summary: ""
 authors: []
-tags: [LLM, Inference, Survey]
+tags:
+  - LLM
+  - 论文笔记
+  - 综述
+  - Serving
 categories: [Academic]
 date: 2024-01-15T01:07:11+08:00
 lastmod: 2024-01-19T01:07:11+08:00

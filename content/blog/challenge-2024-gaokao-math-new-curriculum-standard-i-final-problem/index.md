@@ -6,10 +6,10 @@ subtitle: ""
 summary: ""
 authors: []
 tags:
-- 数学
-- 高考
-- 函数与导数
-- 数列
+  - 高考
+  - 数学
+  - 函数与导数
+  - 数列
 categories: [Essay]
 date: 2024-06-07T20:52:12+08:00
 lastmod: 2024-06-07T20:52:12+08:00

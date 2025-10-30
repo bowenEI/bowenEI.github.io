@@ -2,10 +2,12 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Nonviolent Communication"
-subtitle: "【读书笔记】非暴力沟通"
+subtitle: "非暴力沟通"
 summary: ""
 authors: []
-tags: []
+tags:
+  - 心理学
+  - 读书笔记
 categories: [Read]
 date: 2022-02-15T15:08:33+08:00
 lastmod: 2022-02-16T15:08:33+08:00

@@ -5,7 +5,9 @@ title: "美式反恐 越反越恐"
 subtitle: ""
 summary: ""
 authors: []
-tags: [这就是中国]
+tags:
+  - 这就是中国
+  - 美国政治
 categories: [Presentation]
 date: 2021-12-07T14:06:44+08:00
 lastmod: 2021-12-07T14:06:44+08:00

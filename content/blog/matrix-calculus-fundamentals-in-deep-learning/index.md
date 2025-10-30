@@ -5,7 +5,10 @@ title: "深度学习中的矩阵求导基础"
 subtitle: ""
 summary: ""
 authors: []
-tags: [深度学习, 线性代数, 函数与导数, 凸优化]
+tags:
+  - 深度学习
+  - 线性代数
+  - 多元函数微分学
 categories: [Essay, Knowledge]
 date: 2023-12-06T10:44:14+08:00
 lastmod: 2023-12-06T10:44:14+08:00

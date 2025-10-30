@@ -5,7 +5,12 @@ title: "挑战 2024 年考研数学（一）"
 subtitle: ""
 summary: ""
 authors: []
-tags: [考研, 数学]
+tags:
+  - 考研
+  - 数学
+  - 微积分
+  - 线性代数
+  - 概率论与数理统计
 categories: [Essay]
 date: 2023-12-24T22:20:59+08:00
 lastmod: 2023-12-30T22:20:59+08:00

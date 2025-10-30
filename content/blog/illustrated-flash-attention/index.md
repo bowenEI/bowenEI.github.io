@@ -5,7 +5,11 @@ title: "图解 Flash Attention"
 subtitle: ""
 summary: ""
 authors: []
-tags: [LLM, Attention, Softmax]
+tags:
+  - LLM
+  - Attention
+  - Softmax
+  - 算子融合
 categories: [Academic]
 date: 2024-01-27T01:33:38+08:00
 lastmod: 2024-01-29T01:33:38+08:00

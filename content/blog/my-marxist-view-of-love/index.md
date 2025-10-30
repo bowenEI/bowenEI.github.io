@@ -5,7 +5,8 @@ title: "我的马克思主义爱情观"
 subtitle: ""
 summary: ""
 authors: []
-tags: [马克思主义]
+tags:
+  - 马克思主义
 categories: [Essay]
 date: 2021-08-09T22:38:41+08:00
 lastmod: 2021-08-09T22:38:41+08:00

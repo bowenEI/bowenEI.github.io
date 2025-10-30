@@ -5,7 +5,8 @@ title: "相关性和因果性"
 subtitle: ""
 summary: ""
 authors: []
-tags: [逻辑学]
+tags:
+  - 逻辑学
 categories: [Knowledge]
 date: 2022-11-25T18:25:08+08:00
 lastmod: 2022-11-25T18:25:08+08:00

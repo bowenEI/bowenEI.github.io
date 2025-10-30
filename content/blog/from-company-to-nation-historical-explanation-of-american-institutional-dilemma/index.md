@@ -2,10 +2,13 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "从公司到国家：美国制度困局的历史解释"
-subtitle: "【读书笔记】跳出美国读美国"
+subtitle: "跳出美国读美国"
 summary: ""
 authors: []
-tags: [范勇鹏]
+tags:
+  - 读书笔记
+  - 范勇鹏
+  - 美国政治
 categories: [Read]
 date: 2021-11-23T22:35:29+08:00
 lastmod: 2022-02-17T22:35:29+08:00

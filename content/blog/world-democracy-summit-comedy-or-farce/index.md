@@ -5,7 +5,9 @@ title: "“世界民主峰会”喜剧还是闹剧？"
 subtitle: ""
 summary: ""
 authors: []
-tags: [这就是中国]
+tags:
+  - 这就是中国
+  - 范勇鹏
 categories: [Presentation]
 date: 2022-01-12T09:47:54+08:00
 lastmod: 2022-01-12T09:47:54+08:00

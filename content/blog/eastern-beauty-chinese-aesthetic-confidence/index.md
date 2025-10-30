@@ -5,7 +5,9 @@ title: "东方之美：谈谈中国人的审美自信"
 subtitle: ""
 summary: ""
 authors: []
-tags: [这就是中国]
+tags:
+  - 这就是中国
+  - 文化自信
 categories: [Presentation]
 date: 2024-02-14T03:10:40+08:00
 lastmod: 2024-02-14T03:10:40+08:00

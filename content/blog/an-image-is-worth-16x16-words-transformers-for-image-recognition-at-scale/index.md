@@ -2,10 +2,12 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
-subtitle: "【文献精读】Vision Transformer (ViT)"
+subtitle: "Vision Transformer (ViT)"
 summary: ""
 authors: []
-tags: [文献精读, Transformer]
+tags:
+  - 论文笔记
+  - Transformer
 categories: [Academic]
 date: 2021-11-30T13:37:38+08:00
 lastmod: 2021-11-30T13:37:38+08:00

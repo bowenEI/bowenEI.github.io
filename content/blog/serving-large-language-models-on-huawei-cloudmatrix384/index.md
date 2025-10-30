@@ -5,8 +5,9 @@ date: 2025-10-03T01:35:10+08:00
 lastmod: 2025-10-06T16:09:10+08:00
 draft: false
 tags:
-    - LLM
-    - 文献精读
+  - LLM
+  - 论文笔记
+  - 前沿科技
 ---
 
 华为超节点（CloudMatrix384）是华为在 2025 年发布的一种突破了冯·诺伊曼体系结构，将各类异构资源通过 UB（Unified Bus，统一总线）整合而成的超大规模计算节点，专为 LLM（Large Language Model，大语言模型）服务而设计。在此基础上，华为还提出了 CloudMatrix-Infer 推理系统，提出了 PDC（Prefill-Decode-Cache）分离架构、LEP（Large Expert Parallel，大规模专家并行）等创新技术，为大语言模型的高效推理提供了强大支持。

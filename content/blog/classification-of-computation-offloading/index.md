@@ -5,7 +5,9 @@ title: "Classification of Computation Offloading"
 subtitle: ""
 summary: ""
 authors: []
-tags: [边缘计算, 任务卸载]
+tags:
+  - 边缘计算
+  - 任务卸载
 categories: [Academic]
 date: 2021-07-05T16:59:27+08:00
 lastmod: 2021-07-05T16:59:27+08:00

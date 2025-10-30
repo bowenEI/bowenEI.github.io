@@ -5,7 +5,9 @@ title: "社会学的邀请"
 subtitle: "The Big Picture: A Sociology Primer"
 summary: ""
 authors: []
-tags: [社会学]
+tags:
+  - 社会学
+  - 读书笔记
 categories: [Read]
 date: 2023-10-14T15:59:44+08:00
 lastmod: 2023-10-14T15:59:44+08:00

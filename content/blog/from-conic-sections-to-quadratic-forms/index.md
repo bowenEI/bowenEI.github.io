@@ -5,7 +5,11 @@ title: "从圆锥曲线到二次型"
 subtitle: ""
 summary: ""
 authors: []
-tags: [数学, 线性代数, 圆锥曲线, 二次型]
+tags:
+  - 数学
+  - 线性代数
+  - 圆锥曲线
+  - 二次型
 categories: [Essay, Knowledge]
 date: 2023-12-13T02:09:26+08:00
 lastmod: 2023-12-13T02:09:26+08:00

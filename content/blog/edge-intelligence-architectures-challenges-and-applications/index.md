@@ -2,10 +2,13 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Edge Intelligence: Architectures, Challenges, and Applications"
-subtitle: "【文献精读】边缘智能：架构、挑战和应用"
+subtitle: "边缘智能：架构、挑战和应用"
 summary: ""
 authors: []
-tags: [文献精读, 综述, 边缘智能]
+tags:
+  - 论文笔记
+  - 综述
+  - 边缘智能
 categories: [Academic]
 date: 2021-07-08T11:53:13+08:00
 lastmod: 2021-07-08T11:53:13+08:00

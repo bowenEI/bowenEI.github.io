@@ -5,7 +5,10 @@ title: "调和级数的前 n 项和"
 subtitle: ""
 summary: ""
 authors: []
-tags: [数学, 无穷级数, 微积分]
+tags:
+  - 数学
+  - 无穷级数
+  - 微积分
 categories: [Knowledge]
 date: 2023-12-02T23:37:55+08:00
 lastmod: 2023-12-02T23:37:55+08:00

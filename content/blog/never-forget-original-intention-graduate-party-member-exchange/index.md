@@ -5,7 +5,8 @@ title: "“不忘初心 一生一誓”——毕业生党员交流会"
 subtitle: "在安徽大学计算机科学与技术学院本科生党支部上的讲话"
 summary: ""
 authors: []
-tags: []
+tags:
+  - Talk
 categories: [Essay]
 date: 2021-06-24T20:05:06+08:00
 lastmod: 2021-06-24T20:05:06+08:00

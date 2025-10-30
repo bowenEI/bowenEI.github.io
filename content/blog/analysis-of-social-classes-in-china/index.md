@@ -5,7 +5,8 @@ title: "中国社会各阶级分析"
 subtitle: ""
 summary: ""
 authors: []
-tags: [马克思主义]
+tags:
+  - 马克思主义
 categories: [essay]
 date: 2024-08-26T22:54:06+08:00
 lastmod: 2024-09-09T22:54:06+08:00
