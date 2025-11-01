@@ -1,8 +1,10 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-10-29T18:00:00+08:00
+lastmod: 2025-11-01T14:00:00+08:00
 draft: false
+tags:
+  - 技术分享
 ---
 
 本文档旨在提供一个全面的指南，方便用户重装 Windows 系统并配置常用软件和开发环境。
@@ -338,15 +340,25 @@ SQLite 为所有 Linux 发行版默认安装，无需额外配置。
 
 ### 服务端
 
-通常情况下，服务端都是 Linux 系统，安装 Tailscale 服务端需要在 Linux 系统中执行安装脚本。
+通常情况下，服务端都是 Linux 系统，安装 Tailscale 服务端需要在 Linux 系统中执行安装脚本。这对于 WSL 也同样适用。
 
 ```bash
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
-这对于 WSL 也同样适用。
+安装完成后，需要将当前用户设置为 Tailscale 的操作员。这样就不用每次使用 `sudo` 来运行 Tailscale 命令。
 
-根据安装提示，安装完成后需要执行下列命令来连接 Tailscale 网络。
+```bash
+sudo tailscale set --operator=$USER
+```
+
+检查 Tailscale 守护进程状态：
+
+```bash
+sudo systemctl status tailscaled
+```
+
+如果是 `Active (running)` 状态，下面就可以根据安装提示，执行下列命令来连接 Tailscale 网络。
 
 ```bash
 tailscale up
