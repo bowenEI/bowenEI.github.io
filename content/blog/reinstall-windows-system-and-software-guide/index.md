@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-11-01T14:00:00+08:00
+lastmod: 2025-11-02T15:00:00+08:00
 draft: false
 tags:
   - 技术分享
@@ -93,6 +93,44 @@ Zotero 是一个强大的文献管理工具，推荐安装以下插件以增强�
 关于更多的 Zotero 插件，请参考 [Zotero 插件商店](https://zotero-chinese.com/plugins/)。
 
 {{< /callout >}}
+
+## Windows 终端美化
+
+Windows 系统自带的 PowerShell 版本老旧，推荐安装最新的 [PowerShell 7](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows)。
+
+```powershell
+winget install --id Microsoft.PowerShell --source winget
+```
+
+安装完成后，再安装 [Oh My Posh](https://ohmyposh.dev/docs/installation/windows) 以美化 PowerShell 终端。
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh --source winget --scope user --force
+```
+
+创建配置文件：
+
+```powershell
+notepad $PROFILE
+```
+
+并在文件中添加以下内容：
+
+```powershell
+oh-my-posh init pwsh | Invoke-Expression
+```
+
+然后让配置生效：
+
+```powershell
+. $PROFILE
+```
+
+如果想要更改主题，使用 `--config` 参数指定主题配置文件即可。可以从 [Oh My Posh 主题库](https://ohmyposh.dev/docs/themes) 搜寻喜欢的主题。
+
+```powershell
+oh-my-posh init pwsh --config <THEME_NAME> | Invoke-Expression
+```
 
 ## WSL 配置
 
@@ -282,6 +320,12 @@ sudo apt install texlive-full
 ```
 
 ## Git
+
+Windows 需要单独安装 [Git for Windows](https://git-scm.com/install/windows)，推荐使用 `winget` 进行安装：
+
+```powershell
+winget install --id Git.Git --source winget
+```
 
 Linux 发行版默认安装 Git。首先全局配置用户名和邮箱：
 
