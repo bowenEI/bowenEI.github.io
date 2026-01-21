@@ -1,26 +1,3 @@
-/* Superscript and Subscript */
-
-.supsub .base {
-    font-size: 1em;
-}
-
-sup,
-sub {
-    font-size: 0.6em;
-}
-
-.supsub .sup {
-    top: -0.7em;
-    left: -0.4em;
-}
-
-.supsub .sub {
-    bottom: -0.3em;
-    margin-left: -1.11111em;
-    left: -0.4em;
-    margin-right: -0.44444em;
-}
-
 :root {
     /* 页面宽度 - 也可以通过 hugo.yaml 中的 params.page.width 配置 */
     --hextra-max-page-width: 90rem; /* 默认值：80rem（普通），90rem（宽版），100%（全宽） */
@@ -37,4 +14,12 @@ sub {
 
 .hx\:dark\:text-amber-200:where(.dark, .dark *) {
     color: var(--hx-color-orange-300);
+}
+
+.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    text-decoration-line: unset;
+}
+
+.content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)):hover {
+    color: var(--hx-color-primary-300);
 }
