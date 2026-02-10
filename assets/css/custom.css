@@ -23,3 +23,34 @@
 .content :where(a):not(:where([class~=not-prose],[class~=not-prose] *)):hover {
     color: var(--hx-color-primary-300);
 }
+
+.content table {
+    width: 100%;
+    min-width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: color-mix(in srgb, currentColor 4%, transparent);
+    border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.content table th,
+.content table td {
+    padding: 0.65rem 0.75rem !important;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.content table thead th {
+    background-color: color-mix(in srgb, currentColor 10%, transparent);
+    font-weight: 600;
+}
+
+.content table tbody tr:nth-child(even) {
+    background-color: color-mix(in srgb, currentColor 7%, transparent);
+}
+
+.content table tbody tr:last-child td {
+    border-bottom: 0;
+}
