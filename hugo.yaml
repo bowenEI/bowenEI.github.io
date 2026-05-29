@@ -90,3 +90,13 @@ params:
       displayTags: true
       sortBy: lastmod
       sortOrder: desc
+
+  toc:
+    displayTags: true
+
+  imageZoom:
+    enable: true
+
+  # 显示最后修改日期
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
