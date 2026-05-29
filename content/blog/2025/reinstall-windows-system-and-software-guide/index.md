@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
-date: 2025-10-27T15:34:18+08:00
-lastmod: 2025-11-02T15:00:00+08:00
+date: 2026-04-04T01:18:48+08:00
+lastmod: 2026-05-29T01:19:24+08:00
 draft: false
 tags:
   - 技术分享
@@ -29,6 +29,12 @@ Microsoft 官方 Windows 系统镜像[下载地址](https://www.microsoft.com/zh
 
 推荐使用[沧水的 KMS 服务](https://kms.cangshui.net/)激活 Windows 系统。激活脚本[下载地址](https://kms.cangshui.net/kms/KMS-Cangshui.net.bat)。
 
+### 设置
+
+- 启用开发者模式
+- 用户账户控制等级设置为“从不通知”
+- 关闭传递优化
+
 ### 永久禁用更新
 
 注册表定位至
@@ -39,49 +45,79 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
 
 新建 `DWORD` 值 `FlightSettingsMaxPauseDays` 为 65535（0xFFFF），即最多可暂停更新 65535 天。然后在设置中即可发现选择暂停更新的时间更长。
 
-### 杂项
+### 右键菜单
 
-使用 [DesktopOK](https://www.softwareok.com/?seite=Microsoft/DesktopOK) 可以定制系统字体。
-
-字体推荐更纱黑体（Sarasa）。系统字体可以使用 Sarasa UI SC，编程和终端字体通常使用等宽字体，包括 Sarasa Mono SC、Sarasa Term SC、Sarasa Fixed SC。
-
-推荐在设置中启用**开发者模式**。首先它支持在 PowerShell 中使用 `New-Item` 命令时无需管理员权限。
+使用经典 Win10 右键菜单：
 
 ```powershell
-New-Item -ItemType SymbolicLink -Path <LINK_NAME> -Target <TARGET_PATH>
+reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
+使用 Win11 右键菜单：
+
+```powershell
+reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /va /f
+```
+
+均须重启文件资源管理器生效。
+
+### 系统字体
+
+微软雅黑字体是一个**功勋卓著但廉颇老矣**的设计。它在模糊的屏幕时代解决了“看清”的问题，却在高清时代输给了“好看”。
+
+使用 [DesktopOK](https://www.softwareok.com/?seite=Microsoft/DesktopOK) 可以定制系统字体。字体推荐更纱黑体（Sarasa Gothic），可以通过[微软应用商店](https://apps.microsoft.com/detail/9mw0m424ncz7?gl=CN&hl=zh-cn)下载。
+
+> [更纱黑体这么多版本，要怎么选？ - 知乎](https://zhuanlan.zhihu.com/p/627059922)
+
+系统字体可以使用 Sarasa UI SC，编程和终端字体通常使用等宽字体，包括 Sarasa Mono SC、Sarasa Term SC、Sarasa Fixed SC。
+
 ## 常用软件安装
+
+### 装机必备
+
+|       名称       |            描述            |                                     来源                                      |
+| :--------------: | :------------------------: | :---------------------------------------------------------------------------: |
+| Microsoft Office |       办公软件全家桶       |             [Web](https://www.microsoft.com/zh-cn/microsoft-365/)             |
+| Office Tool Plus | 快速自定义安装 Office 软件 |                     [Web](https://otp.landian.vip/zh-cn/)                     |
+|     Notepad3     | 国产 Notepad++ 平替<br />  |               [Web](https://rizonesoft.com/downloads/notepad3/)               |
+|    SumatraPDF    |     轻量化 PDF 阅读器      |            [Web](https://www.sumatrapdfreader.org/free-pdf-reader)            |
+|    LocalSend     |       局域网文件传输       |                         [Web](https://localsend.org/)                         |
+|     Snipaste     |            截图            |              [Web](https://www.snipaste.com/) / Microsoft Store               |
+|       Pot        |          全局翻译          |                          [Web](https://pot-app.com/)                          |
+|     思源笔记     |    隐私优先的本地知识库    |              [Web](https://b3log.org/siyuan/) / Microsoft Store               |
+|     Obsidian     |  插件系统最为丰富的知识库  |                          [Web](https://obsidian.md/)                          |
+|      7-Zip       |            压缩            |                         [Web](https://www.7-zip.org/)                         |
+|     Draw.io      |          开源绘图          |              [Web](https://app.diagrams.net/) / Microsoft Store               |
+|     Drawnix      |        开源白板工具        |                          [Web](https://drawnix.com/)                          |
+|    PotPlayer     |       全能视频播放器       |             [Web](https://potplayer.daum.net/) / Microsoft Store              |
+|    PowerToys     |    Windows 系统官方外挂    | [Web](https://learn.microsoft.com/zh-cn/windows/powertoys/) / Microsoft Store |
+|      uTools      |   功能丰富的插件应用生态   |                        [Web](https://www.u-tools.cn/)                         |
+|  ~~OpenFiles~~   | ~~开源万能格式文件查看器~~ |         ~~[Web](https://openfiles.pansysoft.app/) / Microsoft Store~~         |
+
+### 浏览器扩展
+
+|           名称            |             描述             |
+| :-----------------------: | :--------------------------: |
+| Authenticator: 2FA Client |        两步验证客户端        |
+|       篡改猴测试版        |        著名的油猴脚本        |
+|         Momentum          | 外观简约、风景秀丽的新标签页 |
+|          Ruffle           |         Flash 渲染器         |
+|       uBlock Origin       |           屏蔽广告           |
+
+### AI & Agent
+
+- [Cherry Studio](https://www.cherry-ai.com/) 超级 AI 工作站
+- ~~[Antigravity Tools](https://github.com/lbjlaq/Antigravity-Manager)~~ ~~Gemini API 反向代理~~
+- [WorkBuddy](https://copilot.tencent.com/work/) 腾讯出品龙虾，小白友好
 
 ### IDE
 
 - [VS Code](https://code.visualstudio.com/)
-- [Trae](https://www.trae.cn/)
-
-### 装机必备
-
-- [Microsoft Office](https://www.microsoft.com/zh-cn/microsoft-365/)
-  - 可从 [MSDN](https://msdn.itellyou.cn/) 下载 Microsoft 各类软件资源
-  - [Office Tool Plus](https://otp.landian.vip/zh-cn/) 快速自定义安装 Office 软件
-- [Notepad3](https://rizonesoft.com/downloads/notepad3/)
-- [SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader)
-- [LocalSend](https://localsend.org/)
-- [Snipaste](https://www.snipaste.com/)
-  - Microsoft Store [下载地址](https://apps.microsoft.com/detail/9p1wxpkb68kx)
-- [Pot](https://pot-app.com/)
-- [思源笔记](https://b3log.org/siyuan/)
-  - Microsoft Store [下载地址](https://apps.microsoft.com/detail/9p7hpmxp73k4)
-- [7-Zip](https://www.7-zip.org/)
-- [Draw.io](https://app.diagrams.net/)
-  - Microsoft Store [下载地址](https://apps.microsoft.com/detail/9mvvszk43qqw)
-- [PotPlayer](https://potplayer.daum.net/)
-  - Microsoft Store [下载地址](https://apps.microsoft.com/detail/xp8bsbgqw2dks0)
-- [PowerToys](https://learn.microsoft.com/zh-cn/windows/powertoys/)
-  - Microsoft Store [下载地址](https://apps.microsoft.com/detail/xp89dcgq3k6vld)
+- [Trae](https://www.trae.cn/) 国内版
 
 ### 文献管理 Zotero
 
-- [Zotero](https://www.zotero.org/)
+- [Zotero](https://www.zotero.org/) 桌面端
 - [Zotero Connector](https://www.zotero.org/download/) 浏览器插件
 
 Zotero 是一个强大的文献管理工具，推荐安装以下插件以增强功能：
@@ -93,6 +129,27 @@ Zotero 是一个强大的文献管理工具，推荐安装以下插件以增强�
 关于更多的 Zotero 插件，请参考 [Zotero 插件商店](https://zotero-chinese.com/plugins/)。
 
 {{< /callout >}}
+
+### 编曲
+
+- Cubase 专业 DAW（数字音频工作站）
+  - Prism 音频转 MIDI 插件
+  - Song Master Pro 音频分析
+
+- Sibelius 专业打谱软件
+  - NotePerformer 5 高质量替换音源
+
+#### 插件
+
+- [VoiceMeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm) 专业虚拟音频混音软件
+- [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) 提供虚拟 MIDI 输入输出
+
+#### 音源
+
+- [Pianoteq](https://www.modartt.com/pianoteq_overview) 物理建模钢琴音源
+- [BBC Symphony Orchestra](https://www.spitfireaudio.com/en-us/collections/bbc-symphony-orchestra) 专业管弦音源
+- ~~Keyscape 四巨头之钢琴音源~~
+- Ample 系列民族乐器音源
 
 ## Windows 终端美化
 
@@ -143,7 +200,7 @@ oh-my-posh init pwsh --config <THEME_NAME> | Invoke-Expression
 重启系统后，在 PowerShell（管理员权限）中执行以下命令安装 WSL 和 Ubuntu 发行版：
 
 ```powershell
-wsl --install
+wsl --install -d Ubuntu
 ```
 
 安装完成后，打开 Ubuntu 终端，设置用户名和密码。
@@ -151,7 +208,7 @@ wsl --install
 更新软件包：
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade
 ```
 
 ### 终端美化
@@ -218,6 +275,14 @@ networkingMode=mirrored
 dnsTunneling=true
 firewall=true
 autoProxy=true
+```
+
+### 访问 Windows 宿主文件系统
+
+Windows C 盘挂载在 `/mnt/c`。因此，可以通过符号链接将 Windows 文件系统中的常用文件夹作为链接目标，例如：
+
+```bash
+ln -s /mnt/c/Users/<USER>/Downloads ~/downloads
 ```
 
 ## 开发环境
@@ -342,6 +407,10 @@ ssh-keygen -t rsa -C "comment"
 
 将公钥添加到 GitHub 账户中。`-C` 表示为 SSH 密钥添加备注。
 
+```bash
+cat ./.ssh/id_rsa.pub
+```
+
 ## Docker
 
 推荐使用 [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/) 来管理 Docker 容器。安装完成后，可以通过 WSL 终端直接使用 Docker 命令。
@@ -417,3 +486,47 @@ sudo systemctl start ssh
 ```
 
 最后，别忘了在服务端安装并启动 SSH 服务。
+
+## Agents
+
+### Claude Code CLI
+
+使用 Anthropic 官方的安装脚本安装 [Claude Code CLI](https://claude.com/product/claude-code)。
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+### Codex CLI
+
+OpenAI 官方推荐使用 `npm` 安装 [Codex CLI](https://developers.openai.com/codex/quickstart?setup=cli)。
+
+```bash
+npm i -g @openai/codex
+```
+
+### OpenCode CLI
+
+使用官方提供的安装脚本安装 [OpenCode CLI](https://opencode.ai/zh)。
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+使用 `npm` 安装 [OpenCode CLI](https://opencode.ai/zh)。
+
+```bash
+npm i -g opencode-ai
+```
+
+### OpenClaw
+
+```bash
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+
+### Hermes Agent
+
+```bash
+curl -fsSL https://res1.hermesagent.org.cn/install.sh | bash
+```
