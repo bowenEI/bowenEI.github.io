@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiYuan Hugo Sync"
+  short_description: "Convert and sync SiYuan notes with Hugo posts"
+  default_prompt: "Use $siyuan-hugo-sync to sync a SiYuan note with a Hugo Markdown post."
