@@ -67,6 +67,31 @@ Reverse mapping:
 
 Keep blank lines around Hugo shortcode blocks. For SiYuan blockquotes, prefix each content line with `> ` and use a bare `>` for blank lines.
 
+## Math
+
+Inline math delimiters differ by target:
+
+| Direction | Source inline math | Target inline math |
+| --- | --- | --- |
+| SiYuan to Hugo | `$a+b$` | `\(a+b\)` |
+| Hugo to SiYuan | `\(a+b\)` | `$a+b$` |
+
+Display math delimiters are the same in both systems and must be preserved:
+
+```markdown
+$$
+E = mc^2
+$$
+```
+
+When converting math:
+
+- Convert only inline math in normal prose.
+- Preserve fenced code blocks and inline code spans exactly.
+- Preserve display math wrapped by `$$...$$` exactly, including multiline blocks.
+- Do not use a broad `$` replacement that could rewrite display math delimiters.
+- Treat `$...$` as inline math only when the opening `$` is not followed by whitespace and the closing `$` is not preceded by whitespace. This avoids most prose/currency false positives while preserving normal SiYuan inline formulas such as `$x_i$` and `$a + b$`.
+
 ## Body Cleanup
 
 - Remove zero-width spaces (`U+200B`) from SiYuan exports unless the user explicitly needs them.

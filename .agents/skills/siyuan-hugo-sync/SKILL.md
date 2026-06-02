@@ -19,7 +19,7 @@ Use this skill to move content between SiYuan Note and Hugo Markdown without los
    - SiYuan to Hugo: export the SiYuan document as Markdown, convert it to Hugo style, then write the Hugo `index.md`.
    - Hugo to SiYuan: read the Hugo Markdown, convert it to SiYuan-compatible Markdown, then update or create the SiYuan document.
 2. Load detailed conversion rules only when needed: `references/conversion-rules.md`.
-3. Use `scripts/convert_markdown.py` for deterministic conversion of front matter, duplicate H1s, summary markers, zero-width spaces, and callout blocks.
+3. Use `scripts/convert_markdown.py` for deterministic conversion of front matter, duplicate H1s, summary markers, zero-width spaces, callout blocks, and inline math delimiters.
 4. Inspect the converted output before writing over an existing document.
 5. Validate with a Hugo build for Hugo output, or by re-reading the SiYuan block/document after SiYuan updates.
 
@@ -32,6 +32,8 @@ When updating an existing Hugo document:
 - Set `lastmod` to the current time for the user's timezone. Use the environment date/time or `date --iso-8601=seconds` if available.
 - Keep `<!--more-->` if the existing Hugo post uses it; otherwise insert it after the first introductory paragraph when appropriate.
 - Remove the exported top-level `# Title` when it duplicates the Hugo front matter title.
+- Convert SiYuan inline math from `$...$` to Hugo inline math `\(...\)`.
+- Preserve display math blocks delimited by `$$...$$`; both SiYuan and Hugo use the same display math wrapper.
 - Convert SiYuan/GitHub callouts to Hugo shortcodes:
   - `[!NOTE]` -> `{{< callout type="note" >}}`
   - `[!TIP]` -> `{{< callout type="tips" >}}`
@@ -55,6 +57,8 @@ When updating SiYuan from Hugo:
 - Convert Hugo callout shortcodes back to GitHub-style callouts so SiYuan can represent them as the corresponding block style.
 - Keep front matter only if the SiYuan document intentionally stores metadata; otherwise strip Hugo-only fields before updating the note.
 - Convert `<!--more-->` according to user preference. If unspecified, remove it for SiYuan notes.
+- Convert Hugo inline math from `\(...\)` back to SiYuan inline math `$...$`.
+- Preserve display math blocks delimited by `$$...$$`; both Hugo and SiYuan use the same display math wrapper.
 - Do not overwrite a SiYuan note until you have confirmed the target document ID/path.
 
 Example:
@@ -79,3 +83,4 @@ python3 .agents/skills/siyuan-hugo-sync/scripts/convert_markdown.py \
 - Check that no raw `[!TIP]`/`[!IMPORTANT]` markers remain in Hugo output.
 - Check that no Hugo `{{< callout ... >}}` shortcodes remain in SiYuan-bound output.
 - Check that no accidental duplicate top-level H1 was introduced.
+- Check inline math directionally: Hugo-bound prose should use `\(...\)` for inline math, while SiYuan-bound prose should use `$...$`. Display math should remain wrapped with `$$...$$` in both directions.
