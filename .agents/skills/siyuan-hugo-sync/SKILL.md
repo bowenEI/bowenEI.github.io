@@ -34,8 +34,10 @@ When updating an existing Hugo document:
 - Remove the exported top-level `# Title` when it duplicates the Hugo front matter title.
 - Convert SiYuan inline math from `$...$` to Hugo inline math `\(...\)`.
 - Preserve display math blocks delimited by `$$...$$`; both SiYuan and Hugo use the same display math wrapper.
+- Convert SiYuan block/document references to plain text when importing to Hugo. This includes exported block-ref syntax, `siyuan://blocks/...` links, document/block IDs, or SiYuan-only data attributes such as block reference metadata. Keep the visible reference label or linked document title, and remove the SiYuan target/id/attribute so the Hugo Markdown contains only normal prose.
+- In the final written report to the user, explicitly list every SiYuan block/document reference that was converted, including the Hugo file path plus the most specific location available (line number, heading, or nearby text) and the original reference target/id when visible.
 - Convert SiYuan/GitHub callouts to Hugo shortcodes:
-  - `[!NOTE]` -> `{{< callout type="note" >}}`
+  - `[!NOTE]` -> `{{< callout type="info" >}}`
   - `[!TIP]` -> `{{< callout type="tips" >}}`
   - `[!IMPORTANT]` -> `{{< callout type="important" >}}`
   - `[!WARNING]` -> `{{< callout type="warning" >}}`
@@ -80,7 +82,8 @@ python3 .agents/skills/siyuan-hugo-sync/scripts/convert_markdown.py \
 ## Validation
 
 - For Hugo output, run the repository's normal Hugo build. If remote theme assets block validation, use a temporary config that disables remote asset fetches and state this clearly.
-- Check that no raw `[!TIP]`/`[!IMPORTANT]` markers remain in Hugo output.
+- Check that no raw `[!NOTE]`/`[!TIP]`/`[!IMPORTANT]`/`[!WARNING]`/`[!CAUTION]` markers remain in Hugo output.
 - Check that no Hugo `{{< callout ... >}}` shortcodes remain in SiYuan-bound output.
 - Check that no accidental duplicate top-level H1 was introduced.
 - Check inline math directionally: Hugo-bound prose should use `\(...\)` for inline math, while SiYuan-bound prose should use `$...$`. Display math should remain wrapped with `$$...$$` in both directions.
+- For Hugo output, check that no SiYuan block/document reference syntax, `siyuan://blocks/...` target, block ID, or SiYuan-only data attribute remains unless the user explicitly asked to preserve it.
