@@ -1,7 +1,7 @@
 ---
 title: "重装 Windows 系统和软件指南"
 date: 2026-04-04T01:18:48+08:00
-lastmod: 2026-05-29T01:19:24+08:00
+lastmod: 2026-06-12T15:43:21+08:00
 draft: false
 tags:
   - 技术分享
@@ -71,58 +71,40 @@ reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a
 
 系统字体可以使用 Sarasa UI SC，编程和终端字体通常使用等宽字体，包括 Sarasa Mono SC、Sarasa Term SC、Sarasa Fixed SC。
 
-## 常用软件安装
+## 装机必备
 
-### 装机必备
+|名称|描述|
+| :---------------: | :-------------------------------------------: |
+|[VS Code](https://code.visualstudio.com/)|强大轻量级 IDE + Agent Coder|
+|~~[Trae](https://www.trae.cn/)~~|字节跳动 Agent Coder|
+|[Microsoft Office](https://www.microsoft.com/zh-cn/microsoft-365/)|办公软件全家桶|
+|[Clash Verge Rev](https://www.clashverge.dev/)|基于 Mihomo 内核的 Clash 客户端|
+|[Office Tool Plus](https://otp.landian.vip/zh-cn/)|快速自定义安装 Office 软件|
+|[Notepad3](https://rizonesoft.com/downloads/notepad3/)|国产 Notepad++ 平替<br />|
+|[SumatraPDF](https://www.sumatrapdfreader.org/free-pdf-reader)|轻量化 PDF 阅读器|
+|[LocalSend](https://localsend.org/)|局域网文件传输|
+|[Snipaste](https://www.snipaste.com/)|截图|
+|[Pot](https://pot-app.com/)|全局翻译|
+|[思源笔记](https://b3log.org/siyuan/)|隐私优先的本地知识库|
+|[Obsidian](https://obsidian.md/)|插件系统最为丰富的知识库|
+|[7-Zip](https://www.7-zip.org/)|压缩|
+|[Draw.io](https://app.diagrams.net/)|开源绘图|
+|~~[Drawnix](https://drawnix.com/)~~|开源白板工具|
+|[PotPlayer](https://potplayer.daum.net/)|全能视频播放器|
+|[PowerToys](https://learn.microsoft.com/zh-cn/windows/powertoys/)|Windows 系统官方外挂|
+|[uTools](https://www.u-tools.cn/)|功能丰富的插件应用生态|
+|~~[OpenFiles](https://openfiles.pansysoft.app/)~~|~~开源万能格式文件查看器~~|
+|[Allen Explorer](https://www.allenxiang.com/)|类 Chrome 的强大文件资源管理器|
+|[Inkscape](https://inkscape.org/)|免费矢量图编辑器|
 
-|       名称       |            描述            |                                     来源                                      |
-| :--------------: | :------------------------: | :---------------------------------------------------------------------------: |
-| Microsoft Office |       办公软件全家桶       |             [Web](https://www.microsoft.com/zh-cn/microsoft-365/)             |
-| Office Tool Plus | 快速自定义安装 Office 软件 |                     [Web](https://otp.landian.vip/zh-cn/)                     |
-|     Notepad3     | 国产 Notepad++ 平替<br />  |               [Web](https://rizonesoft.com/downloads/notepad3/)               |
-|    SumatraPDF    |     轻量化 PDF 阅读器      |            [Web](https://www.sumatrapdfreader.org/free-pdf-reader)            |
-|    LocalSend     |       局域网文件传输       |                         [Web](https://localsend.org/)                         |
-|     Snipaste     |            截图            |              [Web](https://www.snipaste.com/) / Microsoft Store               |
-|       Pot        |          全局翻译          |                          [Web](https://pot-app.com/)                          |
-|     思源笔记     |    隐私优先的本地知识库    |              [Web](https://b3log.org/siyuan/) / Microsoft Store               |
-|     Obsidian     |  插件系统最为丰富的知识库  |                          [Web](https://obsidian.md/)                          |
-|      7-Zip       |            压缩            |                         [Web](https://www.7-zip.org/)                         |
-|     Draw.io      |          开源绘图          |              [Web](https://app.diagrams.net/) / Microsoft Store               |
-|     Drawnix      |        开源白板工具        |                          [Web](https://drawnix.com/)                          |
-|    PotPlayer     |       全能视频播放器       |             [Web](https://potplayer.daum.net/) / Microsoft Store              |
-|    PowerToys     |    Windows 系统官方外挂    | [Web](https://learn.microsoft.com/zh-cn/windows/powertoys/) / Microsoft Store |
-|      uTools      |   功能丰富的插件应用生态   |                        [Web](https://www.u-tools.cn/)                         |
-|  ~~OpenFiles~~   | ~~开源万能格式文件查看器~~ |         ~~[Web](https://openfiles.pansysoft.app/) / Microsoft Store~~         |
-
-### 浏览器扩展
-
-|           名称            |             描述             |
-| :-----------------------: | :--------------------------: |
-| Authenticator: 2FA Client |        两步验证客户端        |
-|       篡改猴测试版        |        著名的油猴脚本        |
-|         Momentum          | 外观简约、风景秀丽的新标签页 |
-|          Ruffle           |         Flash 渲染器         |
-|       uBlock Origin       |           屏蔽广告           |
-
-### AI & Agent
-
-- [Cherry Studio](https://www.cherry-ai.com/) 超级 AI 工作站
-- ~~[Antigravity Tools](https://github.com/lbjlaq/Antigravity-Manager)~~ ~~Gemini API 反向代理~~
-- [WorkBuddy](https://copilot.tencent.com/work/) 腾讯出品龙虾，小白友好
-
-### IDE
-
-- [VS Code](https://code.visualstudio.com/)
-- [Trae](https://www.trae.cn/) 国内版
-
-### 文献管理 Zotero
+## 文献管理 Zotero
 
 - [Zotero](https://www.zotero.org/) 桌面端
 - [Zotero Connector](https://www.zotero.org/download/) 浏览器插件
 
-Zotero 是一个强大的文献管理工具，推荐安装以下插件以增强功能：
+- 插件
 
-- [Actions and Tags for Zotero](https://github.com/windingwind/zotero-actions-tags/releases/)：提供批量标签管理功能。
+  - [Actions and Tags for Zotero](https://github.com/windingwind/zotero-actions-tags/releases/)：批量标签管理
 
 {{< callout type="tips" >}}
 
@@ -130,34 +112,37 @@ Zotero 是一个强大的文献管理工具，推荐安装以下插件以增强�
 
 {{< /callout >}}
 
-### 编曲
+## 编曲
 
 - Cubase 专业 DAW（数字音频工作站）
+
   - Prism 音频转 MIDI 插件
   - Song Master Pro 音频分析
-
 - Sibelius 专业打谱软件
+
   - NotePerformer 5 高质量替换音源
 
-#### 插件
+### 插件
 
 - [VoiceMeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm) 专业虚拟音频混音软件
 - [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) 提供虚拟 MIDI 输入输出
 
-#### 音源
+### 音源
 
 - [Pianoteq](https://www.modartt.com/pianoteq_overview) 物理建模钢琴音源
 - [BBC Symphony Orchestra](https://www.spitfireaudio.com/en-us/collections/bbc-symphony-orchestra) 专业管弦音源
 - ~~Keyscape 四巨头之钢琴音源~~
 - Ample 系列民族乐器音源
 
-## Windows 终端美化
+## PowerShell
 
 Windows 系统自带的 PowerShell 版本老旧，推荐安装最新的 [PowerShell 7](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows)。
 
 ```powershell
 winget install --id Microsoft.PowerShell --source winget
 ```
+
+### 终端美化
 
 安装完成后，再安装 [Oh My Posh](https://ohmyposh.dev/docs/installation/windows) 以美化 PowerShell 终端。
 
@@ -189,15 +174,9 @@ oh-my-posh init pwsh | Invoke-Expression
 oh-my-posh init pwsh --config <THEME_NAME> | Invoke-Expression
 ```
 
-## WSL 配置
+## WSL
 
-### 安装
-
-> 参考资料：[Microsoft 官方 WSL 安装指南](https://learn.microsoft.com/zh-cn/windows/wsl/install)
-
-首先在“控制面板 --> 程序 --> 启用或关闭 Windows 功能”中启用适用于 Windows 的 Linux 子系统和 Hyper-V。
-
-重启系统后，在 PowerShell（管理员权限）中执行以下命令安装 WSL 和 Ubuntu 发行版：
+根据最新的 [Microsoft 官方 WSL 安装指南](https://learn.microsoft.com/zh-cn/windows/wsl/install)，~~首先在“控制面板 –> 程序 –> 启用或关闭 Windows 功能”中启用适用于 Windows 的 Linux 子系统和 Hyper-V。~~ 无需手动提前配置再安装，直接在 PowerShell（管理员权限）中执行以下命令安装 WSL 和 Ubuntu 发行版：
 
 ```powershell
 wsl --install -d Ubuntu
@@ -285,9 +264,7 @@ Windows C 盘挂载在 `/mnt/c`。因此，可以通过符号链接将 Windows �
 ln -s /mnt/c/Users/<USER>/Downloads ~/downloads
 ```
 
-## 开发环境
-
-> 以下配置均在 WSL 终端中进行。
+## WSL 开发环境
 
 ### Python
 
@@ -338,10 +315,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 ```
 
-目前最新的 Node.js LTS 版本为 22：
+安装最新版的 Node.js LTS：
 
 ```bash
-nvm install 22
+nvm install lastest
 ```
 
 ### Go
@@ -421,75 +398,11 @@ cat ./.ssh/id_rsa.pub
 
 {{< /callout >}}
 
-## Nvidia 显卡驱动
+## Agent
 
-推荐使用 [Nvidia 官方驱动](https://www.nvidia.cn/geforce/drivers/) 来查找和安装合适的显卡驱动。驱动版本是向下兼容的，一般安装最新版本即可。
+### CLI 类 Agent
 
-安装完成后，通过 `nvidia-smi` 命令检查驱动是否安装成功，并且查看 WSL 的驱动版本是否与 Windows 系统的驱动版本一致。
-
-## 数据库
-
-### SQLite
-
-SQLite 为所有 Linux 发行版默认安装，无需额外配置。
-
-### MongoDB
-
-- 服务端：[MongoDB Community Edition](https://www.mongodb.com/try/download/community)
-- 客户端：[MongoDB Compass](https://www.mongodb.com/products/tools/compass)
-
-### Redis
-
-- 服务端：[Redis Open Source](https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/)
-- 客户端：[RedisInsight](https://redis.io/insight/)
-
-## 内网穿透
-
-推荐使用 [Tailscale](https://tailscale.com/) 进行内网穿透。其本质是基于 WireGuard 的零配置 VPN，只需要身份认证即可让多个端侧设备安全互联，而无需集中式 VPN 服务器。
-
-### 客户端
-
-通常情况下，客户端都是 Windows 系统，直接访问[官网](https://tailscale.com/download/windows)下载安装包即可。安装完成后同样需要进行身份认证。
-
-### 服务端
-
-通常情况下，服务端都是 Linux 系统，安装 Tailscale 服务端需要在 Linux 系统中执行安装脚本。这对于 WSL 也同样适用。
-
-```bash
-curl -fsSL https://tailscale.com/install.sh | sh
-```
-
-安装完成后，需要将当前用户设置为 Tailscale 的操作员。这样就不用每次使用 `sudo` 来运行 Tailscale 命令。
-
-```bash
-sudo tailscale set --operator=$USER
-```
-
-检查 Tailscale 守护进程状态：
-
-```bash
-sudo systemctl status tailscaled
-```
-
-如果是 `Active (running)` 状态，下面就可以根据安装提示，执行下列命令来连接 Tailscale 网络。
-
-```bash
-tailscale up
-```
-
-此过程中，需要进行身份认证，认证成功后即可连接 Tailscale 网络。
-
-```bash
-sudo apt install ssh
-sudo systemctl enable ssh
-sudo systemctl start ssh
-```
-
-最后，别忘了在服务端安装并启动 SSH 服务。
-
-## Agents
-
-### Claude Code CLI
+#### Claude Code
 
 使用 Anthropic 官方的安装脚本安装 [Claude Code CLI](https://claude.com/product/claude-code)。
 
@@ -497,7 +410,33 @@ sudo systemctl start ssh
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-### Codex CLI
+如要通过 API Key 接入非 Anthropic 模型（例如 MiniMax），配置 `~/.claude/settings.json`
+
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "<MINIMAX_API_KEY>",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_MODEL": "MiniMax-M3",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M3",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M3",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M3",
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "512000"
+  }
+}
+```
+
+还要新增 onboarding 标记，编辑 `~/.claude.json`
+
+```json
+{
+  "hasCompletedOnboarding": true
+}
+```
+
+#### Codex
 
 OpenAI 官方推荐使用 `npm` 安装 [Codex CLI](https://developers.openai.com/codex/quickstart?setup=cli)。
 
@@ -505,7 +444,30 @@ OpenAI 官方推荐使用 `npm` 安装 [Codex CLI](https://developers.openai.com
 npm i -g @openai/codex
 ```
 
-### OpenCode CLI
+如要通过 API Key 接入非 OpenAI 模型，配置 `~/.codex/auth.json`
+
+```json
+{
+  "OPENAI_API_KEY": "<YOUR_API_KEY>"
+}
+```
+
+配置 `~/.codex/config.toml`
+
+```toml
+model_provider = "<PROVIDER_NAME>"
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+disable_response_storage = true
+
+[model_providers.<PROVIDER_NAME>]
+name = "<PROVIDER_NAME>"
+wire_api = "responses"
+requires_openai_auth = false
+base_url = "<PROVIDER_API_URL>"
+```
+
+#### ~~OpenCode~~
 
 使用官方提供的安装脚本安装 [OpenCode CLI](https://opencode.ai/zh)。
 
@@ -519,14 +481,27 @@ curl -fsSL https://opencode.ai/install | bash
 npm i -g opencode-ai
 ```
 
-### OpenClaw
+### Claw 类 Agent
+
+#### ~~OpenClaw~~
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-### Hermes Agent
+#### ~~Hermes Agent~~
 
 ```bash
 curl -fsSL https://res1.hermesagent.org.cn/install.sh | bash
 ```
+
+#### Desktop for Windows
+
+- [Codex Desktop](https://openai.com/zh-Hans-CN/index/codex-for-almost-everything/) 👉 Codex CLI 的重大更新和升级
+- [WorkBuddy](https://copilot.tencent.com/work/) 👉 腾讯出品龙虾，小白友好
+
+### Agent 管理
+
+- [CC Switch](https://www.ccswitch.io/zh/) 👉 统一管理 API 提供商
+
+- [Cherry Studio](https://www.cherry-ai.com/) 👉 超级 AI 工作站
